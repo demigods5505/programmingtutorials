@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Python Tutorials</h3>
+    </div>
+    <div class="container my-3">
+        <!-- prog61 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog61" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                map,filter$reduce
+            </a>
+        </p>
+        <div class="collapse" id="prog61">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #map function
+    numbers=["34","55","11","89","76","64"]
+    print(numbers) #all elements in form of string
+    print(map(int,numbers)) #object
+    new=list(map(int,numbers))  #first parameter is that function jo saara elements par apply karna ha ,list name
+    # a new list named "new" is made
+    # we typecased the above code in list as map return in form of object
+    new[2]=new[2]+11
+    print(new[2])
+    print(new) # all elememnts in form of int
+    
+    #squaring of all list functions
+    def sqre(n):
+        return n*n
+    lst=[2,3,5,1,4,5,6,3]
+    print(f"before squaring {lst}")
+    squarelst1=list(map(sqre,lst))
+    print(f"after squaring using noramal func. {squarelst1}")
+    
+    squarelst2=list(map(lambda x:x*x,lst))
+    print(f"after squaring using lambda func. {squarelst2}")
+    
+    #complicated
+    
+    def square(a):
+        return a*a
+    def cube(a):
+        return a*a*a
+    
+    funclist=[square,cube]
+    
+    for i in range(5):
+        val=list(map(lambda m:m(i),funclist))
+        print(val)
+    
+    #filter function
+    lst_1=[1,2,3,4,5,6,7,8,9]
+    
+    def is_greater_5(u):
+        return u>5 #return true or false
+    
+    print(filter(is_greater_5,lst_1))
+    filtered=list(filter(is_greater_5,lst_1))
+    print(filtered)
+    
+    # reduce
+    from functools import reduce
+    lst_2=[3,5,3,6,5,2]
+    
+    result=reduce(lambda x,y:x+y,lst_2)
+    print(result)       
+</pre>
+            </div>
+        </div>
+        <!-- prog62 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog62" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tell and seek
+            </a>
+        </p>
+        <div class="collapse" id="prog62">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    fptr=open("codewithharry.txt")
+    print(fptr.tell()) #it tells the current position of filepointer
+    
+    print(fptr.readline())
+    print(fptr.tell())
+    
+    print(fptr.readline())
+    print(fptr.tell())
+    fptr.close()
+    
+    # here i am reseting the filepointer
+    # first comment out the above code
+    fptr=open("codewithharry.txt")
+    
+    print(fptr.readline())
+    fptr.seek(10)
+    
+    print(fptr.readline())
+    
+    fptr.close()
+    
+    # comment out the above code
+    fptr=open("codewithharry.txt")
+    fptr.seek(10) # shifting file pointer directly to 10
+    print(fptr.tell()) #printing the current file pointer
+    print(fptr.readline()) # here reading start from 10th character
+    print(fptr.readline())
+    
+    fptr.close()   
+</pre>
+            </div>
+        </div>
+        <!-- prog63 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog63" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                os module
+            </a>
+        </p>
+        <div class="collapse" id="prog63">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import os
+    #
+    # print(dir(os))  #which we can perform over os,some of thsese used below
+    # # functions of os
+    #
+    #
+    # # it helps when u are reading any file and that file is not in present directory,so it gives error so we can use it to find our directory
+    # print(os.getcwd()) # gives the present working directory
+    # #
+    # # # to change current working directory
+    # # os.chdir("C://")   #here current working directory is changed
+    # # print(os.getcwd())
+    # # # reading file in this changed directory gives error because file in the original directory not the chnaged directory
+    # f=open("codewithharry.txt") # gives error
+    
+    
+    # before starting this do comment of above code
+    
+    # to find all files of this present directory
+    
+    print(os.listdir()) #all files of this directory
+    # if u want ot see files in different directory or folder
+    print(os.listdir("C://")) #all files of different directory
+    
+    print(type(os.listdir("C://"))) #list
+    
+    # os.mkdir("new_folder") # to make a new folder in this present directory
+    
+    # after commenting above code
+    # os.mkdir("this/that") #gives error because this to ha nahi and that bana raha ho
+    
+    # os.makedirs("this/that") #directory ka andar directory / folder ka andar folder
+    
+    # to rename a present file
+    # os.rename("rohan.txt","codewithharry.txt") #file name changed,but the content remain same
+    # os.rename("eyes","e")
+    
+    # os.rename("eyess","eyes")
+    
+    # to get environment variable of this present directory
+    print(os.environ.get('Path')) #abhi konse file me kamm kar raha ho
+    
+    # to join the two paths
+    #it always gives a valid path
+    print(os.path.join("C://","codewithharry.txt"))
+    print(os.path.join("C://","/codewithharry.txt"))
+    print(os.path.join("C:/","/codewithharry.txt"))
+    
+    #to check path is present or not
+    print(os.path.exists("C://")) #return true becoz this path exists as C:// exists
+    print(os.path.exists("C://harr")) #returns false becoz this path not exist ,harr is not exist
+    print(os.path.exists("C://Program Files")) #return true becoz this path exists as C://Program Files exists
+    
+    print(os.path.isdir("C://Program Files")) #return true because it is a directory
+    print(os.path.isfile("C://Program Files")) #return false becoz it is not a file       
+</pre>
+            </div>
+        </div>
+        <!-- prog64 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog64" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                pickle module
+            </a>
+        </p>
+        <div class="collapse" id="prog64">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import pickle
+    # pickling a file on object
+    
+    # cars=["audi","lamborgini","bmw","swift"]
+    # file="mycar.pkl"
+    # fileobj=open(file,'wb') #opening in binary mode,write binary
+    # pickle.dump(cars,fileobj) #dump takes 2 arguments 1st is jo app pack karna chata ha aur 2nd file object
+    # fileobj.close()
+    
+    # to get the preserved file
+    file="mycar.pkl"
+    fileobj=open(file,'rb') #read binary
+    carscollection=pickle.load(fileobj)
+    print(carscollection)
+    print(type(carscollection)) #list
+    
+    # for items in carscollection:
+    #     print(items)
+    
+    
+    # try to find pickle.loads meaning   
+</pre>
+            </div>
+        </div>
+        <!-- prog65 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog65" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                pickle iris proj.
+            </a>
+        </p>
+        <div class="collapse" id="prog65">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # https://archive.ics.uci.edu/ml/machine-learning-databases/iris/
+    import requests
+    import pickle
+    
+    # getting the link
+    url=requests.get("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data")
+    # print(url.text)
+    # f=open("irisdatasheet",'w')
+    # f.write(url.text)
+    # f.close
+    
+    fptr=open("irisdatasheet")
+    lst=fptr.readlines()
+    newlist=list(lst)
+    print(newlist)
+    fptr.close()
+    
+    # pickle_fptr=open("irisdatasheetlist",'wb')
+    # pickle.dump(newlist,pickle_fptr)
+    # pickle_fptr.close()
+    
+    read=open("irisdatasheet",'rb')
+    readlist=pickle.load(read) # i don't know y it is not loading
+    
+    for items in (readlist):
+        print(items)       
+</pre>
+            </div>
+        </div>
+        <!-- prog66 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog66" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                request module
+            </a>
+        </p>
+        <div class="collapse" id="prog66">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import requests
+    a=requests.get("https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgxwJWrhNpxLfCZBRzFlksqthFMJL")
+    print(a.text) #u will get full html code
+    print(a.status_code) #200 means request is ok
+    
+    
+    url="www.something.com"
+    dta={
+        "p1":1,
+        "p2":2
+    }
+    
+    b=requests.post(url=url,data=dta)   
+</pre>
+            </div>
+        </div>
+        <!-- prog67 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog67" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                refile
+            </a>
+        </p>
+        <div class="collapse" id="prog67">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    Re.txt file as described in the video!
+    Meta Characters
+    [] A set of characters
+    \ Signals a special sequence (can also be used to escape special characters)
+    . Any character (except newline character)
+    ^ Starts with
+    $ Ends with
+    * Zero or more occurrences
+    + One or more occurrences
+    {} Exactly the specified number of occurrences
+    | Either or
+    () Capture and group
+    Special Sequences
+    \A Returns a match if the specified characters are at the beginning of the string
+    \b Returns a match where the specified characters are at the beginning or at the end of a word r"ain\b"
+    \B Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word
+    
+    \d Returns a match where the string contains digits (numbers from 0-9)
+    \D Returns a match where the string DOES NOT contain digits
+    \s Returns a match where the string contains a white space character
+    \S Returns a match where the string DOES NOT contain a white space character
+    \w Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character)
+    \W Returns a match where the string DOES NOT contain any word characters
+    \Z Returns a match if the specified characters are at the end of the string   
+</pre>
+            </div>
+        </div>
+        <!-- prog68 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog68" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                re module
+            </a>
+        </p>
+        <div class="collapse" id="prog68">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import re
+
+    # print(r"\n") #this r cannot escape the escape sequence characters or print("\\n")
+    
+    
+    mystr = '''Tata Limited
+    Dr. David Landsman, executive director
+    18, Grosvenor Place
+    London SW1X 7HSc
+    Phone: +44 (20) 7235 8281
+    Fax: +44 (20) 7235 8727
+    Email: tata@tata.co.uk
+    Website: www.europe.tata.com
+    Directions: View map
+    
+    Tata Sons, North America
+    1700 North Moore St, Suite 1520
+    Arlington, VA 22209-1911
+    USA
+    Phone: +1 (703) 243 9787
+    Fax: +1 (703) 243 9791
+    66-66
+    455-4545
+    Email: northamerica@tata.com 
+    Website: www.northamerica.tata.com
+    Directions: View map fass
+    harry bhai lekin
+    bahut hi badia aadmi haiaiinaiiiiiiiiiiii'''
+    
+    # functions used with re module
+    # findall, search, split, sub, finditer
+    
+    # finditer
+    patt=re.compile(r'fass')#raw string,we are searching fass
+    matches=patt.finditer(mystr)
+    for match in matches:
+        print(match)
+        print(mystr[448:452])
+    
+    
+    cat=re.compile(r'.adm') # any character except new line,use .adm means koi bhi char. ka baad adm ho
+    cat=re.compile(r'^Tata') # ^ starts with
+    cat=re.compile(r'^Ta') # ^ starts with
+    cat=re.compile(r'iiiiii$') # ends with $
+    cat=re.compile(r'ai*') # means a ho and 0 ya kitna bhi i ho
+    cat=re.compile(r'a*i*') # means a 0 ya kitna bhi ho and i 0 ya kitna bhi ho
+    cat=re.compile(r'ai+') # a to ho he ho and 1 ya ek sa zyada i ho
+    cat=re.compile(r'ai{2}') # a to ho he ho and exactly 2 i ho
+    cat=re.compile(r'(ai){2}') # making group means aiai want
+    cat=re.compile(r'ai{1}|t') # either or
+    cat=re.compile(r'ai{1}|Fax') # either or
+    cat=re.compile(r'ai{1}|fax') # fax is not present
+    
+    
+    
+    #special characters
+    #if true then retun the match
+    cat=re.compile(r'\ATata')
+    cat=re.compile(r'\AFax')
+    cat=re.compile(r'\bFax') #jaha Fax se starting hori ho
+    cat=re.compile(r'Fax\b') # jaha Fax se ending ho rahi ho
+    cat=re.compile(r'27\b')
+    cat=re.compile(r'\BFax') #not working y
+    cat=re.compile(r'\d{5}-\d{4}') #d means digits and then {} menas exactly specified no. of characters , pehla 5 digits then - then 4 digits
+    cat=re.compile(r'\d{3} \d{3}')
+    bating=cat.finditer(mystr)
+    for bat in bating:
+        print(bat)
+    
+    # given a string with lot of indian phone numbers starting with +91
+    # find all thata 10 digits phoen number and confined them in the form of strring       
+</pre>
+            </div>
+        </div>
+        <!-- prog69 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog69" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                re number proj.
+            </a>
+        </p>
+        <div class="collapse" id="prog69">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import re
+
+    mystr="""ddhhdoieehffojdnwkndkd
+    dhlijdoqwjdo;kwkdowk2e;kqdokw;dk
+    jquejdj;ekqwkqwdkdhodkqwoudojdoji
+    918439361826 rfijvorjlhfheifhfi2
+    jwejoijfoidijwojdobiubfufibiu 918756372634
+    lweopw 912354678291 iefjdiwejdok;okoe
+     ehhdoiejijdojpjp 910023467582 j23ji
+     jeo2kpkpekp12keo 918765482937 djqlhdljd
+     917689451123 wjlwdiwjdoihwdhw 917560856382
+     ujfohif 910986542467 j2ojohjoieoie eii2hi jeo1j
+     919876543246 rjlhhuhhou8ohhddhdih 91879098675475"""
+    
+    number=re.compile(r'\b(91)\d{10}')
+    numbers=number.finditer(mystr)
+    for num in numbers:
+        print(num)
+        print()
+    
+    # findall, search, split, sub, finditer       
+</pre>
+            </div>
+        </div>
+        <!-- prog70 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog70" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                sets in py.
+            </a>
+        </p>
+        <div class="collapse" id="prog70">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # set conatins only unique values
+    s=set()  #empty set
+    print(type(s))
+    # making set from list
+    set_from_list=set([34,53,2,4,4,67,3])
+    print(set_from_list)
+    print(type(set_from_list))
+    
+    # we can also do
+    # l=[34,53,2,4,67,3]
+    # set_from_list=set(l)
+    
+    # addding values in set s=set()
+    s.add(1)
+    s.add(1) #adding once more,but not added
+    s.add(4)
+    print(s) #it contains only unique values
+    
+    # union in sets
+    s1=s.union({1,4,5,3,66})
+    print(s,s1)
+    
+    #intersection in sets
+    s2=s.intersection({1,3,4,56,7})
+    print(s,s2)
+    
+    # lenght of set
+    print(len(s1))
+    print(min(s1)) #minimum
+    print(max(s1)) #maximum
+    
+    # isdisjoint set , used to check common between the sets
+    
+    s3=({1,22,33,45})
+    s4=({22,98,56})
+    print(s.isdisjoint(s3))
+    print(s.isdisjoint(s4))
+    
+    s4.remove(22)
+    print(s4)   
+</pre>
+            </div>
+        </div>
+        <!-- prog71 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog71" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                with operator(file opener)
+            </a>
+        </p>
+        <div class="collapse" id="prog71">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # imp= we can use the same file pointer again and again after using it in one file and closing
+
+
+    # fptr=open("codewithharry.txt") #use "r" or "rt" no affected
+    # print(fptr.read()) #simple full text
+    # # print(fptr.readlines()) #print all lines in form of list
+    # # print(fptr.readline()) #print exactly 1 line
+    # fptr.close()
+    
+    # instead of above
+    
+    with open("rohan.txt") as fptr:
+        print(fptr.readlines())
+    
+    fptr=open("rohan.txt")
+    print(fptr.readlines())
+    fptr.close()   
+</pre>
+            </div>
+        </div>
+        <!-- prog72 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog72" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                star pattern
+            </a>
+        </p>
+        <div class="collapse" id="prog72">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #pattern printing
+    # pehla no. of rows puchna ha then
+    # input from user as 1 or 0 and typecast to true and false,
+    # if true
+    # *
+    # * *
+    # * * *
+    # * * * *
+    # otherwisw
+    # * * * *
+    # * * *
+    # * *
+    # *
+    
+    print("enter the no. of rows u want")
+    num=int(input())
+    print("enter 0 or 1 for a star pattern")
+    str_ptrn=int(input())
+    q=bool(str_ptrn)
+    if q==False:
+        for i in range(1, num+1):
+            for j in range(1, i + 1):
+                print("*", end=" ")
+            print()
+    else:
+        for i in range(1,num+1):
+            for j in range(1,num+1):
+                if j>num+1-i:
+                    print(" ",end=" ")
+                else:
+                    print("*",end=" ")
+            print()       
+</pre>
+            </div>
+        </div>
+        <!-- prog73 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog73" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                time module
+            </a>
+        </p>
+        <div class="collapse" id="prog73">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import time
+    #used to find execution time of large programms
+    
+    initial=time.time()  #here using time function in time module
+    k=0
+    while(k<45):
+        print("this is harry bahi")
+        # time.sleep(2) #waits for 2 sec after 1st printing and again and again
+        k+=1
+    print("while loop takes",time.time()-initial,"seconds")  #time() - 0.000997066... #time.time() - 0.000995625...
+    
+    initial2=time.time()
+    for i in range(45): # here i starts from 0 to 44
+        print("this is harry bahi")
+    
+    print("loop takes",time.time()-initial2,"seconds") #time() - 0.000995874......  #time.time() - 0.00099730....
+    
+    #to find a accurate time run that program multuiple times and then find the average
+    
+    # #returns our time
+    # currenttime=time.asctime(time.localtime(time.time()))
+    # print(currenttime)   
+</pre>
+            </div>
+        </div>
+        <!-- prog74 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog74" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                ifelse shorthand
+            </a>
+        </p>
+        <div class="collapse" id="prog74">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    a= int(input("enter a \n"))
+    b= int(input("enter b \n"))
+    
+    # if a>b : print("a is greater than b")
+    
+    print("a is greater than b") if a>b else print("b is greater than a ")   
+</pre>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="python1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="python2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="python3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="python4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="python5.html">5</a></li>
+              <li class="page-item"><a class="page-link" href="python6.html">6</a></li>
+              <li class="page-item"><a class="page-link" href="python7.html">7</a></li>
+              <li class="page-item"><a class="page-link" href="python8.html">8</a></li>
+            </ul>
+          </nav>
+    </div>
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

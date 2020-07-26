@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+     
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Python Tutorials</h3>
+    </div>
+    <div class="container my-3">
+
+
+        <!-- prog1 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog1" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                end=" " function
+            </a>
+        </p>
+        <div class="collapse" id="prog1">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # please dont remove this line
+    print("subscribe demi gods")
+    print("please do")
+    # if you want next line in the same previous line
+    print("subscribe demi gods",end=" ") #end is new line cahracter
+    print("please do",end=" ")
+    print("on youtube")
+    
+    # jo bhi "" isma likenga vo aa jayegi and next line bhi ussi line me aa jayegi
+    print("please do",end=" joker ")
+    print("ahha")
+    
+    print("hello my","name is rohan") #comma means space here
+    print("hello my","name is rohan",end=" ")
+    print("bhai plz")
+    
+    #below all are escape sequence character
+    
+    print("ok \n bro") #new line character
+    print("..................")
+    print("ok\n bro")
+    print("..................")
+    print("ok\nbro")
+    print("..................")
+    # if you want to use \n safely
+    print("ok \\n bro")
+    print("..................")
+    # if u want single quote or double quote
+    print("ok \" bro")
+    print("ok \' bro")
+    #for giving tab
+    print("hello my\tname is rohan")
+    #for using tab safely
+    print("hello my \\t name is rohan")    
+
+</pre>
+            </div>
+        </div>
+
+        <!-- prog2 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog2" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                string slicing
+            </a>
+        </p>
+        <div class="collapse" id="prog2">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    str="my name is rohan"
+    print(str[1])
+    print(str[2])
+    print(str[0:5]) #0 to n-1
+    #finding length
+    print(len(str))
+    
+    print(str[0:40])
+    print(str[0:16:2]) # skipping 1 character and printing the string
+    print(str[0:16:3]) # skipping 2 character and printing the string(n-1 character skip karega)
+    print(str[0:]) #full string ,take the n+1 index/length automatically
+    print(str[:10]) #take the 0th index by default
+    print(str[:]) #full string
+    print(str[::]) #full string and by default ,last vala : ka bad 1 assume kar lega and puri string as it is print
+    
+    print(str[:6:])
+    print(str[:16:2])
+    print(str[::200]) #nothing will print except first letter
+    print("....................")
+    print(str[-4:]) # 12 to end
+    print(str[-4:-1]) #here it goes from -4 to -2 i.e n-1
+    print(str[::-1]) #string reversed
+    print(str[::-2]) #first  reversed then skip character
+    print(str[-5::-1])#once string is reversed then -ve comes foreward
+    print(str[3::-1])#once string is reversed then -ve comes foreward
+    
+    varr="mynameisrohan"
+    print(varr.isalnum())  #alphabets ho ya numeric values ho
+    print(varr.isalpha())  #only alphabets
+    print(str.isalnum())   # it contain spaces
+    
+    varr1="hello guys my name is rohan"
+    print(varr1.endswith("an"))
+    print(varr1.endswith("rohan"))
+    print(varr1.endswith("ran"))
+    
+    print(varr1.count("h")) #no of h is 2 in the string
+    
+    print(varr1.capitalize()) #makes the first letter capital
+    print(varr1.find("gu"))  #gives the position
+    
+    print(varr1.lower())
+    print(varr1.upper())
+    
+    #to replace
+    print(varr1.replace("guys","haha"))    
+</pre>
+            </div>
+        </div>
+
+        <!-- prog3 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog3" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                global variables
+            </a>
+        </p>
+        <div class="collapse" id="prog3">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    l=10 #global variable
+    def function11(n):
+        # l=5
+        m=6
+        # l=l+45 throws error as here global value can't be changed ,to remove error first assign the value of l or use the below code
+        global l #way to change global variable
+        l=l+45 #here globally variable is changed
+        print(l,m) # l,m ko pehla ya local me dhundega then global me dekhenga
+        # print(b) # here scope will find b locally ,if not present then search globally otherwise error
+        # print(l) if u print l here without assignment the above line then it will return 10
+        print(n,"i have printed")
+    function11("this is a text")
+    print(l)
+    # print(m) error is found here as it search globally only
+    
+    
+    #first remove the above code to try the below code 
+    
+    x=89
+    def harry():
+        x=20 # harry function me x ke local value 20 ha
+        def rohan():
+            global x # it directly goes to all the function and changes the value globally
+            x=88
+        print("before calling rohan()",x) #ya line harry ke andar he so it will find value of x locally
+        rohan() #calling rohan() it changes the value ofglobal varibale ,outside of all code and functions
+        print("after calling rohan()",x) #ya change nahi hoga kyuke rohan() fun. targets only the true global variable
+    
+    harry()
+    print(x)
+</pre>
+            </div>
+        </div>
+        <!-- prog4 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog4" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                dictionary
+            </a>
+        </p>
+        <div class="collapse" id="prog4">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # dictionary is nothoing but key value pairs
+    lis=[]
+    tupl=()
+    dic={} #here both key and values are present
+    set={} #here only values are present
+    print(type(lis))
+    print(type(tupl))
+    print(type(dic))
+    food={"rohan":"momos","sagar":"bread","ankit":"burger","chirag":{"play":"cricket","study":"btech","work":"from home"}}
+    print(food)
+    food["mishra"]="chai"
+    food["sid"]={"juice":"apple","play":"basketball"}
+    food[420]="gaming"
+    print(food)
+    
+    print(food["rohan"])
+    print(food["sagar"])
+    print(food["mishra"])
+    print(food["sid"])
+    print(food["sid"]["juice"])
+    print(food[420])
+    
+    print(food["chirag"])
+    print(food["chirag"]["play"])
+    print(food["chirag"]["study"])
+    
+    #deleting 1
+    del food["sid"]
+    print(food)
+    
+    f1=food #here f1 is not a new dictionary ,it simply pointing the food dictionary
+    del f1["rohan"]  #if we delete rohan from f1 it also deleted from food
+    print(food)
+    #to avoid above situation
+    f2=food.copy()
+    del f2["sagar"]
+    print(food)
+    
+    food["sid"]={"juice":"apple","play":"basketball"}
+    
+    #name of all keys
+    print(food.keys())
+    
+    print(food.items())
+</pre>
+            </div>
+        </div>
+        <!-- prog5 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog5" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                string formatting
+            </a>
+        </p>
+        <div class="collapse" id="prog5">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    #fstrings
+    # importing math module
+    import math
+    
+    # string formatting
+    me="rohan"
+    s=3
+    a="this is %s"%me[1]
+    print(a)
+    b="this is %s %s"%(me,s) # here we made a tupple
+    print(b)
+    
+    
+    name="rohan"
+    number="420"
+    template="my name is {1} and i am {0}" # u can use indexes in them ,if indexes not used then automatically 0 and 1
+    newstr=template.format(name,number) # their indexes are 0 and 1 and so on..
+    print(newstr)
+    
+    # easy way to sting format
+    # use f before string to make it fstring
+    fstr=f"hello guys my name is {name[2]} haha just joking  and i am {number} or {20*21},{math.cos(65)}" # here brackets can't be empty
+    print(fstr)
+</pre>
+            </div>
+        </div>
+        <!-- prog6 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog6" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                guess a no. greater than 100
+            </a>
+        </p>
+        <div class="collapse" id="prog6">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    print("enter a number greater than 100")
+    num=int(input())
+    if num>100:
+        print("congraluations you entered a number greater than 100")
+        exit()
+    while(True):
+        print("try again")
+        num=int(input())
+        if num > 100:
+            print("congraluations you entered a number greater than 100")
+            break
+        else:
+            continue
+    
+    
+</pre>
+            </div>
+        </div>
+        <!-- prog7 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog7" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                apni dictionary
+            </a>
+        </p>
+        <div class="collapse" id="prog7">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    mydictionary={"name":"name is used to identify something",
+    "remote":"it is an electronic device",
+    "bag":"used to carry items from one place to another",
+    "mobile":"it is a n electronic device to intract between people",
+    "speaker":"these are used to play music or sounds at high loud"}
+
+# print("enter a word to find its meaning") OR
+meaning=input("enter a word to find its meaning \n")
+print(mydictionary[meaning])
+</pre>
+            </div>
+        </div>
+        <!-- prog8 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog8" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                aakbhar padkr sunao
+            </a>
+        </p>
+        <div class="collapse" id="prog8">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    #aakbhar  padhke sunaoo
+    import requests
+    # import json
+    # import time
+    from datetime import date
+    def speak(str):
+        from win32com.client import Dispatch
+    
+        speak = Dispatch("SAPI.SpVoice")
+    
+        speak.Speak(str)
+    
+    if __name__ == '__main__':
+    
+        newstopics=["health","technology","sports","entertainment","science"]
+        speak("Today's top 5 latest news are")
+        count=1
+        for topics in newstopics:
+            a = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&category={topics}&to={date.today()}&apiKey=2cebc4ec6c00476dbe6dc94534b4a4fc")
+            dic = a.json()
+            # print(dic["articles"])
+            # print(dic["articles"][0])
+            print(f"news number {count}")
+            speak(f"news number {count}")
+            print(dic["articles"][0]["title"])
+            print(dic["articles"][0]["description"])
+            speak(dic["articles"][0]["title"])
+            speak(dic["articles"][0]["description"])
+            count=count+1
+            print("\n")
+    
+</pre>
+            </div>
+        </div>
+        <!-- prog9 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog9" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                faulty calculator
+            </a>
+        </p>
+        <div class="collapse" id="prog9">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    while(True):
+    print("enter 1st number")
+    num1 = int(input())
+
+    print("enter 2nd number")
+    num2 = int(input())
+
+    print("enter one of these to perform operations: +,-,*,/")
+    operation = input()
+
+    if operation == "+":
+        print(num1 + num2 - 6)
+        a=input("do u want to run again: ")
+        if a=="yes":
+            continue
+        else:
+            break
+
+    elif operation == "-":
+        print(num1 - num2)
+        a=input("do u want to run again: ")
+        if a=="yes":
+            continue
+        else:
+            break
+
+    elif operation == "*":
+        print(num1 * num2 * 7)
+        a=input("do u want to run again: ")
+        if a=="yes":
+            continue
+        else:
+            break
+
+    elif operation == "/":
+        print(num1 / num2)
+        a=input("do u want to run again: ")
+        if a=="yes":
+            continue
+        else:
+            break
+
+    else:
+        print("invalid input of operation")
+        a=input("do u want to run again")
+        if a=="yes":
+            continue
+        else:
+            break
+
+print("program ended")
+</pre>
+            </div>
+        </div>
+        <!-- prog10 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog10" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                random module
+            </a>
+        </p>
+        <div class="collapse" id="prog10">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # modules may contains sub modules and sub modules contain function or modules directly contains function
+    import random
+    import keyword
+    # module ke andar randint function hn
+    random_number=random.randint(0,5)#it gives random no. including 0 and 5,int only 0 1 2 3 4 5
+    print(random_number)
+    
+    #module ke andar random function ha
+    randm=random.random() # generates random no 0 to 1 ,including decimal values
+    randm=random.random()*3  # generate s numvbers frpm 0 to 3
+    print(randm)
+    
+    # choice function in random module
+    # picks one of the list randomly
+    chnllist=["hungama","demigods","codewithharry","indiatv","sonytv"]
+    mychoice=random.choice(chnllist)
+    print(mychoice)
+</pre>
+            </div>
+        </div>
+        <!-- prog11 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog11" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                recursion
+            </a>
+        </p>
+        <div class="collapse" id="prog11">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # recursion means function ka andar function use karna
+    # this below code is not a recursive functiion
+    def factorial_iterative(n):
+        """function to find factorial"""
+        fact=1
+        for i in range(n): #means i starts from 0 to n-1
+            fact=fact*(i+1)
+        return fact
+    
+    def factorial_recursive(n):
+        """functuion to find factorial"""
+        if n==1:
+            return 1
+        else:
+            return n * factorial_recursive(n-1)
+    
+    
+    factorial=int(input("enter the number to find factorial\n"))
+    print("factorial using iterrative method",factorial_iterative(factorial))
+    print("factorial using recursion method",factorial_recursive(factorial))
+    
+    
+    # fibonacci series
+    # 0 1 1 2 3 5 8 13
+    
+    
+    def fibbonaci(n): #here n means kitna number chaia
+        if n==1:
+            return 0
+        elif n==2:
+            return 1
+        else:
+            return fibbonaci(n-1)+fibbonaci(n-2)
+    
+    numwantinfibo=int(input("enter how many numbers u want\n"))
+    print(fibbonaci(numwantinfibo))
+</pre>
+            </div>
+        </div>
+        <!-- prog12 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog12" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                types of operators
+            </a>
+        </p>
+        <div class="collapse" id="prog12">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # operators in python
+
+    # airthmetic operators
+    # assignment operators
+    # comparison operators
+    # logical operators
+    # identity operators
+    # membership operators
+    # bitwise operators
+    
+    print("airthmetic operators")
+    print("5+6 is",5+6)
+    print("5-6 is",5-6)
+    print("5*6 is",5*6)
+    print("5/6 is",5/6) #gives exact value
+    print("10//6 is",10//6) #gives quotient i.e integer
+    print("5**2 is",5**2) # a ke power b
+    print("10%6 is",10%6) # gives remainder
+    
+    print("assignment operators ")
+    x=5
+    print(x)
+    x+=7
+    # x/=7  means x= x/7
+    # x-=7
+    print(x)
+    
+    print("comparison operators ")
+    i=3
+    print(i==5)
+    print(i!=5)
+    print(i>5)
+    print(i<5)
+    
+    print("logical operatirs ")
+    a=True
+    b=False
+    print(a and b)
+    print(a or b)
+    
+    print("identity operators ")
+    print(a is b)
+    print(a is not b)
+    print(int(a is not b))
+    
+    print("membership operatirs ")
+    lst=[34,5,2,3,55,1,2,45,56]
+    print(34 in lst)
+    print(344 in lst)
+    print(344 not in lst)
+    
+    print("bitwise operatirs ")
+    # 0 - 00
+    # 1 - 01
+    # 2 - 10
+    # 3 - 11
+    
+    print(0 & 1)  #00 is 0
+    print(0 | 1)  #01 is 1
+    print(0 | 3)  #11 is 3
+</pre>
+            </div>
+        </div>
+        <!-- prog13 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog13" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                snake,water,gun
+            </a>
+        </p>
+        <div class="collapse" id="prog13">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    import random
+
+    inputs=["snake","water","gun"]
+    chances=1
+    print("this game contains only 10 chances to play")
+    
+    user_score=0
+    computer_score=0
+    while(chances<=10):
+        print(f"enter one of the following , chances left {11-chances}")
+        computer=random.choice(inputs)
+        print(f"{inputs[0]} {inputs[1]} {inputs[2]}")
+        user=input()
+        if user in inputs:
+            if user==computer:
+                print("this time tie")
+            elif user==inputs[0] and computer==inputs[1] :
+                print("this time you won")
+                user_score+=1
+            elif user==inputs[0] and computer==inputs[2]:
+                print("this time computer won")
+                computer_score+=1
+            elif user==inputs[1] and computer==inputs[0]:
+                print("this time computer won")
+                computer_score+=1
+            elif user==inputs[1] and computer==inputs[2]:
+                print("this time you won")
+                user_score+=1
+            elif user==inputs[2] and computer==inputs[0]:
+                print("this time you won")
+                user_score+=1
+            else:
+                print("this time computer won")
+                computer_score+=1
+        else:
+            print("invalid input try again")
+            continue
+        print(f"your choice = {user} , computer choice ={computer}")
+        print(f"your score = {user_score} , computer score ={computer_score}")
+        chances=chances+1
+        continue
+    
+    if user_score>computer_score:
+        print("congratulations !! u won this match")
+    elif user_score<computer_score:
+        print("better luck next time !! computer won the match")
+    else:
+        print("well palyed!! match tied")
+    print("game over")    
+</pre>
+            </div>
+        </div>
+        <!-- prog14 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog14" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                try$except
+            </a>
+        </p>
+        <div class="collapse" id="prog14">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    a=input("enter 1st number: ")
+    b=input("enter 2nd number: ")
+    
+    try:
+        print("sum of these two numbers are",int(a)+int(b))
+    except Exception as error:
+        print(error)
+    
+    print("this is very important")
+    
+</pre>
+            </div>
+        </div>
+        <!-- prog15 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog15" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                else$finally with try$except
+            </a>
+        </p>
+        <div class="collapse" id="prog15">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # else and finally in try except
+
+    # agar aise kuch likhan ha jo agr try me ghusa ya except me ghusa but runn zarur ho then use -finnaly
+    #else= if except run nahi hota then else run hoga varna nahi
+    f1=open("codewithharry.txt")
+    
+    try:
+        f2=open("sagardiet1.txt")
+    
+    #we can write multiple except statements
+    except EOFError as error:
+        print(f"this is EOFError {error}")
+    
+    except IOError as error:
+        print(f"this is IOError {error}")
+        
+    else:
+        print("this is running because excpt is not running")
+    
+    finally:
+        print("run this anyway")
+        f1.close()
+        # f2.close()
+    
+    print("important stuff")
+    
+    
+</pre>
+            </div>
+        </div>
+        <!-- prog16 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog16" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                stringinput$type
+            </a>
+        </p>
+        <div class="collapse" id="prog16">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    var1="hello world "
+    var4="harry bhai"
+    var5="44" #string
+    print(var1)
+    var2=4
+    var3=36.7
+    print(type(var1))
+    print(type(var2))
+    print(type(var3))
+    
+    print(var2+var3)
+    # print(var2+var1) #error occurs
+    print(var1+var4)
+    print(var1+var5)
+    
+    a="20 "
+    b="40"
+    print(a+b) #return string
+    print(int(a)+int(b))
+    #similarly
+    str()
+    int()
+    float()
+    print(var1+"hii")
+    name1="rohan"
+    name2="sagar"
+    print(5*f"hello {a} \n") #string formattting
+    print(5*var1)
+    
+    print(5*str(int(a)+int(b)))
+    
+    
+    print("enter a number")
+    inputnum=input()
+    print("you entered",inputnum)
+    # print("you entered",inputnum+10) #erroe occurs as input() takes the input as string and here u are adding strings nd int
+    print("you entered", inputnum+str(10))
+    print("you entered",int(inputnum)+10)
+    
+    #calculator
+    print("enter 1st number")
+    inp1=input()
+    print("enter 2nd number")
+    inp2=input()
+    print("resultant of the given no is",int(inp1)+int(inp2))
+    
+    
+</pre>
+            </div>
+        </div>
+        <!-- prog17 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog17" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutmain1$import
+            </a>
+        </p>
+        <div class="collapse" id="prog17">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    # writing some imp functions lets suppose
+
+    def printing(string):
+        return f"ya string rohan ko de do {string}"
+    
+    def add(num1,num2):
+        return num1+num2+5
+    
+    # here koi aur file import nahi ki to name ke value main hogi aur agar import ke he to name ke value imported file ka naam
+    print("the name is",__name__)
+    # below code will be absent in other program becoz name ke value main nahi hogi is file ka name hoga in other files
+    if __name__ == '__main__':
+        print(printing("hello harry bhai"))
+        ans=add(2,3)
+        print(ans)
+    
+</pre>
+            </div>
+        </div>
+        <!-- prog18 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog18" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutmain2$import
+            </a>
+        </p>
+        <div class="collapse" id="prog18">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    import tutmain1
+    print(tutmain1.add(4,5))  #here all other function is also running,means pehla saara ka saara content execute hoga file1 ka
+    # to stop the execution of the imported file use main in that imported file
+    # main vala content execute nahi hoga
+        
+</pre>
+            </div>
+        </div>
+        <!-- prog19 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog19" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                guess the number
+            </a>
+        </p>
+        <div class="collapse" id="prog19">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    number=22
+    print("guess the number between 0 to 50,you have 6 chances only")
+    guess_num=int(input())
+    if guess_num==number:
+        print("congraluations your guess is correct , attempts made = 1")
+        print("game over")
+        exit()
+    if guess_num>number:
+        print("no. seems to be lesser, attempts left = 5",end=" ")
+    else :
+        print("no. seems to be greater, attempts left = 5",end=" ")
+    i=1
+    while(True):
+        print("try again")
+        guess_num=int(input())
+        if guess_num == number:
+            i=i+1
+            if i==6:
+                if guess_num == number:
+                    print("congratulations your guess is right", ",attempts made", i)
+                    break
+                else:
+                    print("game over no attempts left")
+                    break
+            print("congratulations your guess is right",",attempts made",i)
+            print("game over")
+            break
+        else:
+            i=i+1
+            if guess_num > number:
+                print("no. seems to be lesser, attempts left =",6-i,end=" ")
+            else:
+                print("no. seems to be greater, attempts left =",6-i,end=" ")
+            if i==6: # upar vala else ke andar
+                print("game over no attempts left")
+                break
+            continue    
+</pre>
+            </div>
+        </div>
+        <!-- prog20 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog20" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                ifelseCalculator
+            </a>
+        </p>
+        <div class="collapse" id="prog20">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    var1=30
+    print("enter a number")
+    var2=int(input())
+    if var2>var1:
+        print("entered number is greater")
+    elif var2==var1: #elif is else if
+        print("both are equal")
+    else:
+        print("entered number is not greater")
+    
+    lst=[34,53,1,2,3,54]
+    
+    print(54 in lst) #here membership operator is used
+    if 2 in lst:
+        print("yea it is present")
+    
+    print(54 not in lst) #ya baat glt ha so fslse is returned
+    if 2 not in lst: #ya baat glt ha to if me nahi jayega
+        print("yea it is present")
+    
+    
+    
+    print("enter your age")
+    age=int(input())
+    
+    if age>18 and age<=100:
+        print("you can drive")
+    elif age==18:
+        print("we can't say")
+    else:
+        print("you cannot drive")    
+</pre>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="python1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="python2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="python3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="python4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="python5.html">5</a></li>
+              <li class="page-item"><a class="page-link" href="python6.html">6</a></li>
+              <li class="page-item"><a class="page-link" href="python7.html">7</a></li>
+              <li class="page-item"><a class="page-link" href="python8.html">8</a></li>
+            </ul>
+          </nav>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

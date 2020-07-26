@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Python Tutorials</h3>
+    </div>
+    <div class="container my-3">
+        <!-- prog41 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog41" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                compression and project
+            </a>
+        </p>
+        <div class="collapse" id="prog41">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # list compresion
+    # for list compresion we used square brackets
+    lst1=[i for i in range(100)] #first i for printing and then for loop annd then condition if required
+    print(lst1)  #prints 0 to 99
+    
+    #numbers divisible by 3
+    ls=[]
+    for i in range(100):
+        if i%3==0:
+            ls.append(i)
+    print(ls)
+    
+    newlst=[i for i in range(100) if i%3==0]
+    print(newlst)
+    
+    
+    # for dictionary compresion we used curly braces with key and value
+    #dictionary compresion
+    dict1= {0:"iten0",1:"item1"} #and so one to write the whole
+    # or
+    # like list
+    
+    # here dictionary is from 1 to 100
+    dictnew={i:f"item{i}" for i in range(1,101)} # you can apply condition also in it
+    print(dictnew)
+    #dictionary compresion is also used to reverse the dictionary means value then key
+    dictnew2={value:key for key,value in dictnew.items()} #can also apply conditions here
+    print(dictnew2,"\n",dictnew) #first reversed vali then simple vali
+    
+    
+    #for set compresion we use curly braces
+    # set compresion
+    dresses={dress for dress in ["dress1","dress1","dress2","dress1","dress2","dress2"]}
+    print(dresses)  # it take only one time because it is a set
+    print(type(dresses))
+    
+    
+    
+    #for generators compresion we used parentehesis
+    #genetaor compresion
+    evens=(i for i in range(100) if i%2==0)
+    print(type(evens))
+    print(id(evens))
+    print(evens) #generator
+    print(evens.__next__()) # only 1 time
+    print(evens.__next__()) # only 1 time
+    print(evens.__next__()) # only 1 time
+    # or use loop
+    print("..............")
+    for i in evens:
+        print(i)
+    
+    
+    
+    
+    # excrcise
+    # sabse pehla kitna items chaiya
+    # for loop chalakr saara items ko input le and then ksi tarah ke compresion bana chata ha list,dict,set and then print kara do
+    #
+    # lst=[1,2,3]
+    # print("enter how many terms u want in your list,set,dictionary")
+    # count=int(input())
+    # print("compresion= press 1 for list, 2 for set , 3 for dictionary")
+    # inp=int(input())
+    #
+    # if inp in lst:
+    #     if inp==1:
+    #         lstitems=[]
+    #         print("enter terms of list")
+    #         for i in range(count):
+    #             l=input()
+    #             lstitems.append(l)
+    #         yourlist=[i for i in lstitems]
+    #         print("your compresion list is")
+    #         print(yourlist)
+    #     if inp==2:
+    #         setitems=[]
+    #         print("enter terms of set")
+    #         for i in range(count):
+    #             s=input()
+    #             setitems.append(s)
+    #         yourset={i for i in setitems}
+    #         print("your compresion set is")
+    #         print(yourset)
+    #     if inp==3:
+    #         dictitems={}
+    #         c=1
+    #         print("enter the key and values of dictionary")
+    #         for i in range(count):
+    #             print(f"term {c} ->")
+    #             keyy = input("enter key :")
+    #             valuee = input("enter value :")
+    #             dictitems[keyy]=valuee
+    #             yourdictionary={key:value for key,value in dictitems.items()}
+    #             c=c+1
+    #         print("your dictionary is")
+    #         print(yourdictionary)
+    # else:
+    #     print("Invalid input, try again")      
+</pre>
+            </div>
+        </div>
+        <!-- prog42 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog42" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                coroutine
+            </a>
+        </p>
+        <div class="collapse" id="prog42">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #coroutine
+
+    def searcher():
+        import time
+        book="this is a book on harry and code with harry and good"
+        time.sleep(4) #assume reading a big book or doing some ml work
+        print("search is started") # it only prints one time whike starting the searcher
+        while True:
+            text=(yield)
+            if text in book:
+                print("your text is found in the book")
+            else:
+                print("text is not found in the book")
+    
+    search=searcher()
+    next(search) # to start the searcher and then no need of starting it it will keep its pointer befor while when anything send to it
+    search.send("harry") # sending to searcher
+    search.send("book on harry") # if again run no time lag/no delay
+    search.send(input("enter text from the book\n")) #no delay as pointer always remain before while
+    
+    search.close() # to free all resources use close       
+</pre>
+            </div>
+        </div>
+        <!-- prog43 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog43" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                coroutine project
+            </a>
+        </p>
+        <div class="collapse" id="prog43">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    def search_names():
+    import time
+    time.sleep(4)
+    fptr=open("names.txt")
+    print("project is started")
+    while True:
+        text=(yield)
+        if text in fptr.read():
+            print(f"{text} is found in this file")
+        else:
+            print("name is not found in this file")
+
+search=search_names()
+print(search) # it will return an object
+print("project is starting...")
+next(search)
+search.send(input("enter the name u want to find\n"))
+search.send(input("enter the name u want to find\n"))
+
+# fptr=open("names.txt")   
+</pre>
+            </div>
+        </div>
+        <!-- prog44 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog44" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                decorators
+            </a>
+        </p>
+        <div class="collapse" id="prog44">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    def func1():
+    print("subscribe now")
+func2=func1 #not () parentheses not used here
+func2()
+del func1
+func2() #it prints becoz ya function 1 ke copy ha
+
+# function ke andar function banana
+#function ke through function ko return karna
+def retfunc(num):
+    if num==0:
+        return print #print is a  built in function.here function ka through fun. ko return karna
+    elif num==1:
+        return sum #sum is a  built in function
+    else:
+        return int #int is an object of class int
+
+print(retfunc(0))
+print(retfunc(1))
+print(retfunc(2))
+
+# passing function as an argument
+def executor(funcname):
+    funcname("this is it")
+
+executor(print)
+
+print(".......................")
+#decorators
+def dec1(func):
+    def nowexc():
+        print("executing now")
+        func()
+        print("executed")
+    return nowexc
+
+# @dec1
+def who_is_harry():
+    print("harry is a good boy")
+
+who_is_harry= dec1(who_is_harry) # or write @above who_is_harry()
+who_is_harry()   
+</pre>
+            </div>
+        </div>
+        <!-- prog45 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog45" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                enumerate function
+            </a>
+        </p>
+        <div class="collapse" id="prog45">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # enumerate
+    listitems=["bhindi","allo","chips","kurkure","chowmine","maggie"]
+    
+    
+    for key,value in enumerate(listitems):
+        if key%2==0:
+            print(f"buy {value}")   
+</pre>
+            </div>
+        </div>
+        <!-- prog46 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog46" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                file1
+            </a>
+        </p>
+        <div class="collapse" id="prog46">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # import flask may got error if flask file name is there in the directory
+    import file2
+    print(file2.a)
+    # or
+    #bad practice as if a is present in file3 and u are importing a from file3 like this to so embquity occurs in below line
+    from file2 import a
+    print(a)
+    
+    # using function of different file
+    import file2
+    file2.printing("\"my name is rohan\"")
+    # u can make a lots of function in a file and then import them in different files,file must be in same directory
+       
+</pre>
+            </div>
+        </div>
+        <!-- prog47 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog47" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                file2
+            </a>
+        </p>
+        <div class="collapse" id="prog47">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    a=10
+    # makinga  afunction
+    def printing(str):
+        print(f"hello u printed {str}")   
+</pre>
+            </div>
+        </div>
+        <!-- prog48 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog48" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                file reading
+            </a>
+        </p>
+        <div class="collapse" id="prog48">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    f= open("rohan.txt","rt") #without r and rt output is same as it is bydefault
+    f1=open("rohan.txt","rb") # opens in binary file
+    content= f.read(10) #if nothing in brackets then full file is read, if no ex. 10 then it read 1st 10 chara.
+    print(content)
+    #if u gave a a no. greater than the no. of characters in the file then it completes the full
+    content= f.read(10) #read next 10 character
+    print(content)
+    
+    content= f1.read()
+    print(content)
+    f.close()
+    f1.close()
+    
+    # to read the file line by line
+    f2=open("rohan.txt")
+    # data=f2.read()
+    
+    for line in f2:
+        print(line,end="")
+    
+    f2.close()
+    
+    print("\n.........................")
+    # another way of reading a line
+    
+    f3=open("rohan.txt")
+    
+    print(f3.readline(),end="")
+    print(f3.readline(),end="")
+    print(f3.readline())
+    
+    f3.close()
+    
+    print("..........................")
+    #if u want to print the whole file in the form of list
+    
+    f4=open("rohan.txt")
+    
+    print(f4.readlines())
+    
+    f4.close()   
+</pre>
+            </div>
+        </div>
+        <!-- prog49 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog49" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                file writing
+            </a>
+        </p>
+        <div class="collapse" id="prog49">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    f=open("rohan.txt","w")
+    f.write("i am going to edit rohan.txt file")
+    f.close()
+    #rerun the above code will remove the above content from that file and then again write the above data
+    
+    f1=open("rohan1.txt","w")
+    f1.write("this file is not made before")
+    f1.close()
+    # #rerun the above code will remove the above content from that file and then again write the above data
+    
+    f2=open("rohan1.txt","a")
+    char=f2.write("\n adding this content in rohan1.txt hahah")
+    print(char) # here no. of character is not affected by rerun it remains same ,its just saying iss barr kitna char add kia
+    f2.close()
+    #rerun the above code will add the above code once again,but make suru used this only,
+    # otherwise
+    # #rerun the above code will remove the above content from that file and then again write the above data
+    
+    
+    # using read and write both
+    fptr=open("rohan.txt","r+") #r+ means read and write both at the same time
+    print(fptr.read())
+    fptr.write("\n i am adding something")
+    print(fptr.read())   
+</pre>
+            </div>
+        </div>
+        <!-- prog50 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog50" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                else with forloop
+            </a>
+        </p>
+        <div class="collapse" id="prog50">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    khana=["roti","sabzi","chawal"]
+    # for ke saat else tab kaam karega jab for loop end jo jayega
+    #list he kahamt ho jaya then end ho jayega for loop ,but if break se end karna ke kosish karoga to else run nahi hoha
+    # but agar break uss condition pr runn karoga jo ha nahi lst me
+    for items in khana:
+        if items=="paratha":
+            break # remove it when u want to run else
+    
+    else:
+        print("for loop pura run hua ha if lst full print hua ya break uspa laga jo tha nahi lst me")   
+</pre>
+            </div>
+        </div>
+        <!-- prog51 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog51" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                funct. cashing
+            </a>
+        </p>
+        <div class="collapse" id="prog51">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    khana=["roti","sabzi","chawal"]
+    # for ke saat else tab kaam karega jab for loop end jo jayega
+    #list he kahamt ho jaya then end ho jayega for loop ,but if break se end karna ke kosish karoga to else run nahi hoha
+    # but agar break uss condition pr runn karoga jo ha nahi lst me
+    for items in khana:
+        if items=="paratha":
+            break # remove it when u want to run else
+    
+    else:
+        print("for loop pura run hua ha if lst full print hua ya break uspa laga jo tha nahi lst me")   
+</pre>
+            </div>
+        </div>
+        <!-- prog52 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog52" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                functions
+            </a>
+        </p>
+        <div class="collapse" id="prog52">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    a=10
+    b=20
+    c= sum((a,b))  #a and b bracket me ayega, it is an inbuilt function
+    print(c)
+    
+    def funcprint(a,b):
+        print("hello guys this is a function", a+b)
+    
+    funcprint(a,b)
+    # docstring
+    def average(a,b):
+        """this is a function to calculate average of two numbers"""
+        avg=(a+b)/2
+        print(avg)
+        return avg
+    
+    v=average(a,b)
+    print(v)
+    
+    print(average.__doc__)   
+</pre>
+            </div>
+        </div>
+        <!-- prog53 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog53" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                generators
+            </a>
+        </p>
+        <div class="collapse" id="prog53">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # Iterable= iter() or __getitem__()  after traversing through string using this method gives iterator
+    # Iterator - __next__()
+    # Iteration -
+    
+    #generator are like iterators ,jinko hum ek bar traverse kar sakta ha
+    # range is a generator which generates values on the fly (means at the running of program)
+    
+    #making our own generators
+    
+    def gen(n):
+        for i in range(n):
+            yield i   #on the fly generate karga means ya generator ha  # can try return here also and see difference
+    
+    g=gen(5) #they run one time and can sava ram # here ya generate karna ka capable ha but abhi karna nahi chata generate
+    # like a normal range and nam hum store karke rakhna chata #nahi to ek list banani padte
+    
+    print(g.__next__())
+    print(g.__next__())
+    print(g.__next__())
+    print(g.__next__())
+    print(g.__next__())
+    # print(g.__next__()) error as it runs till 4
+    
+    # OR
+    
+    for i in g:
+        print(i)
+    
+    h="harry" #string obj is iterable u can check but int obj. is not iterable like h=43546
+    # for c in h:
+    #     print(c)
+    #completely iterable so used iter by commenting above lines
+    print(iter(h))
+    ier=iter(h)
+    print(ier.__next__())
+    print(ier.__next__())
+    print(ier.__next__())
+    print(ier.__next__())
+    print(ier.__next__())
+    # print(ier.__next__()) error stop iteration       
+</pre>
+            </div>
+        </div>
+        <!-- prog54 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog54" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                health management sys.
+            </a>
+        </p>
+        <div class="collapse" id="prog54">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #health management system
+    names=["harry","rohan","sagar"]
+    input1=["harryexercise.txt","rohanexercise.txt","sagarexercise.txt"]
+    input2=["harrydiet.txt","rohandiet.txt","sagardiet.txt"]
+    print("choose one of your students")
+    
+    def getdate():
+        import datetime
+        return datetime.datetime.now()
+    
+    def ret_names():
+        i=0
+        for values in names:
+            i=i+1
+            print("press",i,"for",values)
+    
+    ret_names()
+    
+    member=int(input())
+    while(True):
+        j=[1,2,3]
+        if member in j:
+            print("press 1 to retrive data")
+            print("press 2 to insert data")
+            data=int(input())
+            if data==1:
+                p=[1,2,3]
+                if member in p:
+                    print("student report:")
+                    print("/n")
+                    fptr = open(input1[member - 1])
+                    print("excercise")
+                    print(fptr.read())
+                    fptr.close()
+                    fptr = open(input2[member - 1])
+                    print("diet")
+                    print(fptr.read())
+                    fptr.close()
+                    break
+            elif data==2:
+                print("press 1 to add excercise", )
+                print("press 2 to add diet")
+                work = int(input())
+                n = [1, 2, 3]
+                if work == 1:
+                    if member in n:
+                        ex = open(input1[member - 1], "a")
+                        print("enter the excercise")
+                        exe = input()
+                        ex.write(str(getdate()))
+                        ex.write(" ")
+                        ex.write(exe)
+                        ex.write("\n")
+                        print("excercise added")
+                        ex.close()
+                        break
+    
+                elif work == 2:
+                    if member in n:
+                        di = open(input2[member - 1], "a")
+                        print("enter the diet")
+                        diet = input()
+                        di.write(str(getdate()))
+                        di.write(" ")
+                        di.write(diet)
+                        di.write("\n")
+                        print("diet added")
+                        di.close()
+                        break
+    
+                else:
+                    print("invalid input")
+                    break
+    
+            else:
+                print("invalid input")       
+</pre>
+            </div>
+        </div>
+        <!-- prog55 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog55" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                healthy programmer
+            </a>
+        </p>
+        <div class="collapse" id="prog55">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #healthy programmer
+    # 9 am- 5pm
+    # water - water.mp3(3.5ltrs) Drank - log - every 40 min
+    # eyes- eyes.mp3 every 30 min - EyDone - log - Every 30 min
+    # physical activiteies - physical.mp3 every - 45 min - ExDone - log
+    
+    
+    from pygame import mixer
+    from datetime import datetime
+    import time
+    def musiconloop(file,stopper):
+        mixer.init()
+        mixer.music.load(file)
+        mixer.music.play()
+        while True:
+            a=input()
+            if a == stopper:
+                mixer.music.stop()
+                break
+    
+    def log_now(msg):
+        with open("mylogs.txt","a") as f:
+            f.write(f"{msg} {datetime.now()}\n")#gives current timestamp
+    
+    
+    if __name__ == '__main__':
+        # musiconloop("water","stop")
+        init_water=time.time() # assume it as 0 sec.
+        init_eyes=time.time()
+        init_excercise=time.time()
+        watersecs = 5 #multoply them by 60 to converts to min
+        eyessecs= 20
+        exsecs= 10
+        while True:
+            if time.time()-init_water>watersecs:
+                print("water drinking time. Enter 'drank' to stop the alarm")
+                musiconloop("water","drank")
+                init_water=time.time()
+                log_now("drank water at")
+    
+            if time.time()-init_excercise>exsecs:
+                print("physcial excercise time. Enter 'exdone' to stop the alarm")
+                musiconloop("physical","exdone")
+                init_excercise=time.time()
+                log_now("physical excercise at")
+    
+            if time.time()-init_eyes>eyessecs:
+                print("eyes excercise time. Enter 'eyesdone' to stop the alarm")
+                musiconloop("eyess","eyesdone")
+                init_eyes=time.time()
+                log_now("eyes excercise at")       
+</pre>
+            </div>
+        </div>
+        <!-- prog56 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog56" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                join funct.
+            </a>
+        </p>
+        <div class="collapse" id="prog56">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    lst=["rohan","sagar","harry","ankit","chirag","ayan"]
+    #to acces all
+    
+    # for names in lst:
+    #     print(f"{names} and",end=" ")
+    
+    # another way
+    
+    nameslst=" and ".join(lst) #here in quotes we can use anything
+    
+    print(f"{nameslst} are my friends")   
+</pre>
+            </div>
+        </div>
+        <!-- prog57 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog57" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                json module
+            </a>
+        </p>
+        <div class="collapse" id="prog57">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    import json
+
+    # making json - javascript object notation from string
+    data='{"var1":"harry bhai","var2":23}'
+    print(data) #its is clearly a string
+    # print(data["var1"]) #gives syntax error
+    
+    parsed=json.loads(data) #here json is parsed
+    print(parsed)
+    print(parsed["var1"])
+    
+    # json.load() is used to read a json file
+    
+    # below is already a json file
+    data2={
+        "fridge": (540, "roti"),
+        "channel_name":"codewithharry",
+        "class":12,
+        "cars":["lamborgini","audi","jaguar"],
+        "isbad":False #in python F is capital and f in javascript to make it compatible we use
+    }
+    
+    jscompact=json.dumps(data2)
+    print(jscompact)
+    
+    # what is sort keys parameter is dumps
+    # it prints by alphabetical order of keys
+    
+    # all keys are sorted to alphabetical order of keys
+    so=json.dumps(data2,sort_keys=True)
+    print(so)       
+</pre>
+            </div>
+        </div>
+        <!-- prog58 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog58" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                key$values in py.
+            </a>
+        </p>
+        <div class="collapse" id="prog58">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    names=["rohan","sagar","ankit","chirag"] #list
+    name=("rohan","sagar","ankit","chirag") #tupple
+    for item in name: #membership operator
+        print(item)
+    
+    # for lists of list
+    lolly=[["rohan",5],["mukesh",12],["himesh",7]]
+    for item in lolly:
+        print(item)
+    
+    for key,value in lolly:
+        print(key,"eats",value,"lollypop")
+    
+    dict1=dict(lolly)    # converting list of list to dictionnary
+    print(dict1)
+    
+    for item in dict1:#to print keys correct
+        print(item)
+    
+    # for key,value in dict1: #error,cannot print keys and values
+    #     print(key,"eats",value,"lollypop")
+    
+    # use
+    for key,value in dict1.items():
+        print(key,"eats",value,"lollypop")
+    
+    
+    ex=["rohan",44,"uday",45,2,11,1,"mukesh",3,6,87,98]
+    for value in ex:
+        if str(value).isnumeric():  # first convert to str
+            if value>6:
+                print(value)
+    
+    print(".....................")
+    for value in ex:
+        if str(value).isnumeric() and value>6:
+            print(value)   
+</pre>
+            </div>
+        </div>
+        <!-- prog59 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog59" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                lambda func.
+            </a>
+        </p>
+        <div class="collapse" id="prog59">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # lambda functions or anonymous functions
+    # you can call them as one liner functions
+    #
+    # def minus(a,b):
+    #     return a-b
+    
+    # or
+    minus = lambda a,b:a-b
+    print(minus(10,3))
+    
+    def funcname(lst):
+        return lst[1] # return first index of lst
+    
+    lst=[[1,14],[5,6],[8,23],[0,0],[3,9]]  # sabka first index ka acc incresing number me arrange ho jayenga
+    # lst.sort(key=funcname) # here key is an argument of sort which takes the name of function,here using the normal functions
+    lst.sort(key=lambda lst:lst[1]) # here key is an argument of sort which takes the name of function,here using lambda functions
+    print(lst)   
+</pre>
+            </div>
+        </div>
+        <!-- prog60 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog60" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                list concepts
+            </a>
+        </p>
+        <div class="collapse" id="prog60">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #lists
+    items=["harpic","toothpaste","sabun","clothes",56]
+    print(items)
+    print(items[0])
+    print(items[4])
+    numbers=[34,53,42,55,23,12]
+    print(numbers)
+    print(numbers[2])
+    print(numbers.sort()) #returns null
+    numbers.sort()
+    print(numbers)
+    
+    itms=[47,4,3,2,44,667,3]
+    itms.reverse()
+    print(itms)
+    print("........................")
+    n=[34,53,42,55,23,12]
+    print(n[:])
+    print(n[1:])
+    print(n[1:4])
+    
+    print(n[::])
+    print(n[::2])
+    print(n[::-2]) #it only work when first and second place is empty
+    print(n[1:4:-2]) #it does not work
+    
+    n.append(100)
+    n.append(10)
+    n.append(100)
+    n.append(20)
+    n.append(50)
+    
+    n.insert(2,56) #index 2 pr 56 insert ho jayega
+    n.remove(100) #1st 100 remove hoga
+    n.pop()
+    
+    n[3]=65 #here list is cchanged if u want yoyr lists will ot change then use tuppel
+    
+    print(n)
+    print(len(n))
+    print(max(n))
+    print(min(n))
+    # mutable-can change ,lists are mutable
+    # immautable- cannot change,tupples are immutable
+    tupp=(3,45,3,21,3) #parenthesis
+    # tupp[1]=33 #cannot do as it is immutable
+    # tupp.remove(3)
+    print(tupp)
+    
+    # traditional way of swapping 2 numbers
+    a=2
+    b=4
+    temp=a
+    a=b
+    b=temp
+    print("value of a and b are",a,"and",b)
+    # using python
+    c=33
+    d=21
+    c,d=d,c
+    print("value of c and d are",c,"and",d)       
+</pre>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="python1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="python2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="python3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="python4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="python5.html">5</a></li>
+              <li class="page-item"><a class="page-link" href="python6.html">6</a></li>
+              <li class="page-item"><a class="page-link" href="python7.html">7</a></li>
+              <li class="page-item"><a class="page-link" href="python8.html">8</a></li>
+            </ul>
+          </nav>
+    </div>
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

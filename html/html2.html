@@ -1,0 +1,1535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to html and css Tutorials</h3>
+    </div>
+    <div class="container my-3">
+        <!-- prog21 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog21" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                flex-box
+            </a>
+        </p>
+        <div class="collapse" id="prog21">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;flexbox&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;style&gt;
+    .container{
+        height: 544px;
+        width:100%;
+        border:2px solid black;
+        display:flex;
+        /* properties for flex box */
+        /* by default flex-direction: row */
+        /* flex direction defines the direction of flex items */
+        flex-direction: row;
+        /* flex-direction:column ;
+        flex-direction:row-reverse ;
+        flex-direction:column-reverse; */
+        /* flex rap is by default no rap */
+        /* flex-wrap: wrap; */
+        /* flex-wrap:wrap-reverse ; */
+        /* to adjust flex direction and flex  wrap simultaneously  */
+        /* flex-flow: row-reverse wrap ; */
+        /* left aur right me space ,vertically line ke accross centre ho jyega*/
+        /* justify-content: center; */
+        /* har do dabbo ka beech me baraba spacs and left and right me no space */
+        /* justify-content: space-between;
+        even spaces between container and boxes
+        justify-content: space-evenly; */
+        /* ek dabba ke dono direction me equal space  */
+        /* justify-content: space-around; */
+        /* align properties for centre bilkul center me  ,horizontal line ke along items centre ho jayenga*/
+        /* align-items: center; */
+        /* bilul niche */
+        /* align-items:flex-end ; */
+        /* bilkul upar */
+        /* align-items: flex-start; */
+        /* spaces while shrinking remains constant but first change height of flex items  */
+        align-items: stretch;
+    }
+    .item{
+        width:200px;
+        height:200px;
+        background-color: tomato;
+        border:2px solid rgb(30, 230, 12);
+        margin:10px;
+        padding:3px;
+        /* properties of flex items  */
+    
+    }
+    #item1{
+        /* more the order later it shows up in the container  */
+        /* order: 1; */
+        flex-shrink: 2;
+    /* flex-grow: 2; */
+    /* flex-basis: 160px; */
+    /* when flex direction set to row then control width  */
+    /* when flex direction is set to colume it control height  */
+    }
+    #item2{
+    /* order:4; */
+    /* flex-grow: 3; */
+    flex-shrink: 3;
+    }
+    #item3{
+    /* for using all parameters - flew grow,flex shrink,flex basis */
+    /* flex: 2 2 230px; */
+    align-self: flex-end;
+    align-self: flex-start;
+    align-self: center;
+    }
+    &lt;/style&gt;
+    &lt;body&gt;
+        &lt;h1&gt;this is flexbox tutorial&lt;/h1&gt;
+        &lt;div class="container"&gt;
+        &lt;div class="item" id="item1"&gt;first box&lt;/div&gt;
+        &lt;div class="item" id="item2"&gt;second box&lt;/div&gt;
+        &lt;div class="item" id="item3"&gt;third box&lt;/div&gt;
+        &lt;!-- &lt;div class="item" id="item4"&gt;fourth box&lt;/div&gt; --&gt;
+        &lt;!-- &lt;div class="item" id="item5"&gt;fifth box&lt;/div&gt; --&gt;
+        &lt;!-- &lt;div class="item" id="item6"&gt;sixth box&lt;/div&gt; --&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog22 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog22" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                size units
+            </a>
+        </p>
+        <div class="collapse" id="prog22">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;size units&lt;/title&gt;
+        &lt;style&gt;
+            html{
+                font-size: 25px;
+            }
+            .container{
+                /* height:300px; */
+                /* view port height  */
+                height:100vh;
+                width:100vw;
+                /* for 50%use 50vh or 50vw */
+                border:2px solid red;
+                font-size: 10px;
+            }
+            h1{
+                text-align: center;
+            }
+            #first{
+                /* parent ke font size ka 3 times by deafult font size is 16px but i overright as 10px */
+                /* in font size it is 3 times  i.e 30px size*/
+                font-size: 3em;
+                /* padding size is 3 times of font size: i.e 90px  ; */
+                padding:3em;
+                /* for not chaning multiple use rem; */
+            }
+            #second{
+                font-size: 3rem;
+                padding:3rem;
+            }
+            /* for more search-compherensive guide for rem and em  */
+    
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="first"&gt;this is heading&lt;/h1&gt;
+        &lt;h1 id="second"&gt;this is heading&lt;/h1&gt;
+        &lt;h1 id="third"&gt;this is heading&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog23 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog23" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                media queries
+            </a>
+        </p>
+        <div class="collapse" id="prog23">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;meadia queries&lt;/title&gt;
+    &lt;style&gt;
+        .boxes{
+            background-color: red;
+            color:white;
+            font-size: 72px;
+            text-align: center;
+            display:none;
+        }
+        /* below line ka mtlb kam se km 0 width and max X width ha then display it block */
+        /* i dont know what the hell is doing in my laptop just use max and then min  */
+        /* agar hum un devices ko support nahi karna jo aur media types ke lia bana ha then use only screen and what the fuck not working */
+        @media (max-width: 300px){
+            #box1{
+                display:block;
+            }
+        }
+        @media (max-width: 500px) and (min-width: 300px){
+            #box2{
+                display:block;
+                background-color: greenyellow;
+               
+            }
+        }
+      
+          @media (max-width: 800px) and (min-width: 500px){
+            #box3{
+                display:block;
+                background-color: yellow;
+                color:black;
+            }
+        } 
+        @media (min-width:800px){
+            #box4{
+                display:block;
+                background-color: green;
+            }
+        } 
+        /* for more search media types in css */
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="boxes" id="box1"&gt;me ek iphone hu&lt;/div&gt;
+        &lt;div class="boxes" id="box2"&gt;me ek tablet hu&lt;/div&gt;
+        &lt;div class="boxes" id="box3"&gt;me ek  desktop computer hu&lt;/div&gt;
+        &lt;div class="boxes" id="box4"&gt;me ek widecomputer hu&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog24 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog24" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                more on selectors
+            </a>
+        </p>
+        <div class="collapse" id="prog24">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;More on selectors&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;style&gt;
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+    
+        /* if p is contained by any li which is contained by div */
+        /* div li p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+    
+        /* if p is right inside div then this CSS will be applied */
+        /* div &gt; p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+    
+        /* if p is right after div i.e p is the next sibling of div*/
+        div + p{
+            color: white;
+            background-color: rgb(238, 137, 137);
+        }
+    
+    &lt;/style&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is more on selectors&lt;/h1&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;ul&gt;
+                    &lt;li class="item"&gt;&lt;p&gt; this is another paragraph inside li&lt;/p&gt;&lt;/li&gt; 
+                    &lt;li&gt;this will not get affected&lt;/li&gt;
+                    &lt;p&gt;this is a para inside ul&lt;/p&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;This is a paragraph&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;p&gt;This is another paragraph&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;this is outermost paragraph&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog25 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog25" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                Attribute and nth child pseudo selectors
+            </a>
+        </p>
+        <div class="collapse" id="prog25">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;Attribute and nth child pseudo selectors&lt;/title&gt;
+        &lt;style&gt;
+            .container {
+                display: block;
+                width: 233px;
+                margin: auto;
+            }
+    
+            input {
+                display: block;
+            }
+    
+            input[type='text'] {
+                padding: 23px;
+                border: 2px solid red;
+            }
+    
+            a[target] {
+                font-size: 44px;
+                color: violet;
+            }
+    
+            a[target='_self'] {
+                font-size: 14px;
+                color: rgb(13, 22, 151);
+            }
+    
+            input[type='email'] {
+                color: yellow;
+                border: 4px solid black;
+            }
+    
+            /* This will apply css for third child */
+            /* li:nth-child(3){
+            color: cyan;
+        }
+    
+        li:nth-child(2n+0){
+            color: red;
+        } */
+    
+            li:nth-child(3n+3) {
+                color: red;
+            }
+    
+            /* Odd child */
+            /* li:nth-child(odd){
+            background-color: yellow;
+        } */
+    
+            /* Even child */
+            li:nth-child(even) {
+                background-color: yellow;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;h1&gt;&lt;a href="http://google.com" target="_blank"&gt;Go to google&lt;/a&gt;&lt;/h1&gt;
+            &lt;h1&gt;&lt;a href="http://facebook.com" target="_self"&gt;Go to Facebook&lt;/a&gt;&lt;/h1&gt;
+            &lt;form action="" class="form-control"&gt;
+                &lt;input type="text" placeholder="Enter your name"&gt;
+                &lt;input type="email" placeholder="Enter your email"&gt;
+                &lt;input type="password" placeholder="Enter your password"&gt;
+                &lt;input type="submit" value="Submit"&gt;
+            &lt;/form&gt;
+            &lt;ul&gt;
+                &lt;li class="item" id="item-1"&gt;Item1&lt;/li&gt;
+                &lt;li class="item" id="item-2"&gt;Item2&lt;/li&gt;
+                &lt;li class="item" id="item-3"&gt;Item3&lt;/li&gt;
+                &lt;li class="item" id="item-4"&gt;Item4&lt;/li&gt;
+                &lt;li class="item" id="item-5"&gt;Item5&lt;/li&gt;
+                &lt;li class="item" id="item-6"&gt;Item6&lt;/li&gt;
+                &lt;li class="item" id="item-7"&gt;Item7&lt;/li&gt;
+                &lt;li class="item" id="item-8"&gt;Item8&lt;/li&gt;
+                &lt;li class="item" id="item-9"&gt;Item9&lt;/li&gt;
+                &lt;li class="item" id="item-10"&gt;Item10&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog26 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog26" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                doc. before and after
+            </a>
+        </p>
+        <div class="collapse" id="prog26">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Documentbefore and after psuedo selectors&lt;/title&gt;
+        &lt;!-- use source unsplash.com for random images --&gt;
+        &lt;style&gt;
+            body {
+                background-color: black;
+                color: white;
+                margin: 0px;
+                padding: 0px;
+                /* but text is not clear then use opacity to make background buller,learn about opacity */
+            }
+    
+            header ::before {
+                content: "";
+                background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left:0;
+                /* harry use opacity 0.5; less the opacity buller the image*/
+                opacity: 0.1;
+            }
+    
+            /* section::before{
+                content:"this is content";
+            }
+            section::after{
+                content: "this is content";
+            } */
+            section {
+                display: flex;
+                flex-direction: column;
+                /* border: 2px solid red; */
+                margin: 3px 230px;
+                align-items: center;
+                height: 344px;
+                /* we want iss height me bhi items center aa jye  */
+                justify-content: center;
+    
+            }
+    
+            li {
+                list-style: none;
+                padding: 20px 23px;
+            }
+    
+            .navigation {
+                flex-direction: row;
+                display: flex;
+                /* border: 2px solid yellow; */
+                font-size: 20px;
+            }
+    
+            h1 {
+                font-size: 4rem;
+            }
+    
+            p {
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;nav class="navbar"&gt;
+                &lt;ul class="navigation"&gt;
+                    &lt;li class="item"&gt;home&lt;/li&gt;
+                    &lt;li class="item"&gt;about&lt;/li&gt;
+                    &lt;li class="item"&gt;services &lt;/li&gt;
+                    &lt;li class="item"&gt;contact us&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;h1&gt;welcomt to coading world&lt;/h1&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa magni eligendi dolor unde rem dicta error
+                quis tempora sed enim quam excepturi consequuntur laboriosam maxime ea cumque rerum debitis libero
+                quisquam, ipsam atque autem.&lt;/p&gt;
+        &lt;/section&gt;
+        
+    &lt;/body&gt;
+    
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog27 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog27" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                box-shadow$text-shadow
+            </a>
+        </p>
+        <div class="collapse" id="prog27">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;box shadow and text shadow&lt;/title&gt;
+        &lt;style&gt;
+            .container {
+                display: flex;
+            }
+    
+            .card {
+                padding:23px 12px;
+                margin:23px 12px;
+                /* border:2px solid red; */
+                background-color: burlywood;
+                /* box-shadow: offset-x offset-y color; */
+                box-shadow: 5px 8px red;
+                /* these no. can be negative  */
+                box-shadow: -5px -8px red;
+                /* for blur radius third one is blur px,blur radius is used to blur the color therefore it spread box shadow */
+                /* box-shadow: offset-x offset-y blurradius color; */
+                box-shadow: 5px 8px 10px red;
+                /* spread radius  */
+                /* box-shadow: offset-x offset-y blurradius spreaDradius color ; */
+                /* a means alpha , it defines darkness of color */
+                /* box-shadow: -5px -8px 10px 34px rgba(70, 224, 137, 0.4); */
+                /* inset means shadow increase inside the box by default it is offset  */
+                /* box-shadow: inset 11px 27px green; */
+                /* for multiple shadow  */
+                box-shadow: 25px 5px red, 3px 35px green;
+    
+            }
+            .card h2{
+                /* text-shadow: 1px 3px white; */
+                /* blur can also be used to blur the shadow  */
+                /* text-shadow: 6px 3px 3px white; */
+                /* text of shadow uppar ke taraf */
+                text-shadow: -6px -3px 3px white;
+    
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="card" id="card1"&gt;
+                &lt;h2&gt;this is C++ course&lt;/h2&gt;
+                &lt;p&gt; this is c++ course which does not mean that we will stop this course. we will continue this course  to completion .Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dicta in consectetur eos cupiditate aliquid autem ullam iusto voluptatum ipsam, reiciendis nulla quasi, velit quos alias, animi fuga voluptatem officiis suscipit! Odio, corporis doloribus.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="card" id="card2"&gt;
+                &lt;h2&gt;this is html course&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, laudantium perspiciatis corrupti quia commodi voluptatum totam earum vel. Inventore ipsa nemo et repudiandae praesentium nisi voluptas. Totam ab natus similique temporibus hic consequatur? Asperiores!&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="card" id="card3"&gt;
+                &lt;h2&gt;card3&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique, ex odio, ullam mollitia numquam dicta earum veritatis soluta amet, commodi eligendi! Sequi ipsa sed quas ducimus beatae quam totam dolorem consequuntur odio reprehenderit!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog28 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog28" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                css variables/custom prop.
+            </a>
+        </p>
+        <div class="collapse" id="prog28">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Variables/Custom Properties&lt;/title&gt;
+        &lt;style&gt;
+            :root{
+                --primary-color: blue;
+                --danger-color: red;
+                --maxw: 333px;
+            }
+            .box{
+                width:200px;
+                height: 200px;
+                background-color: var(--primary-color);
+                border: 2px solid var(--danger-color);
+                box-shadow: 3px 3px var(--box-color);
+                margin: 2px 9px;
+            }
+            .container{ 
+                width: var(--maxw);
+                margin: auto;
+                background-color: var(--danger-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* background-color: var(--box-color); */
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;div class="box"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog29 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog29" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                keyframes$animation
+            </a>
+        </p>
+        <div class="collapse" id="prog29">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;keyframes and animations&lt;/title&gt;
+        &lt;style&gt;
+            .container {
+                /* display: flex; */
+                background-color: yellow;
+            }
+    
+            .box {
+                background-color: green;
+                width: 250px;
+                height: 250px;
+                position: relative;
+                animation-name: rohan2;
+                animation-duration: 8s;
+                animation-iteration-count: 1;
+                /* for iteration count infinite */
+                /* animation-iteration-count: infinite; */
+                /* to make stop animation after all effects like in foreward foreward me rukega */
+                /* animation-fill-mode: forwards;
+                animation-fill-mode: backwards;
+                animation-fill-mode: alternate; */
+                /* animation-timing-function: ease-in; */
+                /* animation-timing-function: ease-out; */
+                /* animation-timing-function: ease-out;
+                animation-timing-function: ease-in-out; */
+                /* means animation 3s tk ginti karega then chalu hoga  */
+                /* animation-delay: 3s; */
+                /* animation-direction: many ways; */
+                /* ulta chlega in animation revers */
+                /* animation-direction:reverse; */
+    /* shorthand properties of animation  */
+    /* anaimation:animation-name animation-duration animation-timing-function delay animation-iteration-count animation animation-fill-mode */
+    animation:rohan2 5s ease-in 1s 10 backwards;
+            }
+    
+            /* how to make animation */
+            @keyframes rohan1 {
+    
+                /* two things are there in animation  */
+                from {
+                    width: 200px;
+                }
+    
+                to {
+                    width: 700px;
+                }
+            }
+    /* one more way to do animation */
+            @keyframes rohan2 {
+                0% {
+                    top: 0px;
+                    left: 0px;
+                }
+    
+                25% {
+                    top: 0px;
+                    left: 250px;
+                }
+                75% {
+                    top: 250px;
+                    left: 250px;
+                }
+    
+                100% {
+                    top: 250px;
+                    left: 0px;
+                }
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="box"&gt;
+                this is box
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog30 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog30" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                css transtions
+            </a>
+        </p>
+        <div class="collapse" id="prog30">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Transitions&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;style&gt;
+        body{
+            background-color: black;
+        }
+        #box{
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            /* transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s; */
+    
+            /* Transition short hand property in one line */
+            /* transition: background-color 1s ease-in-out 2s; */
+    
+            
+            transition: all 1s ease-in-out .3s;
+        }
+        
+        #box:hover{
+            background-color: green;
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+            font-size: 45px;
+    
+        }
+    
+    &lt;/style&gt;
+    &lt;body&gt;
+        &lt;h3&gt;This is CSS Transition Tutorial&lt;/h3&gt;
+        &lt;div class="container"&gt;
+            &lt;div id="box"&gt;
+                This is my box
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;     
+</pre>
+            </div>
+        </div>
+        <!-- prog31 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog31" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                transform attribute
+            </a>
+        </p>
+        <div class="collapse" id="prog31">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+    
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: yellowgreen;
+                height: 80vh;
+            }
+    
+            .box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: brown;
+                border: 2px solid black;
+                border-radius: 8px;
+                height: 400px;
+                width: 400px;
+                /* transform:rotate(45deg); */
+                transition: all 0.5s ease-in-out;
+            }
+    
+            .box:hover {
+                /* transform: rotate(45deg); */
+                /* transform: rotate(360deg); */
+                /* transform: skew(40deg); */
+                /* scale ke andar no. utna he bada  */
+                /* transform: scale(2); */
+                /* move in positive direction of x axis  for -x axis use negative pixels*/
+                /* transform:translateX(-123px); */
+                /* for movement in negative y axis use positive value and vice versa  */
+                transform: translateY(150px);
+                transform: translateY(-150px);
+                /* for using both x and y movement */
+                transform: translate(150px, 150px);
+                /* we can move in all posibble direction */
+    
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="box"&gt;
+                this is a box
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog32 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog32" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                css grid tutorial
+            </a>
+        </p>
+        <div class="collapse" id="prog32">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Grid Tutorial&lt;/title&gt;
+        &lt;style&gt;
+        .container{
+            display: grid;
+            /* grid-template-columns: 300px 100px 100px; */
+            /* grid-template-columns: 300px auto 100px; */
+            /* grid-template-columns: 1fr 4fr 1fr; */
+            grid-template-columns: repeat(3, auto);
+            /* above is like 1 fr 1fr 1fr */
+            /* grid-gap: 2rem; */
+        }
+        .item{
+            /* height: 100px;
+            width: 100px; */
+            background-color: red;
+            border: 2px solid black;
+            padding: 15px 5px;
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="item"&gt;This is Item-1&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-2&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-3&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-4&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-5&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-6&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-7&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-8&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-9&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-10&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-11&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-12&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-13&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-14&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-15&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-16&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-17&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-18&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-19&lt;/div&gt;
+            &lt;div class="item"&gt;This is Item-20&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog33 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog33" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                more on css grid
+            </a>
+        </p>
+        <div class="collapse" id="prog33">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Grid &lt;/title&gt;
+        &lt;style&gt;
+        .grid{
+            display: grid;
+            grid-template-rows: 1fr 1fr 4fr;
+            grid-auto-rows: 2fr;
+            grid-template-columns: repeat(4, 2fr);
+            /* grid-gap: 1rem; */
+            grid-column-gap:32px;
+            grid-row-gap: 5px;
+        }
+        .box{
+            background-color: red;
+            border: 2px solid black;
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="grid"&gt;
+            &lt;div class="box"&gt;This is box-1&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-2&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-3&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-4&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-5&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-6&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-7&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-8&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-9&lt;/div&gt;
+            &lt;div class="box"&gt;This is box-10&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog34 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog34" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                more on css grid(2)
+            </a>
+        </p>
+        <div class="collapse" id="prog34">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Grid&lt;/title&gt;
+        &lt;style&gt;
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            /* grid-column-gap: 7rem;
+            grid-row-gap: 1rem; */
+            grid-gap: 1rem;
+            
+    
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(228, 188, 228);
+            padding: 23px;
+        }
+        .box:first-child{
+            /* grid-column-start: 1; */
+            /* grid-column-end: 3; */
+            /* grid-row-start: 1;  */
+            /* grid-row-end: 3;  */
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 3;
+    
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="box"&gt;Item-1&lt;/div&gt;
+            &lt;div class="box"&gt;Item-2&lt;/div&gt;
+            &lt;div class="box"&gt;Item-3&lt;/div&gt;
+            &lt;div class="box"&gt;Item-4&lt;/div&gt;
+            &lt;div class="box"&gt;Item-5&lt;/div&gt;
+            &lt;div class="box"&gt;Item-6&lt;/div&gt;
+            &lt;div class="box"&gt;Item-7&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog35 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog35" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                more on css grid(3)
+            </a>
+        </p>
+        <div class="collapse" id="prog35">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Grid&lt;/title&gt;
+        &lt;style&gt;
+            .container{ 
+                display: grid; 
+                grid-gap: 1rem;
+                /* grid-template-columns: 112px 112px 112px;  */
+                /* grid-template-columns: 1fr 1fr 1fr;  */
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                /* justify-content: center;  */
+            }
+            .box{
+                border: 2px solid black;
+                background-color: rgb(245, 187, 101);
+                padding: 34px; 
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="box"&gt;Item-1&lt;/div&gt;
+            &lt;div class="box"&gt;Item-2&lt;/div&gt;
+            &lt;div class="box"&gt;Item-3&lt;/div&gt;
+            &lt;div class="box"&gt;Item-4&lt;/div&gt;
+            &lt;div class="box"&gt;Item-5&lt;/div&gt;
+            &lt;div class="box"&gt;Item-6&lt;/div&gt;
+            &lt;div class="box"&gt;Item-7&lt;/div&gt;
+            &lt;div class="box"&gt;Item-8&lt;/div&gt;
+            &lt;div class="box"&gt;Item-9&lt;/div&gt;
+            &lt;div class="box"&gt;Item-10&lt;/div&gt;
+            &lt;div class="box"&gt;Item-11&lt;/div&gt;
+            &lt;div class="box"&gt;Item-12&lt;/div&gt;
+            &lt;div class="box"&gt;Item-13&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;    
+</pre>
+            </div>
+        </div>
+        <!-- prog36 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog36" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                more on css grid(4)
+            </a>
+        </p>
+        <div class="collapse" id="prog36">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+            &lt;title&gt;CSS Grid &lt;/title&gt;
+            &lt;style&gt;
+            .container{
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas: 
+                'navbar navbar navbar navbar' 
+                /* puri row navbar lega */
+                'section section section aside'
+                /* 3 fr section lega and 1 fr aside lega */
+                'footer footer footer footer ';
+                /* puri row footer lega  */
+            }
+            .item{
+                background-color: yellow;
+                border: 3px solid black;
+                padding: 12px 23px;
+            }
+            #navbar{
+                grid-area: navbar;
+            }
+            #section{
+                grid-area: section;
+            }
+            #aside{
+                grid-area: aside;
+            }
+           footer{
+                grid-area: footer;
+            }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div id="navbar" class="item"&gt;
+        
+                    Home About Contact Us
+                &lt;/div&gt;
+                &lt;div id="section" class="item"&gt;
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi consequuntur quos accusamus iste omnis aut illo expedita facere veniam, sapiente ullam possimus suscipit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, rerum assumenda facere et voluptas praesentium dolores sequi dolorem dolorum labore vel asperiores, odit, saepe soluta quibusdam beatae quasi dignissimos minima! Obcaecati facere ducimus, beatae illo laboriosam officiis esse a rerum quibusdam. Autem laboriosam, veniam vel, voluptates, dolor voluptatem voluptatum fugiat unde tenetur quia ad dolorum tempore quas corporis! Ut distinctio inventore dolorum quis odio totam aliquam exercitationem! Debitis animi ipsum unde obcaecati sed, fugiat autem iste provident odio, illum asperiores, temporibus a veniam. Est eveniet sint recusandae ducimus mollitia accusamus doloremque dignissimos, iusto enim commodi, illo, sequi odit! Saepe doloremque labore aperiam incidunt pariatur. Necessitatibus mollitia expedita reprehenderit accusamus in animi officia voluptates. Similique voluptates ad nam, dolor vero nisi eos, ut eum illum cumque molestiae quod incidunt voluptatum, provident itaque dolorum nesciunt. Nisi omnis necessitatibus voluptatum 
+                &lt;/div&gt;
+                &lt;div id="aside" class="item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas soluta expedita quis!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam beatae laudantium nihil aliquam quisquam, suscipit, tempora maxime excepturi vitae animi voluptatem dignissimos cumque nobis obcaecati, eius temporibus voluptas? Numquam ullam atque cum minima quod deleniti quae qui! Possimus doloribus ea odio explicabo vel. Nemo saepe suscipit ipsa eum tenetur quidem laborum alias corrupti! Ad doloribus voluptas laudantium fugiat odit temporibus, minima in assumenda cupiditate nihil aliquid sit ullam porro esse tempore neque! Error et illo sit deleniti voluptates. Exercitationem fuga quos, autem ea explicabo minima animi impedit, corporis obcaecati qui esse fugiat a illum dicta quam quis, non repellendus saepe dolores sequi vero eveniet ipsum! Qui enim soluta non eveniet pariatur totam ipsa alias vitae, eum minus rerum facere magnam n Impedit, cupiditate.
+                &lt;/div&gt;
+                &lt;footer class="item"&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident quo libero cumque.&lt;/footer&gt;
+                &lt;!-- &lt;div class="item"&gt;Item-1&lt;/div&gt;
+                &lt;div class="item"&gt;Item-2&lt;/div&gt;
+                &lt;div class="item"&gt;Item-3&lt;/div&gt;
+                &lt;div class="item"&gt;Item-4&lt;/div&gt;
+                &lt;div class="item"&gt;Item-5&lt;/div&gt;
+                &lt;div class="item"&gt;Item-6&lt;/div&gt;
+                &lt;div class="item"&gt;Item-7&lt;/div&gt;
+                &lt;div class="item"&gt;Item-8&lt;/div&gt;
+                &lt;div class="item"&gt;Item-9&lt;/div&gt;
+                &lt;div class="item"&gt;Item-10&lt;/div&gt;
+                &lt;div class="item"&gt;Item-11&lt;/div&gt;
+                &lt;div class="item"&gt;Item-12&lt;/div&gt;
+                &lt;div class="item"&gt;Item-13&lt;/div&gt;
+                &lt;div class="item"&gt;Item-14&lt;/div&gt; --&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog37 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog37" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                css grid + media query
+            </a>
+        </p>
+        <div class="collapse" id="prog37">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;CSS Grid + Media Queries&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;style&gt;
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer ';
+        }
+    
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer ';
+            }
+            aside{
+                display: none;
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+    
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer ';
+            }
+            aside{
+                display: none;
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+    
+        @media (min-width: 500px) and (max-width:800px) {
+            body {
+                background-color: yellow;
+            }
+    
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer ';
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+    
+        @media (min-width: 800px) {
+            body {
+                background-color: green;
+            }
+        }
+    
+        .bdr {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+    
+        nav {
+            grid-area: navbar;
+        }
+    
+        section {
+            grid-area: section;
+        }
+    
+        aside {
+            grid-area: aside;
+        }
+    
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    &lt;/style&gt;
+    
+    &lt;body&gt;
+        &lt;div class="container "&gt;
+            &lt;nav class="bdr"&gt;
+                &lt;span&gt;Home&lt;/span&gt;
+                &lt;span&gt;About&lt;/span&gt;
+                &lt;span&gt;Services&lt;/span&gt;
+                &lt;span&gt;Contact&lt;/span&gt; 
+            &lt;/nav&gt;
+            &lt;section class="bdr"&gt;
+                &lt;h2&gt;Learn CSS in hindi&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nemo cupiditate distinctio et expedita. Delectus quaerat accusamus inventore tenetur error quam minus, provident fugit repellat necessitatibus? Architecto itaque quidem sequi blanditiis, facere accusantium hic.lorem122 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi dignissimos ut rerum aut. Fuga delectus suscipit debitis libero. Itaque, ipsum dignissimos consequatur repellat distinctio enim dolorem, facilis esse dolorum illum earum aliquid numquam blanditiis ipsam reiciendis iure nobis quo cum maiores aperiam pariatur. Quas aliquam, quae non rerum, architecto eligendi blanditiis officia placeat dolor soluta explicabo. Voluptatem tenetur perspiciatis neque quidem ducimus velit id explicabo, illo magni quis voluptatum. Tempora quod, dicta illum ratione quo at dolores cupiditate aperiam laboriosam amet sequi quaerat similique incidunt eius deleniti deserunt accusamus eligendi nemo est veritatis fugiat ducimus! Modi ut vel et nihil asperiores mollitia obcaecati, neque accusantium corrupti, quisquam voluptatem rem? Possimus tempore et fugit cumque culpa aliquam doloremque odio hic, cum, minima nostrum!&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;aside class="bdr"&gt;
+                &lt;h1&gt;More about us&lt;/h1&gt;
+            &lt;/aside&gt;
+        &lt;/div&gt;
+        &lt;footer class="bdr"&gt;Copyright CodeWithHarry 2020&lt;/footer&gt;
+    
+    &lt;/body&gt;
+    
+    &lt;/html&gt;      
+</pre>
+            </div>
+        </div>
+        <!-- prog38 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog38" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                ul and li
+            </a>
+        </p>
+        <div class="collapse" id="prog38">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;list and tables&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;ul type="square"&gt;
+            &lt;li&gt;vegetables&lt;/li&gt;
+            &lt;ol type="1"&gt;
+                &lt;li&gt;cabbage&lt;/li&gt;
+                &lt;li&gt;potato&lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;li&gt;fruits&lt;/li&gt;
+            &lt;li&gt;sweets&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ol type="a"&gt;
+            &lt;li&gt;vegetables&lt;/li&gt;
+            &lt;ul type="disc"&gt;
+                &lt;li&gt;cabbage&lt;/li&gt;
+                &lt;li&gt;sweets&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;li&gt;fruits&lt;/li&gt;
+            &lt;li&gt;sweets&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;div style="border:3px solid red;width: 200px;"&gt;
+        
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;name&lt;/th&gt;
+                    &lt;th&gt;idno.&lt;/th&gt;
+                    &lt;th&gt;department&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;rohan&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;programmer&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;sagar&lt;/td&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;wrestler&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;chirag&lt;/td&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                    &lt;td&gt;athlete&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog39 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog39" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                way to link files
+            </a>
+        </p>
+        <div class="collapse" id="prog39">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;meta name="description" content="hello guys welcome here"&gt;
+        &lt;meta name="keywords" content="html tutorial,web development ,front end development"&gt;
+        &lt;meta name="robots" content="index,follow"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;!-- this is the way to link css file --&gt;
+        &lt;link rel="stylesheet" href="rohan.css"&gt;
+        &lt;!-- this is the way to include javascript file --&gt;
+        &lt;script src="rohan.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+     &lt;h1&gt;intro&lt;/h1&gt;
+     &lt;p&gt;hello guys my name is&lt;strong&gt;rohan garg&lt;/strong&gt; here i am welcome to mybrand new tutorial .thakfefefkelgngngn Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit amet quidem, quo laboriosam illo &lt;strong&gt;&lt;em&gt;this is emphasized&lt;/em&gt;&lt;/strong&gt;ipsam culpa ab est rem reiciendis corrupti&lt;br&gt; natus sed perspiciatis placeat odio ducimus nulla iure labore ipsum provident? Voluptate aliquam fugiat recusandae harum quos quod iure commodi illo optio ullam labore sunt sed, porro cum? Eligendi! welcome here &lt;hr&gt;thanks for watching guys hope u enjoy this&lt;/p&gt;
+     &lt;!-- &lt;hr&gt;is used to give a line --&gt;
+     &lt;h2&gt;conclusion&lt;/h2&gt;
+     &lt;p&gt;hello this is over now&lt;/p&gt;
+     &lt;span style="border: 2px solid red;"&gt;this is coloured in red&lt;/span&gt;
+     
+     
+     &lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+        <!-- prog40 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog40" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                html snipit
+            </a>
+        </p>
+        <div class="collapse" id="prog40">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+    &lt;/body&gt;
+    &lt;/html&gt;  
+</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="html1.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="html2.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="html3.html">3</a></li>
+                <!-- <li class="page-item"><a class="page-link" href="html4.html">4</a></li> -->
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

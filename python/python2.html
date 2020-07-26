@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Python Tutorials</h3>
+    </div>
+    <div class="container my-3">
+
+
+        <!-- prog21 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog21" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops1
+            </a>
+        </p>
+        <div class="collapse" id="prog21">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # classes - template
+    # object - instance of the class
+    
+    # DRY= do not repeat yourself
+    
+    
+    #for taking self we use instance method
+    #if we dont want to use self then we use class method
+    #but if we do not require both then we use staic method
+    
+    class Student:
+        pass
+    
+    harry=Student()
+    larry=Student()
+    #instances ka variables
+    harry.name="harry"
+    harry.standard=11
+    harry.section="A"
+    
+    larry.standard=12
+    larry.subjects=["hindi","programming","english"]
+    print(larry.subjects)
+    print(harry.name,larry.standard)
+    print(harry.section)
+    print(harry,larry) #both are different
+</pre>
+            </div>
+        </div>
+        <!-- prog22 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog22" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops2
+            </a>
+        </p>
+        <div class="collapse" id="prog22">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    pass
+
+harry=Employee() #harr objects ka apna variables ha
+rohan=Employee()
+
+harry.name="harry"
+harry.salary=3333
+harry.role="instructor"
+
+rohan.name="rohan"
+rohan.salary=8393
+rohan.role="student"
+# no_of_leaves is a class variable
+print(harry.no_of_leaves)
+print(Employee.no_of_leaves)
+
+Employee.no_of_leaves=12
+
+print(harry.no_of_leaves)
+print(Employee.no_of_leaves)
+
+print(rohan.__dict__) #full information about rohan,dict is a n attribute,all instnace variable is shown
+
+rohan.no_of_leaves=3 #one more instance variable is added to rohan dictionary
+
+print(rohan.__dict__)
+print(rohan.no_of_leaves)
+print(Employee.no_of_leaves)
+
+print(Employee.__dict__)
+</pre>
+            </div>
+        </div>
+        <!-- prog23 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog23" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops3
+            </a>
+        </p>
+        <div class="collapse" id="prog23">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    #methods
+      #this is constructor with parameters like in php
+    def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+        self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary=asalary
+        self.role=arole
+
+    def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+
+#use below two objects by commenting the constructors as its just setting instances which is already set in below 2 instances
+harry=Employee() #harr objects ka apna variables ha
+rohan=Employee()
+harry.name="harry"
+harry.salary=3333
+harry.role="instructor"
+
+rohan.name="rohan"
+rohan.salary=8393
+rohan.role="student"
+#
+print(rohan.printdetails()) #iss function ka andar as aan argument rohan chla jayega
+print(harry.printdetails())#arument is givven it is proved by removing self from printdetails()
+
+# below code run karna se pehla upar ka code hatana padega becoz no argum. is given in them
+# becoz constructor runs for every arguments
+# 
+# class ka name ko arguments do ga to init(constructor) ko jayega
+ankit=Employee("ankit",34432,"memes")
+print(ankit.salary)
+print(ankit.printdetails())
+</pre>
+            </div>
+        </div>
+        <!-- prog24 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog24" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops4
+            </a>
+        </p>
+        <div class="collapse" id="prog24">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    #methods
+      #this is constructor
+    def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+        self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary=asalary
+        self.role=arole
+   # instanec ka function
+    def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+     # class method can be accessed by its instances and other classes
+    @classmethod #once it runs changes the variables of class,isko hum directly Employee.no_of_leaves=22 lkarke bhi change kar sakt tha
+    def change_leaves(cls,newleaves): #cls vo class ha jiska instance/object run ho raha ha
+        cls.no_of_leaves=newleaves #no_of_leaves is class ka variable and newleaves is argument
+
+
+
+ankit=Employee("ankit",34432,"memes")
+rohan=Employee("rohan",45667,"insta")
+
+Employee.no_of_leaves=2
+print(rohan.no_of_leaves) #pehla ya no_of_leaves name ka instance variable dhuindega agar nahi ha then class ka
+# variable me jayega
+
+ankit.change_leaves(55) #here instance is accessing the classmethod
+# or
+# Employee.change_leaves(55) here class is accessing the classmethod
+print(ankit.no_of_leaves)
+print(Employee.no_of_leaves)
+print(rohan.no_of_leaves) #pehla ya no_of_leaves name ka instance variable dhuindega agar nahi ha then class ka
+# variable dhundega , aur class ka variable change ho chuka ha
+print(rohan.__dict__) #isma nahi ayegi leaves as no_of_leaves is not the instance variable of this obj.
+print(Employee.no_of_leaves)
+
+rohan.change_leaves(88) #or u can do Employee.change_leaves(88)
+print(rohan.no_of_leaves) #as it is a class method it chnanges the class variable and set it to 88
+print(Employee.no_of_leaves) #now new value is initialized to no_of_leaves ,shared by all instances of that class
+</pre>
+            </div>
+        </div>
+        <!-- prog25 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog25" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops5
+            </a>
+        </p>
+        <div class="collapse" id="prog25">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    #methods
+      #this is constructor
+    def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+        self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary=asalary
+        self.role=arole
+     #instance function
+    def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls,newleaves): #cls vo class ha jiska instance ha vo vala object jispar ya run karr raha ha
+        cls.no_of_leaves=newleaves #no_of_leaves is  and nclass ka variable and leaves is argument
+
+    #using class method as alternative constructor,making instance here like a constructor do
+    @classmethod
+    def from_str(cls,str):
+        params=str.split("-") #params is formed as list
+        print(params)
+        return cls(params[0],params[1],params[2])  #agar cls parameter me add nahi hogi to ya pata nahi chlegi ke ya cls kiss class me return ho
+        # or
+        # return cls(*params)#class kko jab bhi arguments milenga to constructor me jayenga
+        # or remove above code
+        # return cls(*str.split("-"))
+
+
+
+ankit=Employee("ankit",34432,"memes")
+rohan=Employee("rohan",45667,"insta")
+chirag=Employee.from_str("chirag-222344-engineer")
+
+Employee.no_of_leaves=2
+print(rohan.no_of_leaves) #pehla ya no_of_leaves name ka instance variable dhuindega agar nahi ha then class ka
+# variable me jayega
+
+# instance ka variable ko nahi class ke variables and methods ko change karta ha @classmethod
+ankit.change_leaves(9) #here changing ankit ke leaves ,it also leads to chnage of class variable
+print(rohan.no_of_leaves) #but rohan leaves also changes because class ka variable change hua ha
+print(chirag.no_of_leaves)
+print(Employee.no_of_leaves)
+
+print(chirag.salary)
+print(chirag.printdetails())
+</pre>
+            </div>
+        </div>
+        <!-- prog26 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog26" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops6
+            </a>
+        </p>
+        <div class="collapse" id="prog26">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    #methods
+      #this is constructor (with parameter constructor)
+    def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+        self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary=asalary
+        self.role=arole
+     #instance ka method
+    def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+    @classmethod #class ka methods
+    def change_leaves(cls,newleaves): #cls vo class ha jiska instance ha vo vala object jispar ya run karr raha ha
+        cls.no_of_leaves=newleaves #no_of_leaves is  and nclass ka variable and leaves is argument
+
+    @classmethod
+    def from_str(cls,str):
+        return cls(*str.split("-"))
+
+    @staticmethod  #like noraml functions,na ya self ko na class ko as an argument lega
+    def printcode(string):
+        print("this is good",string)
+
+
+
+ankit=Employee("ankit",34432,"memes")
+rohan=Employee("rohan",45667,"insta")
+chirag=Employee.from_str("chirag-222344-engineer")
+
+ankit.printcode("ankit name ha mera")
+# or
+Employee.printcode("hii guys")
+# if used
+# print(ankit.printcode("ankit name ha mera")) #none is printed because no return
+</pre>
+            </div>
+        </div>
+        <!-- prog27 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog27" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops7
+            </a>
+        </p>
+        <div class="collapse" id="prog27">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    #methods
+      #this is constructor
+    def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+        self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary=asalary
+        self.role=arole
+     #instance ka method
+    def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+    @classmethod #class ka methods
+    def change_leaves(cls,newleaves): #cls vo class ha jiska instance ha vo vala object jispar ya run karr raha ha
+        cls.no_of_leaves=newleaves #no_of_leaves is  and nclass ka variable and leaves is argument
+     #alternative constructor
+    @classmethod
+    def from_str(cls,str):
+        return cls(*str.split("-"))
+
+    @staticmethod  #like noraml functions
+    def printcode(string):
+        print("this is good",string)
+
+#doing single inheritence
+class Programmer(Employee):
+
+    no_of_holidays=20
+    # here overwriting the constructor
+    def __init__(self,aname,asalary,arole,alanguage):
+        self.name = aname  # name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary = asalary
+        self.role = arole
+        self.language=alanguage
+
+    def printprog(self):
+        return f"programmer name is {self.name} his salary is {self.salary} and his role is {self.role} and the languages are {self.language}"
+
+
+
+ankit=Employee("ankit",34432,"memes")
+rohan=Employee("rohan",45667,"insta")
+
+chirag=Programmer("chirag",72827,"programmer",["python"])
+karan=Programmer("karan",9298822,"programmer",["html","javascript"])
+
+print(chirag.printprog())
+
+print(karan.printdetails())
+
+print(karan.printprog())
+
+print(chirag.no_of_holidays)
+chirag.no_of_holidays=200
+print(chirag.no_of_holidays)
+
+print(karan.no_of_leaves)
+</pre>
+            </div>
+        </div>
+        <!-- prog28 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog28" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops8
+            </a>
+        </p>
+        <div class="collapse" id="prog28">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    # var=8
+    no_of_leaves=8 #class ka saara objects iss property kp share karennga
+    #methods
+      #this is constructor
+    def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+        self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+        self.salary=asalary
+        self.role=arole
+     #instance ka method
+    def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+    @classmethod #class ka methods
+    def change_leaves(cls,newleaves): #cls vo class ha jiska instance ha vo vala object jispar ya run karr raha ha
+        cls.no_of_leaves=newleaves #no_of_leaves is  and nclass ka variable and leaves is argument
+     #alternative constructor
+    @classmethod
+    def from_str(cls,str):
+        return cls(*str.split("-"))
+
+    @staticmethod  #like noraml functions
+    def printcode(string):
+        print("this is good",string)
+
+class Players:
+    var=9
+    no_of_games=4
+    def __init__(self,aname,agame):
+        self.name=aname
+        self.game=agame
+
+    def printdetails(self):
+        return f"Name is {self.name} and game is {self.game}"
+#multiple inheriteance
+class CoolProgrammer(Employee,Players):#order is important
+    # var=10
+    language="C++"
+     #instance ka method
+    def printlanguage(self):
+        print(self.language)
+
+
+
+ankit=Employee("ankit",34432,"memes")
+rohan=Employee("rohan",45667,"insta")
+
+shubham=Players("shubham",["cricket"])
+
+karan=CoolProgrammer("Karan",287373,"CoolProgrammer")
+
+#accessing 1st class instance function
+print(karan.printdetails())
+karan.printlanguage()
+
+print(karan.var)
+# var agar initialize ha apni class me to vo print hoga varna ko class pehla inherit hue ha uska var print haga
+# agar pehli inherited class me bhi nahi ha then dusri class me dhundega aur vo print karega otehrwise error
+#same methods ka saat bhi hoga islia printdetails pehli class ka run hoga
+</pre>
+            </div>
+        </div>
+        <!-- prog29 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog29" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops9
+            </a>
+        </p>
+        <div class="collapse" id="prog29">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # multilevel inheritance
+    class Dad:
+        basketball=1
+    
+    class Son(Dad):
+        dance=1
+        basketball=88
+        def isdance(self):
+            return f"yes i dance {self.dance} no of times"
+    
+    class Grandson(Son):
+        dance=6
+        #grandson can overwrite this method
+        def isdance(self):
+            return f"yes i dance very awesomly {self.dance} no of times"
+    
+    
+    dad=Dad()
+    larry=Son()
+    harry=Grandson()
+    
+    # print(harry.isdance()) #pehla son me dhundet=ga nahi mila to son me ,vaha bhi nahi to phir dad me
+    # print(harry.basketball)#pehla son me dhundet=ga nahi mila to son me ,vaha bhi nahi to phir dad me
+    
+    
+    
+    # excercise
+    class Electronic:
+        calculation=10
+        portable="not portable"
+        def mydetails(self):
+            return f"i can do {self.calcutaion} calculations,and i am {self.portable}"
+    
+    class PocketGadget(Electronic):
+        calculation = 50
+        portable="portable"
+        def mydetails(self):
+            return f"i can do {self.calculation} calculations,and i am {self.portable}"
+    
+    class Mobile(PocketGadget):
+        features=["youtube","instagram","facebook"]
+        def mydetails(self):
+            return f"my self - i am a electronic device ,can do {self.calculation} calculations,i am {self.portable},and have {self.features}"
+    
+    
+    Computer=Electronic()
+    Keypad_phone=PocketGadget()
+    Android_phone=Mobile()
+    
+    print(Android_phone.mydetails())
+    print(PocketGadget.calculation)    
+</pre>
+            </div>
+        </div>
+        <!-- prog30 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog30" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops10
+            </a>
+        </p>
+        <div class="collapse" id="prog30">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # public-
+    # private-
+    # protected-
+    
+    class Employee:
+        #class variable
+    
+    
+        var=8 #public variable
+        no_of_leaves=8 #public variable
+    
+        _protectedvariable=11 #protected variable
+        __privatevariable=98#private variable,can be used within the class
+        #methods
+          #this is constructor
+        def __init__(self,aname,asalary,arole): #self me jiss object ka lia ,then name...
+            self.name=aname         #name instance variable ha aur aname argument ha jisma name le raha ha
+            self.salary=asalary
+            self.role=arole
+         #instance ka method
+        def printdetails(self):#self meaning means jb harry ka lia run hoga to self me harry aa jayega
+            return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+    
+        @classmethod #class ka methods
+        def change_leaves(cls,newleaves): #cls vo class ha jiska instance ha vo vala object jispar ya run karr raha ha
+            cls.no_of_leaves=newleaves #no_of_leaves is  and nclass ka variable and leaves is argument
+         #alternative constructor
+        @classmethod
+        def from_str(cls,str):
+            return cls(*str.split("-"))
+    
+        @staticmethod  #like noraml functions
+        def printcode(string):
+            print("this is good",string)
+    
+    class Players:
+        var=9
+        no_of_games=4
+        def __init__(self,aname,agame):
+            self.name=aname
+            self.game=agame
+    
+        def printdetails(self):
+            return f"Name is {self.name} and game is {self.game}"
+    #multiple inheriteance
+    class CoolProgrammer(Employee,Players):#order is important
+        # var=10
+        language="C++"
+    
+        def printlanguage(self):
+            print(self.language)
+    
+    
+    emp=Employee("harry",234532,"programmer")
+    print(emp._protectedvariable) #protected variable can be used by the base class and by the child classes,but otside class canot be used
+    print(Employee._protectedvariable)
+    
+    # print(emp.__privatevariable) #error ayega because taki hum galti se ya access na karlwe ,it has special code below to access ,in other languages we can't access
+    print(emp._Employee__privatevariable) #private variable can be accesed like this,name mangling is done    
+</pre>
+            </div>
+        </div>
+        <!-- prog31 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog31" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops11
+            </a>
+        </p>
+        <div class="collapse" id="prog31">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    print(5+6)
+    print("5"+"6")
+    
+    # Abstraction
+    # Encapsulation
+    # Inheritance
+    # Polymorphism
+</pre>
+            </div>
+        </div>
+        <!-- prog32 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog32" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops12
+            </a>
+        </p>
+        <div class="collapse" id="prog32">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class A:
+    classvar1="i am in class variable in class A" #class variable
+    def __init__(self): #constructor
+        self.var1="i am inside class A constructor"
+        self.classvar1="instance var in class A" #agar ya mita dia jaya
+        self.special="special variable"
+
+class B(A):
+    pass
+    #overwriring class variable
+    classvar1="i am in class B" #class variable #agar iss mita dia jaya
+    def __init__(self):
+        # super().__init__() #here ya pehla uppar ka saara instanec variable ko yaha le ayega aur jo B me bhi h ,vo vala variable overwritten ho jayenga
+        self.var1="i am inside class B constructor"
+        self.classvar1="instance var in class B" #agra ya mita de to instance varibale dusri class me nahi dhundega as it is overwritten
+        # super().__init__() #here same instance variable will be overwritten by class A and some addition also comes from class A like special
+        # accessing superclass variables
+        super().__init__()# doing this to set variable
+        # print(super().classvar1)# it prints class variable
+
+a=A()
+b=B()
+print(b.classvar1) #pehla ya apni b class me jayega aur dekhenga kya koi instance variable ha,but yaha nahi ha ,phir dekhega kya koi instance
+# variable ha uss class kajisse ya class inherit hue ha ,hn vaha ha to vaha ka instance varibale print kar dega agar nahi ha to apna class me uss name
+# ka class variable dhundega aur vo print karega agar vo bhi nahi ha to jisse inherit hua ha usma uss name ka class variable dhundega aur vo print
+# kr dega
+
+#u cannot accses special instance variable if u overwrite the constructor and not using super in child class
+
+# agar ek barr constructor overwrite kar dia then vo pichle class vala call nahi hoga like,u can see above and below by removing instance var in classB
+# print(b.special) #error as constructor overwritten uncomment it without using super
+
+# but if u want to acces the base constructor use super
+print(b.special,b.var1,b.classvar1) #uncomment it without using super after the class B constructor
+print(b.special,b.var1,b.classvar1) #use it when super is after class b constructor
+
+</pre>
+            </div>
+        </div>
+        <!-- prog33 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog33" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops13
+            </a>
+        </p>
+        <div class="collapse" id="prog33">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class A:
+    def met(self):
+        print("this is a method of class A")
+
+class B(A):
+    def met(self):
+        print("this is a method of class B")
+
+class C(A):
+    def met(self):
+        print("this is a method of class C")
+
+class D(B,C):
+    pass
+    # def met(self):
+    #     print("this is a method of class D")
+
+a=A()
+b=B()
+c=C()
+d=D()
+
+d.met()
+</pre>
+            </div>
+        </div>
+        <!-- prog34 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog34" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                oops14
+            </a>
+        </p>
+        <div class="collapse" id="prog34">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    #class variable
+    no_of_leaves=8
+
+    def __init__(self,aname,asalary,arole): #dunder method ,special type of argument
+        self.name=aname
+        self.salary=asalary
+        self.role=arole
+
+    def printdetails(self):
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls,newleaves):
+        cls.no_of_leaves=newleaves
+    #dunder method __ se start hona vala aur __se end hona vala methods ko ketha ha dunder methods like __init__
+    def __add__(self, other): #dunder add ,it is an operator overloading method
+        return self.salary + other.salary #u can add name or role
+    #dunder method
+    def __truediv__(self, other):
+        return self.salary / other.salary
+    #dunder method
+    def __repr__(self): #whenever an object is directly printed
+        return f"Employee details=({self.name},{self.salary},{self.role})"
+
+    def __str__(self):
+        return f"Name is {self.name} his salary is {self.salary} and his role is {self.role}"
+
+# for more dunder methods search
+# mapping operators to function
+
+emp1=Employee("harry",243222,"programmer")
+emp2=Employee("rohan",243,"cleaner")
+print(emp1+emp2)
+print(emp1/emp2)
+# print(emp1)  # use it without str and repr #it just shows imp is an object,and where is its position
+
+
+print(emp1) #agar str and repr dono hua to str dikhega aur repr dekhna ha to alag se call karna padega,aur agar str nahi ha to ya code aur below code
+# run karna pr phir repr dikhega ,try it by commenting str
+print(str(emp1))
+#try it when bboth are present
+print(repr(emp1))
+
+# agr keval repr hua then, emp1 ya str(emp1) ya repr(emp1) kuch bhi print karlo ho jayega
+# but keval str hua then bs emp1 ya str(emp1) he chlega aur repr(emp1) pr nahi chlega
+</pre>
+            </div>
+        </div>
+        <!-- prog35 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog35" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial69
+            </a>
+        </p>
+        <div class="collapse" id="prog35">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    class Employee:
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+        # self.email=f"{fname}.{lname}@gmail.com"
+
+    def explain(self):
+        return f"this employee is {self.fname} {self.lname}"
+    #
+    @property #to acces this as a instance variable
+    def email(self):
+        if self.fname==None or self.lname==None:
+            return "email is not set,please set it using setter"
+        else:
+            return f"{self.fname}.{self.lname}@gmail.com"
+    #
+    @email.setter  # use attribute after @ kisko hum input lena chata ha
+    def email(self,string):
+        print("setting now...")
+        names=string.split("@")[0]
+        self.fname=names.split(".")[0]
+        self.lname=names.split(".")[1]
+    #
+    # @email.deleter
+    # def email(self):
+    #     self.fname=None
+    #     self.lname=None
+    #     print("deleted")
+
+rohan=Employee("rohan","garg")
+sagar=Employee("sagar","thakur")
+
+print(rohan.explain())
+print(rohan.email)
+
+# but if we change first name and then print the email
+
+rohan.fname="rohit"
+print(rohan.explain())
+print(rohan.email) #email will remain same because during formation of object the constructor will run and value is initialize
+# to change the email then remove it from instance variable and make the function like explain()
+#but if u want to run it like an attribute like rohan.email sooo.. use  @property and make email() to email simply
+
+
+
+ # if we want to set the fname and lname by just giving email then use setter
+# rohan.pmail="urururuuueu" # this can be done but not the below code becoz email name ka func. present ha already
+rohan.email="aman.mehra@gmail.com"  #isko set karna ka lia setter dhund raha ha first setter banao
+print(rohan.fname) #fname setted
+print(rohan.lname) #lname setted
+print(rohan.email)
+print(rohan.explain())
+
+# # # if u wnat to delete attribute email
+# del rohan.email  #cant delete  isko delete karna ka lia deleter dhund raha ha jo ha nahi abhi first make it
+# #after this above line executes with deleter function the fname and lname changes to this
+# print(rohan.email)  # it is showing this.this@gmail.com as it deleted but agar hum none nahi dekhna chata,some changes in @property
+# #
+# sagar.email="hello.hello@gmail.com"
+# print(sagar.email)
+#
+# del sagar.email
+# print(sagar.email)
+</pre>
+            </div>
+        </div>
+        <!-- prog36 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog36" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial70
+            </a>
+        </p>
+        <div class="collapse" id="prog36">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #object inspection= object ka baarra me pata lagana
+
+    class Employee:
+        def __init__(self,fname,lname):
+            self.fname=fname
+            self.lname=lname
+            # self.email=f"{fname}.{lname}@gmail.com"
+    
+        def explain(self):
+            return f"this employee is {self.fname} {self.lname}"
+    
+        @property #to acces this as a instance variable
+        def email(self):
+            if self.fname==None or self.lname==None:
+                return "email is not set,please set it using setter"
+            return f"{self.fname}.{self.lname}@gmail.com"
+    
+        @email.setter
+        def email(self,string):
+            print("setting now...")
+            names=string.split("@")[0]
+            self.fname=names.split(".")[0]
+            self.lname=names.split(".")[1]
+    
+        @email.deleter
+        def email(self):
+            self.fname=None
+            self.lname=None
+            print("deleted")
+    
+    rohan=Employee("rohan","garg")
+    print(rohan.email)
+    #
+    print(type("hello guys")) #means string is also a object and it is of str class ,like - int,float all are objects
+    print(id("hello guys")) #every object has a unique id
+    #
+    o="popi hii"
+    print(dir(o)) #vo saara function show karega jo hum ispa uapply kar skatha ha
+    print(dir(rohan)) #vo saara function aur jo mehods humna likha ha vo show karega
+    #
+    import inspect
+    print(inspect.get(rohan))
+</pre>
+            </div>
+        </div>
+        <!-- prog37 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog37" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                abstract baseclass
+            </a>
+        </p>
+        <div class="collapse" id="prog37">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    #abstractmethod is decorator
+    # from abc import ABCMeta,abstractmethod #if using this initialise metaclass as abc meta otherwise
+    from abc import ABC,abstractmethod
+    
+    class Shape(ABC):
+        @abstractmethod #use this above the method which u want to be included as a child class method
+        def printarea(self):
+            return 0
+    #agarr koi bhi class metaclass se inherit hoti ha to vo order de sakti child classes ko kuch methods add karna ka lia
+    
+    class Rectangle(Shape):
+        type="Rectangle"
+        sides=4
+    
+        def __init__(self):
+            self.length=6
+            self.breadth=7
+    
+        def printarea(self):
+             return self.length * self.breadth
+    
+    
+    
+    rect1=Rectangle()
+    
+    print(rect1.printarea())
+    
+    #we cannot make objects of abstract base class
+    # absobj=Shape() #caauses erroe    
+</pre>
+            </div>
+        </div>
+        <!-- prog38 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog38" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                file io basics
+            </a>
+        </p>
+        <div class="collapse" id="prog38">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    # file io basics
+
+    # "r"- open file for reading , it is a default mode
+    # "w"- open file for writing
+    # "x"- open file if not exists
+    # "a"- add more content to the file
+    # "t"- text mode, its is a default mode
+    # "b"- binary mode
+    # "+"- read and write    
+</pre>
+            </div>
+        </div>
+        <!-- prog39 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog39" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                args and kwargs
+            </a>
+        </p>
+        <div class="collapse" id="prog39">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+
+    # use normal arguments then args then kwargs ,thumbrule otherwise return error
+    def argsfunc(quote,*args,**kwargs): #they can be *argsnames and **kwargsjobs i.e * aur ** ka badd kuvh bhi likh sakta ha
+        print(type(args)) #lists and tuples converted to tuples
+        print(type(kwargs)) #dictonary is received no conversion
+        for name in args:
+            print(quote,name)
+        print("their jobs are \n")
+        for key,value in kwargs.items():
+            print(f"{key} job is {value}")
+    
+    names=["rohan","sagar","harry","chirag","ankit"] #whether data send in tupple or list it is converted to tupple
+    jobs={"rohan":"cook","harry":"programmer","sagar":"bodybuilder"}  #send in dictionary
+    quote="my name is"
+    argsfunc(quote,*names,**jobs)
+</pre>
+            </div>
+        </div>
+        <!-- prog40 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog40" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                break and continue
+            </a>
+        </p>
+        <div class="collapse" id="prog40">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    i=0
+
+    # while(i<45):
+    #     print(i+1,end=" ")
+    #     if i==5:
+    #         break
+    #     i=i+1
+    # print("\n")
+    p=0
+    while(p<45):
+        if(p==5):
+            p=p+1
+            continue
+        print(p+1,end=" ")
+        p=p+1
+    print("\n")
+    
+    j=0
+    while(j<45):
+        if(j<5):
+            j=j+1
+            continue
+        print(j,end=" ")
+        j=j+1
+    
+    # while(True):
+    #     print(i+1,end=" ")
+    #     i=i+1
+</pre>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="python1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="python2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="python3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="python4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="python5.html">5</a></li>
+              <li class="page-item"><a class="page-link" href="python6.html">6</a></li>
+              <li class="page-item"><a class="page-link" href="python7.html">7</a></li>
+              <li class="page-item"><a class="page-link" href="python8.html">8</a></li>
+            </ul>
+          </nav>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

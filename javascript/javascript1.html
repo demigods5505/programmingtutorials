@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Javascript Tutorials</h3>
+    </div>
+    <div class="container my-3">
+        
+        <!-- prog1 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog1" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                index.html
+            </a>
+        </p>
+        <div class="collapse" id="prog1">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;
+            hello world
+        &lt;/h3&gt;
+        &lt;!-- &lt;script src="tutorial1.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial2.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial3.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial4.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial5.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial6.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial7.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial8.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial9.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="tutorial10.js"&gt;&lt;/script&gt; --&gt;
+        &lt;script src="tutorial11.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;   
+</pre>
+            </div>
+        </div>
+        <!-- prog2 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog2" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial1
+            </a>
+        </p>
+        <div class="collapse" id="prog2">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // time taken by code to execute 
+    console.time('your code took');
+    
+    // wat to print a array 
+    console.log([23,44,6]);
+    // printing a object 
+    console.log({name:`rohan`,age:`40`})
+    // if dealing with large data
+    console.table({name:`rohan`,age:`40`})
+    // warnings 
+    console.warn("this is a warning");
+    // to clear all 
+    // console.clear();
+    
+    console.timeEnd('your code took');
+    
+    //errors
+    console.error("this is an error");
+       
+</pre>
+            </div>
+        </div>
+        <!-- prog3 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog3" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial2
+            </a>
+        </p>
+        <div class="collapse" id="prog3">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // types of keywords used to make a variables
+    // var,let,const
+    // const variable cannot be changed througfhout the code and it must be initialized while declaration
+    console.log("hello world");
+    // const name; - causes error
+    const name= "rohan";
+    console.log("name");
+    // let ka block level scope hota ha 
+    const arr1=[12,23,34,45];
+    arr1.push(23,44); //no erroe 
+    console.log(arr1);
+    // but it is not possible
+    // arr1=[34]; causes error due to reinitialization
+    
+    // if you once used array and objects with const keyword then you cannot reinitialize them    
+</pre>
+            </div>
+        </div>
+        <!-- prog4 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog4" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial3
+            </a>
+        </p>
+        <div class="collapse" id="prog4">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    let str="hello world";
+    console.log("my string is ",str);
+    // or u can write like this 
+    console.log("my string is "+ str);
+    console.log("type of my string is" ,typeof(str));
+    let a= null;//n is always in small letters  it is a primitive datatype
+    console.log(typeof(a)); // type of null is object
+    bb= undefined;
+    console.log(typeof(bb));
+    
+    //object literals
+    let marks={
+      
+        rohan : 33,
+        sagar : 35,
+        chirag:98,
+        // ankit mishra:50  wrong method if giving spaces
+        "ankit mishra":50,
+        "name of friend":"ankit mishra"
+    }
+    console.table(marks);
+    
+    //functions
+    
+    function findname(params) {
+        
+    }
+    
+    console.log(typeof(findname));    
+</pre>
+            </div>
+        </div>
+        <!-- prog5 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog5" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial4
+            </a>
+        </p>
+        <div class="collapse" id="prog5">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // type conversion and coersion 
+    let a=String(20);// here s is in capital otherwise error 
+    console.log(a,typeof(a));
+    // converting bollean to string 
+    // let b =true;
+    let b =String(true);
+    console.log(b,typeof(b));
+    
+    // for printing dates 
+    let date = String(new Date());//D IS IN CAPITAL
+    console.log(date,typeof(date));
+    
+    // converting array to string so that we can apply functions of string 
+    
+    let arr = String([3,55,67,23]);
+    console.log(arr,typeof(arr));
+    console.log("length of array " +  arr.length); // here as array is now string so  length , is also included and double digits
+    
+    // another way to convert 
+    let i=29;
+    console.log(i.toString());//string in black
+    console.log(i);//number in blue
+    
+    // similarly 
+    
+    let ip=true;
+    console.log(ip.toString());//converted to string as appers in black
+    
+    // converting to number 
+    let strr = Number("4444"); //n in capital 
+    console.log(strr,typeof(strr)); //converted to number as number is in blue
+    
+    // try to convert ,string to number  
+    let arr2 = Number("e37y");
+    console.log(arr2);
+    // appers nan means not a number 
+    
+    
+    let arr3 = Number(false);
+    console.log(arr3 , typeof(arr3));
+    
+    let no = parseInt('50.77');
+    console.log(no);
+    
+    
+    let nop = parseFloat('50.7787');
+    console.log(nop.toFixed(1));
+    console.log(nop.toFixed(4));
+    console.log(nop.toFixed(10));
+    
+    
+    // type coersion 
+    
+    let mystr = '333';
+    let mynum = 67;
+    // either the javascript convert no. to string or vice versa , javascript convert no. to string 
+    console.log(mystr+mynum);
+    
+    let mystr2=Number('456');
+    let mynum2=45;
+    console.log(mystr2+mynum2);   
+</pre>
+            </div>
+        </div>
+        <!-- prog6 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog6" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial5
+            </a>
+        </p>
+        <div class="collapse" id="prog6">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    const a="hello boi";
+    const b="how are you";
+    console.log(a,b); //u can use +
+    
+    // another way to add 
+    console.log(a.concat(b));
+    
+    // tolowercase and uppercase 
+    let c ="heLLO gUyS";
+    console.log(c.toLowerCase());
+    console.log(c.toUpperCase());
+    
+    console.log(c[1]);
+    
+    // indexes done in web develop 
+    let html ="&lt;h2&gt;hello world 5505 &lt;h2&gt;";
+    console.log(html);
+    console.log(html.indexOf("&lt;")); //i in small
+    console.log(html.lastIndexOf("&lt;")); //i in capital 
+    
+    // ending of string returns in boolean
+    console.log(html.endsWith("&gt;"));
+    console.log(Number(html.endsWith("h2&gt;")));
+    console.log(html.endsWith("hug&gt;"));
+    
+    // to check wether a string is present in a variable or not 
+    
+    console.log(html.includes("hello"));
+    console.log(html.includes("helgh"));
+    
+    // to extract substring like in php we use substr(html,4)
+    
+    // start se leke n-1 
+    console.log(html.substring(0,3));
+    
+    // to break a whole string into array and then use the array functions 
+    
+    // it meAns where ' ' occurs then split 
+    console.log(html.split(' '));
+    
+    // it meAns where ' ' occurs then split 
+    console.log(html.split('&lt;'));
+    
+    // to replace ,rembember only 1st occurence 
+    console.log(html.replace("hello","rohan"));
+    
+    
+    // variables templates 
+    let fruit1= "mango";
+    let fruit2= "orange";
+    
+    let updatebody = `hello i am updating this html page .&lt;h2&gt; i like &lt;strong&gt; ${fruit1} and ${fruit2} . &lt;/strong&gt; &lt;/h2&gt;`;
+    // in above case we can use tags also
+    
+    console.log(updatebody);
+    
+    document.body.innerHTML=updatebody;          
+</pre>
+            </div>
+        </div>
+        <!-- prog7 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog7" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial6
+            </a>
+        </p>
+        <div class="collapse" id="prog7">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+
+    let marks=[33,44,56,21];
+    console.log(marks);
+    
+    const fruit = ['mango','banana','grapes','pineapple'];
+    console.log(fruit);
+    
+    const mix=['str',33,[6,88]];
+    console.log(mix);
+    console.log(mix[2]);
+    console.log(mix[2][0]);
+    console.log(mix[2][1]);
+    
+    const arr= new Array(3,54,33,'grapes');
+    console.log(arr);
+    
+    // properties,no curly braces 
+    console.log(arr.length);
+    
+    //methods,with ()
+    
+    // ya batata he ke array ha kya nahi
+    console.log(Array.isArray(arr));
+    console.log(Array.isArray('gfggh'));//return false as it is a string
+    
+    console.log(arr.includes(3));
+    
+    // mutating the array 
+    //modifying the array
+    // for adding in last 
+    marks.push(22);
+    console.log(marks);
+    
+    // for adding in front 
+    marks.unshift(2200);
+    console.log(marks);
+    
+    // to delete from last
+    marks.pop(22);
+    console.log(marks);
+    
+    // to delete from front
+    marks.shift(22);
+    console.log(marks);
+    
+    // to remove a gropu of no from a to a no of elements
+    marks.splice(1,2);
+    console.log(marks);
+    
+    let mark=[23,56,34,12,34,56];
+    mark.reverse();
+    console.log(mark);
+    
+    // adding two arrays 
+    let markss = [2,45,34,65];
+    console.log(mark.concat(markss));
+    
+    let details={
+        name:"rohan",
+        age:23,
+        job:"youtube",
+        "which channel":"gaming"
+    }
+    console.table(details);
+    
+    // accessing key values 
+    console.table(details.name);
+    // or 
+    console.table(details["name"]);
+    console.table(details["which channel"]);       
+</pre>
+            </div>
+        </div>
+        <!-- prog8 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog8" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial7
+            </a>
+        </p>
+        <div class="collapse" id="prog8">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // if else 
+    let age='22';
+    
+    if(age==2){
+        console.log("age is 2");
+    }
+    else if(age==22){
+        console.log("age is 22");
+    }
+    else{
+        console.log("age is 50");
+    }
+    
+    // in the above case age is string but in == we only check the value of variable not the type of variable 
+    
+    // if we want to check both value and type of variable then use === 
+    
+    if(age==2){
+        console.log("age is 2");
+    }
+    else if(age===22){
+        console.log("age is 22 but here it is a number ");
+    }
+    else{
+        console.log("age is 50");
+    }
+    
+    //make string  
+    
+    if(age==2){
+        console.log("age is 2");
+    }
+    else if(age==='22'){
+        console.log("age is 22 and dataype is also matching");
+    }
+    else{
+        console.log("age is 50");
+    }
+    
+    // if value and type dono match na kara then eveluate
+    if(age!=2){
+        console.log("age is not 2");
+    }
+    else if(age==='22'){
+        console.log("age is 22");
+    }
+    else{
+        console.log("age is 50");
+    }
+    
+    // if value is matching but not datatype 
+    if(age==2){
+        console.log("age is 2");
+    }
+    else if(age!==22){
+        console.log("age is 22 matching but not datatype ");
+    }
+    else{
+        console.log("age is 50");
+    }
+    
+    // ternanry operator 
+    
+    let a=20;
+    a==20?console.log("value of a is 20"):console.log("value of a is not 20");
+    // or 
+    console.log(a==20?"value of a is 20":"value of a is not 20");
+       
+</pre>
+            </div>
+        </div>
+        <!-- prog9 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog9" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial8
+            </a>
+        </p>
+        <div class="collapse" id="prog9">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // loops
+    let arr= [23,45,34,11,56,43];
+    
+    arr.forEach(function(element){
+      console.log(element);
+    });
+    
+    console.log("another way");
+    
+    // or 
+    arr.forEach(element => {
+       console.log(element); 
+    });
+    
+    let details={
+        name:"rohan",
+        age:23,
+        type:"coding"
+    }
+    
+    for(let key in details ){
+        console.log(`the ${key} is ${details[key]}` )
+    }
+</pre>
+            </div>
+        </div>
+        <!-- prog10 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog10" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial9
+            </a>
+        </p>
+        <div class="collapse" id="prog10">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // functions
+
+    //we can initialize param , it will work when no argument is passed
+    function greeting(name,greet="thanks meri traf se") {
+        console.log(`${name} hope u are doing great ${greet}`);
+        // return 8;//can return no
+        return "buuuuu";//can return string
+    
+    }
+    
+    let name="rohan";
+    let another="thanks for giving name";
+    greeting(name,another);
+    greeting(name);
+    console.log(greeting(name,another));
+    
+    // building function inside object 
+    let obj ={
+        name:"rohan",
+        // no need of giving name of function as varibel is used - anonymus funct.
+        game:function() {
+            console.log("GTA");
+            return "GTA";
+        }
+    }
+    console.log(obj["game"]);
+    console.log(obj.game());
+    
+    let array1 =["rohan","mohan","sohan"];
+    array1.forEach(function(element,index,array) {
+        console.log(index,element);
+    });
+    
+       
+</pre>
+            </div>
+        </div>
+        <!-- prog11 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog11" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial10
+            </a>
+        </p>
+        <div class="collapse" id="prog11">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    // let/const has block level scope and var has function level scope 
+
+
+    // var i=234
+    // console.log(i);
+    // function ui(name){
+    //     var i =9;
+    //     console.log(i);
+    //     return `this is ${name} ui`;
+    // }
+    
+    // console.log(ui("rohan"),i);
+    //no updation
+    
+    
+    var ia=234
+    console.log(ia);
+    function ui(name){
+         ia =9;
+        console.log(ia);
+        return `this is ${name} ui`;
+    }
+    
+    console.log(ui("rohan"),ia);
+    console.log(ia); //now ia is updated 
+    
+    
+    
+    let i=234
+    console.log(i);
+    function ui(name){
+        let i =9;
+        console.log(i);
+        return `this is ${name} ui`;
+    }
+    
+    console.log(ui("rohan"),i);       
+</pre>
+            </div>
+        </div>
+        <!-- prog12 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog12" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial11
+            </a>
+        </p>
+        <div class="collapse" id="prog12">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    let w= window;
+    console.log(window);
+    console.log(typeof(window));
+    // window.alert("no option else ok");
+    // or as we can use things inside without window,as window is global object therefore we can use all methods of window
+    
+    
+    // let a=alert("hello harry");//alert does not return anything
+    // console.log(w);
+    
+    // let b= prompt("enter your name");
+    // console.log(b);
+    // let c= confirm("u want to delete the page");
+    // console.log(c);
+    
+    let d=window.document;
+    console.log(d);
+    
+    // maximize and minimize the height 
+    console.log(window.innerHeight);
+    // maximize and minimize the width 
+    console.log(window.innerWidth);
+    // or use the method without window
+    console.log(innerWidth);
+    
+    // see by scrolling the window 
+    console.log(screenX);
+    console.log(screenY);
+    
+    console.log(location);
+    console.log(location.href);
+    // location.reload;
+    // use location.reload ,.href ,.href=""
+    
+    
+    // to find history these are like backa nd front arrow button at the top use window.history or history 
+    // history.go(-1); etc 
+    // history.go(-2)
+    // history.go(1)       
+</pre>
+            </div>
+        </div>
+        <!-- prog13 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog13" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                notesapp(index.html)
+            </a>
+        </p>
+        <div class="collapse" id="prog13">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;Notes app&lt;/title&gt;
+      &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    
+      &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Magic Notes&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    
+        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+          &lt;ul class="navbar-nav mr-auto"&gt;
+            &lt;li class="nav-item active"&gt;
+              &lt;a class="nav-link" href="#"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;form class="form-inline my-2 my-lg-0"&gt;
+            &lt;input class="form-control mr-sm-2" id="searchtxt" type="search" placeholder="Search" aria-label="Search"&gt;
+            &lt;button class="btn btn-outline-success my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/nav&gt;
+    
+      &lt;div class="container my-3"&gt;
+    
+        &lt;h1&gt;Welcome To Magic Notes&lt;/h1&gt;
+        &lt;div class="card"&gt;
+          &lt;!-- &lt;img src="..." class="card-img-top" alt="..."&gt; --&gt;
+          &lt;div class="card-body"&gt;
+            &lt;h5 class="card-title"&gt;Add a note&lt;/h5&gt;
+            &lt;div class="form-group"&gt;
+              &lt;textarea class="form-control" id="addtext" rows="3"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;button class="btn btn-primary" id="addbtn"&gt;Add note&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;hr&gt;
+        &lt;h1&gt;Your Notes&lt;/h1&gt;
+        &lt;hr&gt;
+        &lt;div class="container-fluid row" id="notes"&gt;
+        &lt;/div&gt;
+    
+        &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="js/app.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;   
+</pre>
+            </div>
+        </div>
+        <!-- prog14 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog14" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                app.js(in js folder)
+            </a>
+        </p>
+        <div class="collapse" id="prog14">
+            <div class="card card-body ">
+<pre class="bg-dark text-light">
+    console.log("this is app.js")
+    shownotes();
+    
+    let addBtn = document.getElementById('addbtn');
+    addBtn.addEventListener('click', function (e) {
+    
+        let addNOTES = document.getElementById('addtext');
+        let notes = localStorage.getItem('notes'); // '' me notes is item
+    
+        if (notes == null) {  
+            notesObj = [];
+        }
+        else {
+            notesObj = JSON.parse(notes);
+        }
+    
+        notesObj.push(addNOTES.value); // here value is a attribute used to fill the placeholder 
+        localStorage.setItem('notes', JSON.stringify(notesObj));
+        addNOTES.value = "";
+        // console.log(notesObj);
+    
+        shownotes();
+    })
+    // function to show elements from localstorage 
+    function shownotes() {
+        let notes = localStorage.getItem('notes');
+        if (notes == null) {
+            notesObj = [];
+        }
+        else {
+            notesObj = JSON.parse(notes);
+        }
+        let html = ""; // making a blank string
+        notesObj.forEach(function (element, index) {
+            html += `&lt;div class="notecard my-2 mx-2 card" style="width: 18rem;"&gt;
+            &lt;!-- &lt;img src="..." class="card-img-top" alt="..."&gt; --&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Note ${index + 1}&lt;/h5&gt;
+              &lt;p class="card-text"&gt;${element}&lt;/p&gt;
+              &lt;button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary"&gt;Delete note&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;`
+        });
+        // this.id add larna se jis element pr click kia gya ha uski id chali jati ha 
+        let notesElm = document.getElementById('notes');
+        if (notesObj.length != 0) {
+            notesElm.innerHTML = html;
+        }
+        else {
+            notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`;
+        }
+    }
+    
+    //function to delete a note
+    function deleteNote(index) {
+        // console.log("i am deleting", index);
+    
+        let notes = localStorage.getItem('notes');
+    
+        if (notes == null) {
+            notesObj = [];
+        }
+        else {
+            notesObj = JSON.parse(notes);
+        }
+         
+        notesObj.splice(index,1);
+        localStorage.setItem('notes', JSON.stringify(notesObj));
+        shownotes(); 
+    
+    }
+    
+    let search= document.getElementById('searchtxt');
+    search.addEventListener('input',function(){
+        let inputVal=search.value.toLowerCase();  // agar koi capital me text enter karega it co
+        console.log("input event fired!",inputVal);
+        let notecards=document.getElementsByClassName('notecard');
+        Array.from(notecards).forEach(function(element){
+          let cardtxt=element.getElementsByTagName('p')[0].innerText;
+        //   console.log(cardtxt);
+        if(cardtxt.includes(inputVal)){
+          element.style.display="block";
+        }
+        else{
+            element.style.display="none";
+        }
+        
+        })
+        
+    })   
+</pre>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="javascript1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="javascript2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="javascript4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="javascript5.html">5</a></li>
+              <li class="page-item"><a class="page-link" href="javascript6.html">6</a></li>
+              <li class="page-item"><a class="page-link" href="javascript7.html">7</a></li>
+              <li class="page-item"><a class="page-link" href="javascript8.html">8</a></li>
+            </ul>
+          </nav>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
