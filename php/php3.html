@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Php Tutorials</h3>
+    </div>
+    <div class="container my-3">
+<!-- prog39 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog39" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        freetips(categories.php)
+    </a>
+</p>
+<div class="collapse" id="prog39">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    
+        &lt;header class="text-gray-700 body-font"&gt;
+            &lt;div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"&gt;
+                &lt;a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"&gt;
+                    &lt;img src="images/logo.jpg" alt="" class="w-16 h-16 text-white p-2 rounded-full" viewBox="0 0 24 24"&gt;
+                    &lt;span class="ml-3 text-xl"&gt;My-passion&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;nav
+                    class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center"&gt;
+                    &lt;a href="index.php" class="mr-5 hover:text-gray-900"&gt;Home&lt;/a&gt;
+                    &lt;a href="contact.php" class="mr-5 hover:text-gray-900"&gt;feedback&lt;/a&gt;
+                &lt;/nav&gt;
+    
+            &lt;/div&gt;
+        &lt;/header&gt;
+    
+        &lt;?php require'partials/_dbconnect.php';?&gt;
+    
+        &lt;section class="text-gray-700 body-font"&gt;
+            &lt;div class="container px-5 py-24 mx-auto"&gt;
+                &lt;div class="flex flex-wrap -m-4"&gt;
+    
+                    &lt;?php
+                    // fetching  categories cards dynamically 
+          $sql="SELECT * FROM `passionlist`";
+          $result=mysqli_query($conn,$sql);
+          while($row=mysqli_fetch_assoc($result)){
+          $id=$row['p_id'];
+          $name=$row['p_name'];
+          $desc=$row['p_desc'];
+        echo  '&lt;div class="lg:w-1/4 md:w-1/2 p-4 w-full"&gt;
+            &lt;a class="block relative h-48 rounded overflow-hidden"&gt;
+              &lt;img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/420x260/?'.$name.',hobby"&gt;
+            &lt;/a&gt;
+            &lt;div class="mt-4"&gt;
+              &lt;h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"&gt;'.$name.'&lt;/h3&gt;
+              &lt;h2 class="text-gray-900 title-font text-lg font-medium"&gt;&lt;a href="subcategory.php?passion_id='.$id.'"&gt;browse sub. category&lt;/a&gt;&lt;/h2&gt;
+              &lt;p class="mt-1"&gt;'.substr($desc,0,90).'...&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;';
+    
+          }
+    
+         ?&gt;
+    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog40 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog40" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        contact.php
+    </a>
+</p>
+<div class="collapse" id="prog40">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;?php require 'partials/_header.php'; ?&gt;
+    
+        &lt;?php
+      if($_SERVER["REQUEST_METHOD"]=="POST"){
+      
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+    
+        require 'partials/_dbconnect.php';
+    
+        $sql="INSERT INTO `contact` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
+        $result=mysqli_query($conn,$sql);
+    
+      }
+    ?&gt;
+    
+        &lt;section class="text-gray-700 body-font relative"&gt;
+            &lt;div class="container px-5 py-24 mx-auto"&gt;
+                &lt;div class="flex flex-col text-center w-full mb-12"&gt;
+                    &lt;h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"&gt;Contact Us&lt;/h1&gt;
+                    &lt;p class="lg:w-2/3 mx-auto leading-relaxed text-base"&gt;feel free to ask questions or any query.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="lg:w-1/2 md:w-2/3 mx-auto"&gt;
+                    &lt;form action="/freetips/contact.php" method="post"&gt;
+                        &lt;div class="flex flex-wrap -m-2"&gt;
+                            &lt;div class="p-2 w-1/2"&gt;
+                                &lt;input name="name"
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Name" type="text"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-1/2"&gt;
+                                &lt;input name="email"
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Email" type="email"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full"&gt;
+                                &lt;textarea name="message"
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block"
+                                    placeholder="Message"&gt;&lt;/textarea&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full"&gt;
+                                &lt;button
+                                    class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"&gt;Submit&lt;/button&gt;
+                            &lt;/div&gt;
+                    &lt;/form&gt;
+                    &lt;div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"&gt;
+                        &lt;a class="text-indigo-500"&gt;xyz@gmail.com&lt;/a&gt;
+                        &lt;p class="leading-normal my-5"&gt;49 Smith St.
+                            &lt;br&gt;Saint Cloud, MN 56301
+                        &lt;/p&gt;
+                        &lt;span class="inline-flex"&gt;
+                            &lt;a class="text-gray-500"&gt;
+                                &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                            &lt;a class="ml-4 text-gray-500"&gt;
+                                &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;path
+                                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;
+                                    &lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                            &lt;a class="ml-4 text-gray-500"&gt;
+                                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;rect width="20" height="20" x="2" y="2" rx="5" ry="5"&gt;&lt;/rect&gt;
+                                    &lt;path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                            &lt;a class="ml-4 text-gray-500"&gt;
+                                &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;path
+                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"&gt;
+                                    &lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog41 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog41" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        index.php
+    </a>
+</p>
+<div class="collapse" id="prog41">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;?php require 'partials/_header.php'; ?&gt;
+    
+    
+    
+        &lt;section class="text-gray-700 body-font"&gt;
+      &lt;div class="container pt-6 py-24 mx-auto flex flex-wrap"&gt;
+        &lt;h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5"&gt;Finally discovered your likes/hobbies and want to excell in them&lt;/h2&gt;
+        &lt;div class="md:w-3/5 md:pl-6"&gt;
+          &lt;p class="leading-relaxed text-base"&gt;Our team will provide you the exact and most appropriate roadmap to master that skill.&lt;/p&gt;
+          &lt;div class="flex md:mt-4 mt-6"&gt;
+            &lt;button  class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded"&gt;
+            &lt;a href="ourteam.php"&gt; Our team &lt;/a&gt;&lt;/button&gt;
+            &lt;!-- &lt;a class="text-indigo-500 inline-flex items-center ml-4"&gt;Learn More --&gt;
+              &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24"&gt;
+                &lt;path d="M5 12h14M12 5l7 7-7 7"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    
+    
+        &lt;section class="text-gray-700 body-font"&gt;
+      &lt;div class="container pt-2 py-24 mx-auto flex flex-wrap"&gt;
+        &lt;div class="flex flex-wrap w-full"&gt;
+          &lt;div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6"&gt;
+            &lt;div class="flex relative pb-12"&gt;
+              &lt;div class="h-full w-10 absolute inset-0 flex items-center justify-center"&gt;
+                &lt;div class="h-full w-1 bg-gray-200 pointer-events-none"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"&gt;
+                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                  &lt;path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-grow pl-4"&gt;
+                &lt;h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider"&gt;STEP 1&lt;/h2&gt;
+                &lt;p class="leading-relaxed"&gt;If you finally discovered your hobby/passion.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex relative pb-12"&gt;
+              &lt;div class="h-full w-10 absolute inset-0 flex items-center justify-center"&gt;
+                &lt;div class="h-full w-1 bg-gray-200 pointer-events-none"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"&gt;
+                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                  &lt;path d="M22 12h-4l-3 9L9 3l-3 9H2"&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-grow pl-4"&gt;
+                &lt;h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider"&gt;STEP 2&lt;/h2&gt;
+                &lt;p class="leading-relaxed"&gt;Click on the categories option on top of the home page and find your matching interest.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex relative pb-12"&gt;
+              &lt;div class="h-full w-10 absolute inset-0 flex items-center justify-center"&gt;
+                &lt;div class="h-full w-1 bg-gray-200 pointer-events-none"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"&gt;
+                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                  &lt;circle cx="12" cy="5" r="3"&gt;&lt;/circle&gt;
+                  &lt;path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-grow pl-4"&gt;
+                &lt;h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider"&gt;STEP 3&lt;/h2&gt;
+                &lt;p class="leading-relaxed"&gt;Select your desired skills/hobbies.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex relative pb-12"&gt;
+              &lt;div class="h-full w-10 absolute inset-0 flex items-center justify-center"&gt;
+                &lt;div class="h-full w-1 bg-gray-200 pointer-events-none"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"&gt;
+                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                  &lt;path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"&gt;&lt;/path&gt;
+                  &lt;circle cx="12" cy="7" r="4"&gt;&lt;/circle&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-grow pl-4"&gt;
+                &lt;h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider"&gt;STEP 4&lt;/h2&gt;
+                &lt;p class="leading-relaxed"&gt;you will be redirected to a page where you provide your username and gmail id.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex relative"&gt;
+              &lt;div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"&gt;
+                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                  &lt;path d="M22 11.08V12a10 10 0 11-5.93-9.14"&gt;&lt;/path&gt;
+                  &lt;path d="M22 4L12 14.01l-3-3"&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+              &lt;/div&gt;
+              &lt;div class="flex-grow pl-4"&gt;
+                &lt;h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider"&gt;FINISH&lt;/h2&gt;
+                &lt;p class="leading-relaxed"&gt;we will send you a complete roadmap in the form of pdf so that you can master your skills .&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="images/frontimg.jpg" alt="step"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+           
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog42 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog42" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        login.php
+    </a>
+</p>
+<div class="collapse" id="prog42">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;?php require 'partials/_header.php'; ?&gt;
+    
+        &lt;section class="text-gray-700 body-font relative"&gt;
+            &lt;form action="partials/_handlelogin.php" method="post"&gt;
+                &lt;div class="container px-5 py-24 mx-auto"&gt;
+                    &lt;div class="flex flex-col text-center w-full mb-12"&gt;
+                        &lt;h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"&gt;Login !!&lt;/h1&gt;
+                        &lt;!-- &lt;p class="lg:w-2/3 mx-auto leading-relaxed text-base"&gt;&lt;/p&gt; --&gt;
+                    &lt;/div&gt;
+                    &lt;div class="lg:w-1/2 md:w-2/3 mx-auto"&gt;
+                        &lt;div class="flex flex-wrap -m-2"&gt;
+                            &lt;div class="p-2 w-1/2"&gt;
+                                &lt;input
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Name" type="text" name="loginname"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-1/2"&gt;
+                                &lt;input
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Email" type="email" name="loginemail"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full"&gt;
+                                &lt;input
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="password" type="password" name="loginpassword"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full"&gt;
+                                &lt;button
+                                    class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"&gt;Login&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"&gt;
+                                &lt;a class="text-indigo-500"&gt;xyz.gmail.com&lt;/a&gt;
+                                &lt;p class="leading-normal my-5"&gt;49 Smith St.
+                                    &lt;br&gt;Saint Cloud, MN 56301
+                                &lt;/p&gt;
+                                &lt;span class="inline-flex"&gt;
+                                    &lt;a class="text-gray-500"&gt;
+                                        &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                            &lt;path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                    &lt;/a&gt;
+                                    &lt;a class="ml-4 text-gray-500"&gt;
+                                        &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                            &lt;path
+                                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;
+                                            &lt;/path&gt;
+                                        &lt;/svg&gt;
+                                    &lt;/a&gt;
+                                    &lt;a class="ml-4 text-gray-500"&gt;
+                                        &lt;svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                            &lt;rect width="20" height="20" x="2" y="2" rx="5" ry="5"&gt;&lt;/rect&gt;
+                                            &lt;path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                    &lt;/a&gt;
+                                    &lt;a class="ml-4 text-gray-500"&gt;
+                                        &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                            &lt;path
+                                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"&gt;
+                                            &lt;/path&gt;
+                                        &lt;/svg&gt;
+                                    &lt;/a&gt;
+                                &lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    
+    
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog43 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog43" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        logout.php
+    </a>
+</p>
+<div class="collapse" id="prog43">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    session_start();
+    
+    
+    echo"logging you out. Please wait ...";
+    session_destroy();
+    header("location: /freetips");
+    
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog44 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog44" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        need.php
+    </a>
+</p>
+<div class="collapse" id="prog44">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    
+        &lt;?php require 'partials/_dbconnect.php'; ?&gt;
+    
+        &lt;?php require 'partials/_header.php'; ?&gt;
+    
+        &lt;?php
+      if($_SERVER["REQUEST_METHOD"]=="POST"){
+      
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $roadmap = $_POST['roadmap'];
+    
+    
+        $sql="INSERT INTO `roadmap` (`need_name`, `need_email`, `need_roadmap`) VALUES ('$name', '$email', '$roadmap')";
+        $result=mysqli_query($conn,$sql);
+    
+      }
+    ?&gt;
+    
+        &lt;?php
+    
+    // $id = $_GET['passion_id'];
+    // $sql="SELECT * FROM `sub_category` WHERE sub_category_passion_id = $id ";
+    // $result=mysqli_query($conn,$sql);
+    // while($row=mysqli_fetch_assoc($result)){
+    // // $catname=$row['category_name'];
+    // // $id=$row['sub_category_id'];
+    // $title=$row['sub_category_title'];
+    // }
+    
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+    
+    $category_name = $_GET['need_category'];
+    $id = $_GET['need_id'];
+    $sql="SELECT * FROM `sub_category` WHERE `category_name` = '$category_name' AND `sub_category_id` = $id";
+    $result=mysqli_query($conn,$sql);
+    while($row=mysqli_fetch_assoc($result)){
+    // $catname=$row['category_name'];
+    // $id=$row['sub_category_id'];
+    $title=$row['sub_category_title'];
+    
+    echo '&lt;section class="text-gray-700 body-font relative"&gt;
+            &lt;div class="container px-5 py-24 mx-auto"&gt;
+                &lt;div class="flex flex-col text-center w-full mb-12"&gt;
+                    &lt;h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"&gt;Get the Roadmap&lt;/h1&gt;
+                    &lt;p class="lg:w-2/3 mx-auto leading-relaxed text-base"&gt;you will get the exact path to achieve your goals more quickly!!&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="lg:w-1/2 md:w-2/3 mx-auto"&gt;
+                    &lt;form action="'.$_SERVER['REQUEST_URI'].'" method="post"&gt;
+                        &lt;div class="flex flex-wrap -m-2"&gt;
+                            &lt;div class="p-2 w-1/2"&gt;
+                                &lt;input name="name"
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Name" type="text" value="'.$_SESSION['username'].'"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-1/2"&gt;
+                                &lt;input name="email"
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Email" type="email" value="'.$_SESSION['useremail'].'"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full"&gt;
+                                &lt;input name="roadmap"
+                                    class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                    placeholder="Roadmap" type="text" value="i need '.$title.' roadmap"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="p-2 w-full"&gt;
+                                &lt;button
+                                    class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"&gt;Get the Roadmap&lt;/button&gt;
+                            &lt;/div&gt;
+                    &lt;/form&gt;
+                    &lt;div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"&gt;
+                        &lt;a class="text-indigo-500"&gt;xyz@gmail.com&lt;/a&gt;
+                        &lt;p class="leading-normal my-5"&gt;49 Smith St.
+                            &lt;br&gt;Saint Cloud, MN 56301
+                        &lt;/p&gt;
+                        &lt;span class="inline-flex"&gt;
+                            &lt;a class="text-gray-500"&gt;
+                                &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                            &lt;a class="ml-4 text-gray-500"&gt;
+                                &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;path
+                                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;
+                                    &lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                            &lt;a class="ml-4 text-gray-500"&gt;
+                                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;rect width="20" height="20" x="2" y="2" rx="5" ry="5"&gt;&lt;/rect&gt;
+                                    &lt;path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                            &lt;a class="ml-4 text-gray-500"&gt;
+                                &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                    &lt;path
+                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"&gt;
+                                    &lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/a&gt;
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;';
+    }
+    
+    }
+    
+    ?&gt;
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog45 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog45" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        ourteam.php
+    </a>
+</p>
+<div class="collapse" id="prog45">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;?php require 'partials/_header.php'; ?&gt;
+    
+        &lt;section class="text-gray-700 body-font"&gt;
+      &lt;div class="container px-5 py-24 mx-auto"&gt;
+        &lt;div class="flex flex-wrap -m-4"&gt;
+          &lt;div class="lg:w-1/3 lg:mb-0 mb-6 p-4"&gt;
+            &lt;div class="h-full text-center"&gt;
+              &lt;img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302"&gt;
+              &lt;p class="leading-relaxed"&gt;Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.&lt;/p&gt;
+              &lt;span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"&gt;&lt;/span&gt;
+              &lt;h2 class="text-gray-900 font-medium title-font tracking-wider text-sm"&gt;HOLDEN CAULFIELD&lt;/h2&gt;
+              &lt;p class="text-gray-500"&gt;Senior Product Designer&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="lg:w-1/3 lg:mb-0 mb-6 p-4"&gt;
+            &lt;div class="h-full text-center"&gt;
+              &lt;img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300"&gt;
+              &lt;p class="leading-relaxed"&gt;Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.&lt;/p&gt;
+              &lt;span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"&gt;&lt;/span&gt;
+              &lt;h2 class="text-gray-900 font-medium title-font tracking-wider text-sm"&gt;ALPER KAMU&lt;/h2&gt;
+              &lt;p class="text-gray-500"&gt;UI Develeoper&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="lg:w-1/3 lg:mb-0 p-4"&gt;
+            &lt;div class="h-full text-center"&gt;
+              &lt;img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305"&gt;
+              &lt;p class="leading-relaxed"&gt;Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.&lt;/p&gt;
+              &lt;span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"&gt;&lt;/span&gt;
+              &lt;h2 class="text-gray-900 font-medium title-font tracking-wider text-sm"&gt;HENRY LETHAM&lt;/h2&gt;
+              &lt;p class="text-gray-500"&gt;CTO&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    
+    
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog46 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog46" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        signup.php
+    </a>
+</p>
+<div class="collapse" id="prog46">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;?php require 'partials/_header.php'; ?&gt;
+    
+        &lt;section class="text-gray-700 body-font relative"&gt;
+        &lt;form action="partials/_handlesignup.php" method="post"&gt;
+            &lt;div class="container px-5 py-24 mx-auto"&gt;
+                &lt;div class="flex flex-col text-center w-full mb-12"&gt;
+                    &lt;h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"&gt;Signup !!&lt;/h1&gt;
+                    &lt;p class="lg:w-2/3 mx-auto leading-relaxed text-base"&gt;We will notify you when a new skill is added.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="lg:w-1/2 md:w-2/3 mx-auto"&gt;
+                    &lt;div class="flex flex-wrap -m-2"&gt;
+                        &lt;div class="p-2 w-1/2"&gt;
+                            &lt;input
+                                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                placeholder="Name" type="text" name="name"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="p-2 w-1/2"&gt;
+                            &lt;input
+                                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                placeholder="Email" type="email" name="email"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="p-2 w-full"&gt;
+                            &lt;input
+                                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                placeholder="password" type="password" name="password"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="p-2 w-full"&gt;
+                            &lt;input
+                                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                                placeholder="confirm password" type="password" name="cpassword"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="p-2 w-full"&gt;
+                            &lt;button
+                                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"&gt;Signup&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"&gt;
+                            &lt;a class="text-indigo-500"&gt;xyz.gmail.com&lt;/a&gt;
+                            &lt;p class="leading-normal my-5"&gt;49 Smith St.
+                                &lt;br&gt;Saint Cloud, MN 56301
+                            &lt;/p&gt;
+                            &lt;span class="inline-flex"&gt;
+                                &lt;a class="text-gray-500"&gt;
+                                    &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                        &lt;path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"&gt;&lt;/path&gt;
+                                    &lt;/svg&gt;
+                                &lt;/a&gt;
+                                &lt;a class="ml-4 text-gray-500"&gt;
+                                    &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                        &lt;path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;
+                                        &lt;/path&gt;
+                                    &lt;/svg&gt;
+                                &lt;/a&gt;
+                                &lt;a class="ml-4 text-gray-500"&gt;
+                                    &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                        &lt;rect width="20" height="20" x="2" y="2" rx="5" ry="5"&gt;&lt;/rect&gt;
+                                        &lt;path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"&gt;&lt;/path&gt;
+                                    &lt;/svg&gt;
+                                &lt;/a&gt;
+                                &lt;a class="ml-4 text-gray-500"&gt;
+                                    &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                        &lt;path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"&gt;
+                                        &lt;/path&gt;
+                                    &lt;/svg&gt;
+                                &lt;/a&gt;
+                            &lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    
+    
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog47 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog47" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        subcategory.php
+    </a>
+</p>
+<div class="collapse" id="prog47">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;?php require 'partials/_header.php'; ?&gt;
+        &lt;?php require 'partials/_dbconnect.php'; ?&gt;
+    
+        &lt;?php  
+      $id= $_GET['passion_id'];
+      $sql="SELECT * FROM `passionlist` WHERE p_id = $id";
+      $result=mysqli_query($conn,$sql);
+      while($row=mysqli_fetch_assoc($result)){
+      $id=$row['p_id'];
+      $name=$row['p_name'];
+      $desc=$row['p_desc'];
+      }
+    ?&gt;
+    
+        &lt;?php
+    echo '&lt;section class="text-gray-700 body-font"&gt;
+      &lt;div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"&gt;
+        &lt;div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"&gt;
+          &lt;h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"&gt;welcome to
+            &lt;br class="hidden lg:inline-block"&gt;'.$name.' roadmaps
+          &lt;/h1&gt;
+          &lt;p class="mb-8 leading-relaxed"&gt;'.$desc.'&lt;/p&gt;
+          &lt;div class="flex justify-center"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"&gt;
+          &lt;img class="object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/720x600/?'.$name.',hobby"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;';
+    
+    ?&gt;
+    
+    
+    
+        &lt;section class="text-gray-700 body-font"&gt;
+            &lt;div class="container px-5 py-24 mx-auto"&gt;
+                &lt;div class="flex flex-wrap -m-4"&gt;
+    
+                    &lt;?php
+    
+                    // session_start();
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+                    // fetching  sub-categories cards dynamically 
+          $id = $_GET['passion_id'];
+          $sql="SELECT * FROM `sub_category` WHERE sub_category_passion_id = $id ";
+          $result=mysqli_query($conn,$sql);
+          while($row=mysqli_fetch_assoc($result)){
+          $catname=$row['category_name'];
+          $id=$row['sub_category_id'];
+          $title=$row['sub_category_title'];
+          // $desc=$row['p_desc'];
+        echo  '&lt;div class="lg:w-1/4 md:w-1/2 p-4 w-full"&gt;
+            &lt;a class="block relative h-48 rounded overflow-hidden"&gt;
+              &lt;img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/420x260/?'.$catname.','.$title.'"&gt;
+            &lt;/a&gt;
+            &lt;div class="mt-4"&gt;
+              &lt;h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"&gt;'.$title.'&lt;/h3&gt;
+              &lt;h2 class="text-gray-900 title-font text-lg font-medium"&gt;&lt;a href="need.php?need_category='.$catname.'&need_id='.$id.'"&gt;get the roadmap&lt;/a&gt;&lt;/h2&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;';
+    
+          }
+    
+        }
+    
+        else{
+        echo  '&lt;button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"&gt;&lt;a href="login.php"&gt;login first to see subcategories&lt;/a&gt;&lt;/button&gt;';
+        }
+         ?&gt;
+    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    
+        &lt;?php require 'partials/_footer.php'; ?&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog48 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog48" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        _dbconnect.php(in partials)
+    </a>
+</p>
+<div class="collapse" id="prog48">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $server="localhost";
+    $username="root";
+    $password="";
+    $database="mypassion";
+    
+    $conn= mysqli_connect($server,$username,$password,$database);
+    if(!$conn){
+        die("not connected successfully:" . mysqli_conn_error());
+    }
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog49 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog49" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        _footer.php(in partials)
+    </a>
+</p>
+<div class="collapse" id="prog49">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;div class="bg-gray-200"&gt;&lt;div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"&gt;&lt;p class="text-gray-500 text-sm text-center sm:text-left"&gt;© 2020 my-passion&lt;/p&gt;&lt;span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"&gt;&lt;a class="text-gray-500"&gt;&lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;&lt;path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class="ml-3 text-gray-500"&gt;&lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;&lt;path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class="ml-3 text-gray-500"&gt;&lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"&gt;&lt;rect width="20" height="20" x="2" y="2" rx="5" ry="5"&gt;&lt;/rect&gt;&lt;path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class="ml-3 text-gray-500"&gt;&lt;svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"&gt;&lt;path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"&gt;&lt;/path&gt;&lt;circle cx="4" cy="4" r="2" stroke="none"&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+</pre>
+    </div>
+</div>
+<!-- prog50 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog50" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        _handlelogin.php(in partials)
+    </a>
+</p>
+<div class="collapse" id="prog50">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    $showError="false";
+    
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        require '_dbconnect.php';
+        $user_name=$_POST['loginname'];
+        $user_email=$_POST['loginemail'];
+        $password=$_POST['loginpassword'];
+        $sql="SELECT * FROM users where `user_email` = '$user_email' AND `user_name` = '$user_name'";
+        $result=mysqli_query($conn,$sql);
+        $numrows= mysqli_num_rows($result);
+           if($numrows==1){ 
+            $row=mysqli_fetch_assoc($result);
+              if($password=$row['password']){
+                 session_start();
+                 $_SESSION['loggedin']=true;
+                 $_SESSION['sno']=$row['sno'];
+                 $_SESSION['useremail']=$user_email;
+                 $_SESSION['username']=$user_name;
+                   
+                //  echo "logged in . $user_email";
+                 header("location:/freetips/index.php?loggedin");
+                 exit();
+                }
+                else{
+    
+                  header("location:/freetips/index.php?passwordincorrect");
+                  exit();
+                // echo "unavble to login";
+                }
+              }
+     
+     
+         
+              header("location:/freetips/index.php?nologin");
+    }
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog51 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog51" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        _handlesignup.php(in partials)
+    </a>
+</p>
+<div class="collapse" id="prog51">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $showerror=false;
+    
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        require '_dbconnect.php';
+        $user_name=$_POST['name'];
+        $user_email=$_POST['email'];
+        $password=$_POST['password'];
+        $cpassword=$_POST['cpassword'];
+        // checking whether email or user name is present or not 
+       $sqlexist="SELECT * FROM users WHERE `user_name` = '$user_name' OR `user_email` = '$user_email'";
+       $result=mysqli_query($conn,$sqlexist);
+       $numrows= mysqli_num_rows($result);
+       if($numrows&gt;0)
+       {
+           $showerror="email or username is already exists";
+       }
+       else{
+           if($password==$cpassword){
+            // $hash=password_hash($password,PASSWORD_DEFAULT);
+            $sql="INSERT INTO `users` (`user_name`, `user_email`, `password`) VALUES ('$user_name', '$user_email', '$password')";
+            $result=mysqli_query($conn,$sql);
+            if($result){
+                $showalert=true;
+                header("location:/freetips/index.php?signupsuccess=true");
+                exit();
+            }
+           }
+           else{
+               $showerror="passwords do not match";
+           }
+       }
+       header("location:/freetips/index.php?signupsuccess=false&error=$showerror");
+    
+    }
+    
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog52 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog52" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        _header.php(in partials)
+    </a>
+</p>
+<div class="collapse" id="prog52">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    session_start();
+    
+    echo '&lt;header class="text-gray-700 body-font"&gt;
+      &lt;div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"&gt;
+        &lt;a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"&gt;
+          &lt;img src="images/logo.jpg" alt="" class="w-16 h-16 text-white p-2 rounded-full" viewBox="0 0 24 24" &gt;
+          &lt;span class="ml-3 text-xl"&gt;My-passion&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center"&gt;
+          &lt;a href="index.php" class="mr-5 hover:text-gray-900"&gt;Home&lt;/a&gt;
+          &lt;a href="categories.php" class="mr-5 hover:text-gray-900"&gt;Categories&lt;/a&gt;';
+    
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+        echo '&lt;a href="logout.php" class="mr-5 hover:text-gray-900"&gt;Logout&lt;/a&gt;';
+        }
+        else{  
+        echo '&lt;a href="login.php" class="mr-5 hover:text-gray-900"&gt;Login&lt;/a&gt;';
+        echo '&lt;a href="signup.php" class="mr-5 hover:text-gray-900"&gt;Signup&lt;/a&gt;';
+        }     
+        echo  '&lt;a href="contact.php" class="mr-5 hover:text-gray-900"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"&gt;&lt;a href="categories.php"&gt;Categories&lt;/a&gt;
+          &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"&gt;
+            &lt;path d="M5 12h14M12 5l7 7-7 7"&gt;&lt;/path&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;';
+    
+    // require '';
+    // require '';
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="php1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="php2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="php3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="php4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="php5.html">5</a></li>
+            </ul>
+          </nav>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

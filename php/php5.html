@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Php Tutorials</h3>
+    </div>
+    <div class="container my-3">
+
+        <!-- prog67 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog67" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                index.php(oops tutorial)
+            </a>
+        </p>
+        <div class="collapse" id="prog67">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;welcome to opps&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;this is oops tutorial&lt;/h3&gt;
+        &lt;h2&gt;what is oops?&lt;/h2&gt;
+        &lt;p&gt;oops is about creating classes and objects,class serve as templates and multiple objects are created using the class&lt;/p&gt;
+        &lt;h2&gt;what are classes and objects&lt;/h2&gt;
+        &lt;p&gt;classes are the templates for creating objects&lt;/p&gt;
+        &lt;p&gt;if car is a class then maruti suzuki alto and suzuki swift are two objects of class car&lt;/p&gt;
+        &lt;h2&gt;why oops?&lt;/h2&gt;
+        &lt;p&gt;oops makes it easy to keep the code dry?&lt;/p&gt;
+        &lt;p&gt;DRY-do not repeat yourself - the code written by the programmer should be reusable&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+            </div>
+        </div>
+
+        <!-- prog68 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog68" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial77
+            </a>
+        </p>
+        <div class="collapse" id="prog68">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;?php
+
+
+    class Player{
+        //class variables
+        public $speed = 5 ; 
+        public $running = false ;  
+    
+        //methods
+        //functions are public by defauult
+        function set_name($naming){
+           $this-&gt;name=$naming;  //name is instance variable
+        }
+    
+        function get_name(){
+            return $this-&gt;name; //printing instance variable
+        }
+    
+        function run(){
+           $this-&gt;running=true; //this is also a instance variable
+        }
+    
+        function stop(){
+           $this-&gt;running=false; 
+        }
+    }
+    
+    echo "lets understand opps using gta vice city&lt;br&gt;";
+    $player1= new player(); //new object/instance created using class name Player
+    $player1-&gt;set_name("rohan");
+    echo $player1-&gt;get_name();
+    $player1-&gt;speed=88;//setting instance variable if not set then class variable is printed
+    echo $player1-&gt;speed;
+    echo "&lt;br&gt;";
+    $player2= new player();
+    $player2-&gt;set_name("harry");
+    echo $player2-&gt;get_name();
+    echo $player2-&gt;speed; //here instance variable is not present so class variable is accessed
+    echo "&lt;br&gt;";
+    $player3= new player();
+    $player3-&gt;set_name("sagar");
+    echo $player3-&gt;get_name();
+    
+    ?&gt;
+</pre>
+            </div>
+        </div>
+        <!-- prog69 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog69" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial78
+            </a>
+        </p>
+        <div class="collapse" id="prog69">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;?php
+
+    // making a class employee 
+    class Employee{
+    
+        //properties - class variables
+        public $name="popi";
+        public $salary=98;
+    
+        //methods
+        // constructor- it allows u to initialize objects.it is the code which is executed whenever a new object is instantiated.(object ke banna ko)
+    
+        // constructor without arguments
+        // function __construct(){ 
+        //     echo "this is my constructor for employee";
+        // }
+    
+        //constructor with arguments
+        function __construct($aname,$asalary){
+           $this-&gt;name = $aname;
+           $this-&gt;salary= $asalary;
+           echo "the salary of ".$this-&gt;name." is ".$this-&gt;salary;
+           echo "&lt;br&gt;";   
+        }
+    
+    
+    
+    
+    }
+    
+    $rohan =new Employee("rohan",33333); //here constructor(without para called) ,if parameter vala const. banaya ha to arguments dena padenga nahi to error
+    $harry =new Employee("harry",33643); 
+    $sagar =new Employee("sagar",93887); 
+    echo "salary of harry is $harry-&gt;salary";
+    echo "&lt;br&gt;";
+    echo "salary of rohan is $rohan-&gt;salary";
+    echo "&lt;br&gt;";
+    echo $harry-&gt;name;
+    echo "&lt;br&gt;";
+    echo $rohan-&gt;salary; 
+    ?&gt;
+</pre>
+            </div>
+        </div>
+        <!-- prog70 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog70" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial79
+            </a>
+        </p>
+        <div class="collapse" id="prog70">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;?php
+
+    // making a class employee 
+    class Employee{
+    
+        //properties - class variables
+        public $salaries=77;
+        public $namies="popi";
+    
+    
+        // function __construct(){
+        //     echo "this is my constructor for employee";
+        // }
+    
+        //constructor with arguments
+        function __construct($aname,$asalary){
+           $this-&gt;name = $aname;
+           $this-&gt;salary= $asalary;
+           echo "the salary of ".$this-&gt;name." is ".$this-&gt;salary;
+           echo "&lt;br&gt;";   
+        }
+        function __destruct(){
+            echo "i am destructing $this-&gt;name&lt;br&gt;"; //order of destructor is reversed to order of constructor
+        }
+    
+    
+    
+    }
+    
+    $rohan =new Employee("rohan",33333); //here constructor(without para called) ,if parameter vala const. banaya ha to arguments dena padenga nahi to error
+    $harry =new Employee("harry",33643); 
+    $sagar =new Employee("sagar",93887); 
+    echo "salary of $harry-&gt;name is $harry-&gt;salary";
+    echo "&lt;br&gt;";
+    echo "salary of $rohan-&gt;name is $rohan-&gt;salary";
+    echo "&lt;br&gt;";
+    echo "printing public propreties&lt;br&gt;";
+    echo $harry-&gt;salaries; //as salaries variable is not present so it prints the class variable
+    echo "&lt;br&gt;";
+    echo $rohan-&gt;namies; //as salaries variable is not present so it prints the class variable
+    echo "&lt;br&gt;";
+    //after it destructor will work ,kyuke execution aurrr kisi code ka nahi karna ha 
+       
+    ?&gt;
+</pre>
+            </div>
+        </div>
+        <!-- prog71 -->
+        <p class="mt-2">
+            <a class="btn btn-primary" data-toggle="collapse" href="#prog71" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                tutorial80
+            </a>
+        </p>
+        <div class="collapse" id="prog71">
+            <div class="card card-body ">
+                <pre class="bg-dark text-light">
+    &lt;!-- write php for php boiler plate --&gt;
+    &lt;?php 
+      //access modifiers
+    //   1.public 2. private 3. protected
+    // 1.public- can be accesed from anywhere
+    // 2.private-can only be accessed from within the class
+    // 3.protected =can be accessed from within the class and from derived class
+      class employee{
+          private $name="harry"; //or u may write any access modifier or var
+        //    private variables/properties ko use karna ka hakk sirf member functions/methods ka pass ha  
+          protected function showname(){
+              echo $this-&gt;naming="harryimg";
+          }
+      }  
+    
+      $harry = new employee();
+      // echo $harry-&gt;showname(); //thsi also shows error 
+    //   echo $harry-&gt;name; //this shows error 
+        
+    ?&gt;
+</pre>
+            </div>
+        </div>
+    <!-- prog72 -->
+    <p class="mt-2">
+        <a class="btn btn-primary" data-toggle="collapse" href="#prog72" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            tutorial81
+        </a>
+    </p>
+    <div class="collapse" id="prog72">
+        <div class="card card-body ">
+            <pre class="bg-dark text-light">
+    &lt;?php 
+    //inheritance
+    class employee{
+        public $name="harry";
+        public $salary=12000;
+        private $grade=3;
+
+        function showname(){
+            echo $this-&gt;name;
+        }
+        function setsal($asalary){
+            $this-&gt;salary=$asalary;
+        }
+        function getsal(){
+            echo $this-&gt;salary;
+        }
+    }  
+
+    // inheriting class programmer from class employee
+
+    class programmer extends employee{
+        public $language="php";
+
+        function changelanguage($alanguage){
+            echo $this-&gt;language = $alanguage;
+        }
+    }
+
+    $rohan=new employee();
+    $rohan-&gt;name="rohan";
+    $rohan-&gt;showname();
+    echo "&lt;br&gt;";
+    // $rohan-&gt;salary=11111111; cannot do it rn becoz property is private
+    $rohan-&gt;salary=111111184848;
+    echo $rohan-&gt;salary ;//
+    echo "&lt;br&gt;";
+    echo $rohan-&gt;getsal();
+    echo "&lt;br&gt;";
+    $rohan-&gt;setsal(10101001);
+    $rohan-&gt;getsal();
+    echo "&lt;br&gt;";
+    $ankit=new employee();
+    $ankit-&gt;name="ankit";
+    $ankit-&gt;showname();
+    echo "&lt;br&gt;";
+    $amit= new programmer();
+    echo $amit-&gt;name;
+    echo "&lt;br&gt;";
+    $amit-&gt;showname();
+    $amit-&gt;name="amit";
+    $amit-&gt;showname();
+    echo "&lt;br&gt;";    
+    echo $amit-&gt;language;
+    echo "&lt;br&gt;";
+    echo $amit-&gt;language="python";
+    echo "&lt;br&gt;";
+    $amit-&gt;language="html";
+    echo $amit-&gt;language="html";
+    echo "&lt;br&gt;";
+    echo ".................";
+    echo "&lt;br&gt;";
+    $amit-&gt;changelanguage("java"); //spaces appear 
+    echo "&lt;br&gt;";
+    echo $amit-&gt;salary;
+    echo "&lt;br&gt;";
+    $amit-&gt;setsal(3746478338);
+    $amit-&gt;getsal();
+    echo "&lt;br&gt;";
+    echo $amit-&gt;language;
+    echo "&lt;br&gt;";
+    echo ".................";
+    echo "&lt;br&gt;";
+    $rani = new programmer();
+    $rani-&gt;name="rani";
+    $rani-&gt;showname();
+    echo "&lt;br&gt;";
+    $rani-&gt;changelanguage("ruby");
+    echo "&lt;br&gt;";
+    echo "............";
+    echo "&lt;br&gt;";
+    echo $rani-&gt;language;
+?&gt;
+</pre>
+        </div>
+    </div>
+    <!-- prog73 -->
+    <p class="mt-2">
+        <a class="btn btn-primary" data-toggle="collapse" href="#prog73" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            tutorial82
+        </a>
+    </p>
+    <div class="collapse" id="prog73">
+        <div class="card card-body ">
+            <pre class="bg-dark text-light">
+    &lt;?php 
+    
+    class Employee{
+        public $name;
+        public $salary;
+        protected $secrets="gaming";
+
+        public function __construct($aname,$asalary){
+            $this-&gt;name= $aname;
+            $this-&gt;salary=$asalary;
+            $this-&gt;details(); // to access private nd protected methods outside the class
+        }
+
+        protected function details(){  //protected can be accesed by the child class not by any objects 
+            echo "name of the programmer is $this-&gt;name &lt;br&gt;";
+            echo "salary of the programmer is $this-&gt;salary &lt;br&gt;";
+        }
+
+    }
+
+    class Programmer extends Employee{
+        public $language="php";
+
+        public function __construct($aname,$alanguage,$asalary){
+            $this-&gt;name= $aname;
+            $this-&gt;language= $alanguage;
+            $this-&gt;salary=$asalary;
+            $this-&gt;details(); // to access private nd protected methods outside the class
+        }
+
+
+    }
+
+    $harry=new Employee("harry",98887643);
+
+    // $harry-&gt;details(); // gives error if function is private or protected so if u want to acces then add to constructor as they can call them
+
+
+    $rohan=new Programmer("rohan","python",8665);
+    echo $harry-&gt;secrets;   
+    
+?&gt;
+</pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="php1.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="php2.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="php3.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="php4.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="php5.html">5</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Php Tutorials</h3>
+    </div>
+    <div class="container my-3">
+<!-- prog21 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog21" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        mtsqli_create
+    </a>
+</p>
+<div class="collapse" id="prog21">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    // 1. mysqli extension
+    // 2. pdo = php data object
+    
+    //connecting to database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    // echo "connected successfully"; 
+    
+    echo "&lt;br&gt;";
+    //creating a database - sql query
+    $sql= "CREATE DATABASE dbharry7";
+    
+    $result = mysqli_query($conn,$sql); //for executing query
+    // echo "the result is " ;
+    // echo var_dump($result);
+    // echo "&lt;br&gt;";
+    if($result){//here $result is true
+        echo "the db was create successfully";
+    }
+    else{
+        echo "db was not created successfully because of this error ---&gt;".mysqli_error($conn);
+    }
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog22 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog22" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        create_table
+    </a>
+</p>
+<div class="collapse" id="prog22">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    // 1. mysqli extension
+    // 2. pdo = php data object
+    
+    //connecting to database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "dbharry7";
+    
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password,$database);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    // echo "connected successfully"; 
+    
+    echo "&lt;br&gt;";
+    
+    //creating table using php
+    // name of table is phptriping  //below is sequel query or sql query
+    $sql = "CREATE TABLE `phptriping` ( `sno.` INT(6) NOT NULL AUTO_INCREMENT , `name` VARCHAR(12) NOT NULL , `destination` VARCHAR(12) NOT NULL , PRIMARY KEY (`sno.`)) ";
+    
+    $result = mysqli_query($conn,$sql); //for executing query
+    // echo "the result is " ;
+    // echo var_dump($result);
+    // echo "&lt;br&gt;";
+    if($result){//here $result is true
+        echo "the table was create successfully";
+    }
+    else{
+        echo "table was not created successfully because of this error ---&gt;".mysqli_error($conn);
+    }
+    
+    
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog23 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog23" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        insert_data
+    </a>
+</p>
+<div class="collapse" id="prog23">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "dbharry7";
+    
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password,$database);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    // echo "connected successfully"; 
+    
+    echo "&lt;br&gt;";
+    
+    //variables to be inserted in database
+    $name="mohan";
+    $destination="bankok";
+    //sequel query
+    $sql ="INSERT INTO `phptrip` ( `name`, `destination`) VALUES ( '$name', '$destination' )";
+    
+    
+    //adding new table to the table "phptriping" in database "dbharry7"
+    $result = mysqli_query($conn,$sql); //for executing query
+    // echo "the result is " ;
+    // echo var_dump($result);
+    // echo "&lt;br&gt;";
+    if($result){//here $result is true
+        echo "new record has been added successfully";
+    }
+    else{
+        echo "new record has not been added because of this error ---&gt;".mysqli_error($conn);
+    }
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog24 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog24" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        form_in_php
+    </a>
+</p>
+<div class="collapse" id="prog24">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!doctype html&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;!-- Required meta tags --&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    
+        &lt;!-- Bootstrap CSS --&gt;
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"&gt;
+    
+        &lt;title&gt;contact form&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;!-- navigation bar  --&gt;
+      &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+      &lt;a class="navbar-brand" href="#"&gt;get/post&lt;/a&gt;
+      &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    
+      &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+        &lt;ul class="navbar-nav mr-auto"&gt;
+          &lt;li class="nav-item active"&gt;
+            &lt;a class="nav-link" href="/cwhphp/28_form.php"&gt;Countact us &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item dropdown"&gt;
+            &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+              Dropdown
+            &lt;/a&gt;
+            &lt;div class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+              &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
+              &lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;
+              &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+              &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form class="form-inline my-2 my-lg-0"&gt;
+          &lt;input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"&gt;
+          &lt;button class="btn btn-outline-success my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+       
+    
+       &lt;!-- sql query  --&gt;
+    &lt;?php
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $desc = $_POST['description'];
+    
+    
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $database = "contacts";
+     
+     
+     //create a connection object
+     $conn = mysqli_connect($servername,$username,$password,$database);
+     
+     if(!$conn){
+       die("sorry we failed to connect:" . mysqli_connect_error());
+     }
+     else{
+        //  echo "connected successfully";
+         //sequel query
+    $sql ="INSERT INTO `contactus` ( `name`, `email`, `concern`, `date`) VALUES ( '$name', '$email', '$desc', current_timestamp())";
+    
+    
+    //adding new contact table  in "contactus in database "contacts"
+    $result = mysqli_query($conn,$sql); //for executing query
+    // echo "the result is " ;
+    // echo var_dump($result);
+    // echo "&lt;br&gt;";
+    if($result){//here $result is true
+        echo '&lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+        &lt;strong&gt;success!&lt;/strong&gt; your feedback and concren has been submitted successfully!
+        &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+          &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;';
+    }
+    else{
+        echo '&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+        &lt;strong&gt;Error!&lt;/strong&gt; Due to some technical error your form cannot submitted!
+        &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+          &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;';
+    }
+     };
+     };
+     
+    
+    ?&gt;
+    
+    &lt;!-- form  --&gt;
+         &lt;div class="container mt-3"&gt;&lt;!--margin top 3 --&gt;
+         &lt;h3&gt;Contact Us for your Concerns&lt;/h3&gt;
+         &lt;form action="/cwhphp/28_form.php" method="post"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="name"&gt;Name&lt;/label&gt;
+        &lt;input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp"&gt;
+        &lt;!-- &lt;small id="emailHelp" class="form-text text-muted"&gt;We'll never share your email with anyone else.&lt;/small&gt; --&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="email"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"&gt;
+        &lt;small id="emailHelp" class="form-text text-muted"&gt;We'll never share your email with anyone else.&lt;/small&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="desc"&gt;Description&lt;/label&gt;
+        &lt;textarea name="description" id="desc" class="form-control" cols="30" rows="10"&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group form-check"&gt;
+        &lt;input type="checkbox" class="form-check-input" id="exampleCheck1"&gt;
+        &lt;label class="form-check-label" for="exampleCheck1"&gt;Check me out&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+         &lt;/div&gt;
+    
+         &lt;!-- starter template --&gt;
+    
+        &lt;!-- Optional JavaScript --&gt;
+        &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+        &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog25 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog25" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        selecting_data
+    </a>
+</p>
+<div class="collapse" id="prog25">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "dbharry7";
+    
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password,$database);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    // echo "connected successfully"; 
+    
+    echo "&lt;br&gt;";
+    
+    $sql="SELECT * FROM `phptriping`";
+    $result = mysqli_query($conn,$sql);
+     
+    // to find no of records returned 
+    $numrow = mysqli_num_rows($result);
+    echo "no of record found in the database = " . $numrow ;
+    echo "&lt;br&gt;";
+    //to display the rows of table
+    if($numrow&gt;0)
+    {
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+        // $row = mysqli_fetch_assoc($result);
+        // echo var_dump($row);
+        // echo "&lt;br&gt;";
+    
+        while($row = mysqli_fetch_assoc($result))
+        {
+            // echo var_dump($row);
+            echo $row['sno.'] . " hello " . $row['name'] . " welcome to " . $row['destination'] ;
+            echo "&lt;br&gt;";
+        }
+    }
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog26 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog26" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        where_caluse
+    </a>
+</p>
+<div class="collapse" id="prog26">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "dbharry7";
+    
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password,$database);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    // echo "connected successfully"; 
+    
+    echo "&lt;br&gt;";
+     
+    // to find specific records 
+    $sql="SELECT * FROM `phptriping` WHERE `destination`= 'korea' ";
+    $result = mysqli_query($conn,$sql);
+    
+    $numrow = mysqli_num_rows($result);
+    echo "no of record found in the database = " . $numrow ;
+    echo "&lt;br&gt;";
+    
+    $no = 1;
+    if($numrow&gt;0)
+    {
+    while($row = mysqli_fetch_assoc($result))
+    {   //we should change the serial no. as we taken specific people 
+        // echo var_dump($row);
+        echo $no . " hello " . $row['name'] . " welcome to " . $row['destination'] ;
+        $no++;
+        echo "&lt;br&gt;";
+    }
+    }
+      //update the specific records which is extracted
+    $sql="UPDATE `phptriping` SET `name` = 'ankitupdat' WHERE `phptriping`.`sno.` = 5";
+    $result = mysqli_query($conn,$sql);
+    
+    if($result){
+        echo "we updated the record successfully &lt;br&gt;";
+    }
+    else {
+        echo "new rare unable to update the record because of this error ---&gt;".mysqli_error($conn);
+    }
+    
+    
+    $sql="SELECT * FROM `phptriping` WHERE `destination`= 'korea' ";
+    $result = mysqli_query($conn,$sql);
+    
+    $numrow = mysqli_num_rows($result);
+    echo "no of record found in the database = " . $numrow ;
+    echo "&lt;br&gt;";
+    
+    $no = 1;
+    if($numrow&gt;0)
+    {
+    while($row = mysqli_fetch_assoc($result))
+    {   //we should change the serial no. as we taken specific people 
+        // echo var_dump($row);
+        echo $no . " hello " . $row['name'] . " welcome to " . $row['destination'] ;
+        $no++;
+        echo "&lt;br&gt;";
+    }
+    }
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog27 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog27" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        delete_in_php
+    </a>
+</p>
+<div class="collapse" id="prog27">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    //connecting databases
+   $servername = "localhost";
+   $username = "root";
+   $password = "";
+   $database = "dbharry7";
+   
+   
+   //create a connection object
+   $conn = mysqli_connect($servername,$username,$password,$database);
+   
+   if(!$conn){
+     die("sorry we failed to connect:" . mysqli_connect_error());
+   }
+   else{
+       echo "connected successfully";
+   }
+   // echo "connected successfully"; 
+   
+   echo "&lt;br&gt;";
+   
+   
+   $sql=" DELETE FROM `phptriping` WHERE `destination` = 'uk' LIMIT 2";
+   $result = mysqli_query($conn,$sql);
+   
+   //know how much affected rows
+   $aff = mysqli_affected_rows($conn);
+   echo "number of affected rows : $aff &lt;br&gt;";
+   
+   if($result){
+       echo "deleted successfully";
+   }
+   else{
+       echo "not deleted successfully due to this error --&gt;".mysqli_error($conn);
+   }
+   // limit is applicable in select we can able to select top 2 or 3 
+   // to limit the deletinon upto a limit 
+   // $sql=" DELETE FROM `phptriping` WHERE `destination` = 'korea' LIMIT 3 ";
+   
+   
+   // //inserting some data
+   // $sql ="INSERT INTO `phptriping` (`name`, `destination`) VALUES ('mohan', 'uk')";
+   // $result = mysqli_query($conn,$sql); //for executing query
+   // // echo "the result is " ;
+   // // echo var_dump($result);
+   // // echo "&lt;br&gt;";
+   // if($result){//here $result is true
+   //     echo "&lt;br&gt;new record has been added successfully";
+   // }
+   // else{
+   //     echo "&lt;br&gt;new record has not been added because of this error ---&gt;".mysqli_error($conn);
+   // }
+   ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog28 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog28" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        require$include
+    </a>
+</p>
+<div class="collapse" id="prog28">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    // include '_dbconnect.php';
+    require '_dbconnect.php';
+    // both of these will throw errors if there is an error in the file but if the file name included is not present in directory then include will give warning and then execute the furthur code while the require thows an error 
+    
+    echo "&lt;br&gt;";
+    $sql="SELECT * FROM `phptriping`";
+    $result = mysqli_query($conn,$sql);
+    
+    $numrow = mysqli_num_rows($result);
+    echo "no of record found in the database = " . $numrow ;
+    echo "&lt;br&gt;";
+    
+    $no = 1;
+    if($numrow&gt;0)
+    {
+    while($row = mysqli_fetch_assoc($result))
+    {   //we should change the serial no. as we taken specific people 
+        // echo var_dump($row);
+        echo $no . " hello " . $row['name'] . " welcome to " . $row['destination'] ;
+        $no++;
+        echo "&lt;br&gt;";
+    }
+    }
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog29 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog29" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        reading file in php
+    </a>
+</p>
+<div class="collapse" id="prog29">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $a=readfile("myfile.txt");
+    echo $a;//also gives no of characters
+    echo "&lt;br&gt;";
+    readfile("myfile.txt");
+    echo "&lt;br&gt;";
+    readfile("1.html");
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog30 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog30" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        file(2)
+    </a>
+</p>
+<div class="collapse" id="prog30">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    //file pointer
+    $fptr = fopen("myfile.txt","r"); //pointing to file
+    // echo $fptr; it will not open the file
+    
+    if(! $fptr)
+    {
+        die("unable to open this file please enter a valid filename");
+    }
+    //  to read the file 
+    
+    // $content = fread($fptr,5);
+    // echo $content;
+    
+    echo fread($fptr,filesize("myfile.txt"));
+    fclose($fptr);
+    
+    //file size return the size of file ,fread return the content of file
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog31 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog31" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        file(3)
+    </a>
+</p>
+<div class="collapse" id="prog31">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    //most important after every read function the pointer shifts right 
+    
+    $fptr = fopen("myfile.txt", "r");
+    // for reading line by line
+    
+    // echo fgets($fptr);//after this file ptr move to the ne dof the line
+    // echo "&lt;br&gt;";
+    // echo fgets($fptr);//here reading another line
+    // echo "&lt;br&gt;";
+    // echo fgets($fptr);//no printing
+    // echo "&lt;br&gt;";
+    // echo var_dump(fgets($fptr));
+    // echo "&lt;br&gt;";
+    
+    
+    // //the above same work in onwe line
+    
+    // while($a=fgets($fptr)){
+    //     echo $a;
+    // }
+    
+    //to read chararcter by caharacter
+    
+    while($a=fgetc($fptr)){
+        echo $a;
+        
+        if($a==" "){
+        break;
+        }
+    
+    }
+    
+    // close the file after the work
+    
+    fclose($fptr);
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog32 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog32" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        file(4)
+    </a>
+</p>
+<div class="collapse" id="prog32">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    // agar file nahi hogi to ban jayegi , agar file hogi then content overwrite ho jayega 
+     echo "writing files in php" ;//just after the running a new file will be creatwd 
+    // $fptr= fopen("myfile2.txt","w");
+    // fwrite($fptr,"hey bro i am writing this content in this new file");
+    // fwrite($fptr,"hey bro ");
+    
+    
+    // if u comment out all above then content is removed 
+    // refresh a no of times but writing only 1 time 
+    
+    
+    // appending 
+    // adding content ata the end of file 
+    
+    $fptr= fopen("myfile2.txt","a");
+    fwrite($fptr,"\n hey bro i am adding some new content in this new file");//refresh multiple times will not append but if you use only append then added one more time when u refresh
+    
+    fclose($fptr);
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog33 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog33" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        cookies
+    </a>
+</p>
+<div class="collapse" id="prog33">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    echo "welcome to make cookiies&lt;br&gt;";
+    
+    // syntax to set a cookie 
+    // echo time();
+    setcookie("category","books", time() + 86400,"/");
+    echo "the cookie is set";
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog34 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog34" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        get_cookies
+    </a>
+</p>
+<div class="collapse" id="prog34">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $A = $_COOKIE['category'];
+    echo "hereis the list of all $A"
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog35 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog35" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        destroy_sessions
+    </a>
+</p>
+<div class="collapse" id="prog35">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    // start the session and get the data
+    session_start();
+    session_unset();
+    session_destroy();
+    echo "&lt;br&gt;";
+    echo "you have been loged out";
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog36 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog36" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        get_sessions
+    </a>
+</p>
+<div class="collapse" id="prog36">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    // start the session and get the data
+    session_start();
+    if(isset($_SESSION['username'])){
+    
+        echo "welcome " . $_SESSION['username'] = "harry";
+        echo "&lt;br&gt;";
+        echo "your favourite category is " . $_SESSION['favCat'] ;
+    
+    }
+    else {
+    
+        echo " please login to continue";
+    }
+    
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog37 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog37" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        session_in_php
+    </a>
+</p>
+<div class="collapse" id="prog37">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    // what are sessions 
+    // use to manage information across different pages
+    // verify the user login info  
+    session_start();
+    $_SESSION['username'] = "harry";
+    $_SESSION['favCat'] = "Books";
+    echo "we have saved your session";
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog38 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog38" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        crud in php
+    </a>
+</p>
+<div class="collapse" id="prog38">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    $insert=false;
+    // INSERT INTO `notes` (`sno.`, `title`, `description`, `date`) VALUES (NULL, 'shopping', 'buy fruits ,vegetables ,cricket ball', current_timestamp());
+    //connecting to a database 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "notes";
+    
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password,$database);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+        // echo "connected successfully";
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            
+            //inserting a data
+            $sql="INSERT INTO `notes` (`sno.`, `title`, `description`, `date`) VALUES (NULL, '$title', '$description', current_timestamp())";
+            $result= mysqli_query($conn,$sql);        
+    
+    if($result)
+    {
+       $insert=true;
+    }
+    else{
+        echo "record not added". mysqli_error($conn);
+    }
+    // echo "&lt;br&gt;";
+    }
+    ?&gt;
+    
+    &lt;!doctype html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+        &lt;!-- Required meta tags --&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    
+        &lt;!-- Bootstrap CSS --&gt;
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"&gt;
+     
+        &lt;title&gt;i notes&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+            &lt;a class="navbar-brand" href="#"&gt;PHP CRUD&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+    
+            &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                &lt;ul class="navbar-nav mr-auto"&gt;
+                    &lt;li class="nav-item active"&gt;
+                        &lt;a class="nav-link" href="#"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                            Dropdown
+                        &lt;/a&gt;
+                        &lt;div class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                            &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
+                            &lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;
+                            &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+                            &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class="form-inline my-2 my-lg-0"&gt;
+                    &lt;input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"&gt;
+                    &lt;button class="btn btn-outline-success my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    
+        &lt;?php
+         if($insert){
+    
+             echo "&lt;div class='alert alert-success alert-dismissible fade show' role='alert'&gt;
+             &lt;strong&gt;success!&lt;/strong&gt; Your note has been saved successfully.
+             &lt;button type='button' class='close' data-dismiss='alert' aria-label='Close'&gt;
+               &lt;span aria-hidden='true'&gt;&times;&lt;/span&gt;
+             &lt;/button&gt;
+           &lt;/div&gt;";
+         }
+    
+    
+        ?&gt;
+    
+    
+        &lt;div class="container mt-4"&gt;
+            &lt;h2&gt;add a note&lt;/h2&gt;
+            &lt;form action="/crud/index.php" method="post"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;label for="title"&gt;note title&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp"&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="form-group"&gt;
+                    &lt;label for="description"&gt;note description&lt;/label&gt;
+                    &lt;textarea class="form-control" id="description" name="description" rows="3"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="btn btn-primary"&gt;add note&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="container my-3"&gt;
+           
+            &lt;table class="table" id="myTable"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope="col"&gt;sno.&lt;/th&gt;
+                        &lt;th scope="col"&gt;Title&lt;/th&gt;
+                        &lt;th scope="col"&gt;Description&lt;/th&gt;
+                        &lt;th scope="col"&gt;Actions&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;?php
+             $sql="SELECT * FROM `notes`";
+             $result = mysqli_query($conn,$sql);
+             $sno=1;
+             while($row = mysqli_fetch_assoc($result))
+             {   //we should change the serial no. as we taken specific people 
+                 // echo var_dump($row);
+                 echo  " &lt;tr&gt;
+                 &lt;th scope='row'&gt;" . $sno ."&lt;/th&gt;
+                 &lt;td&gt;" . $row['title'] ."&lt;/td&gt;
+                 &lt;td&gt;" . $row['description'] . "&lt;/td&gt;
+                 &lt;td&gt;&lt;a href='/edit'&gt;edit &lt;/a&gt;&lt;a href='/delete'&gt;delete&lt;/a&gt;&lt;/td&gt;
+                 &lt;/tr&gt;"; 
+                 $sno++;
+             } 
+            ?&gt;
+                &lt;tbody&gt;
+                  
+                 
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;!-- Optional JavaScript --&gt;
+        &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+        &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"&gt;&lt;/script&gt;
+            &lt;link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"&gt;
+        &lt;script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+        &lt;/script&gt;
+        &lt;script&gt;
+        $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
+        &lt;/script&gt;    
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="php1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="php2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="php3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="php4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="php5.html">5</a></li>
+            </ul>
+          </nav>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

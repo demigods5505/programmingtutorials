@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Programming Tutorials</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-3 text-center">
+        <h2>Welcome to Php Tutorials</h3>
+    </div>
+    <div class="container my-3">
+<!-- prog1 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog1" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        php snipit
+    </a>
+</p>
+<div class="collapse" id="prog1">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;&lt;?php echo "this is "; echo "title"; ?&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;?php
+    echo "hello world 1";//php can be inserted anywhere
+    ?&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;    
+</pre>
+    </div>
+</div>
+<!-- prog2 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog2" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        variables in php
+    </a>
+</p>
+<div class="collapse" id="prog2">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    echo "this is tutorial 5 &lt;br&gt;";
+    // variables are containers for storing information
+    // stars with dollor
+    $name = "rohan";
+    $income = 400;
+    
+    echo "his name is $name and his salary is $income &lt;br&gt;";
+    echo "$name is a gud guy";
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog3 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog3" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        rules for variables
+    </a>
+</p>
+<div class="collapse" id="prog3">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;h2&gt;more on php variables&lt;/h2&gt;
+    &lt;h3&gt;rules for php variables&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;starts with $&lt;/li&gt;
+        &lt;li&gt;canot start with number&lt;/li&gt;
+        &lt;li&gt; star with letters and _&lt;/li&gt;
+        &lt;li&gt;can only alphanumeric character nd _&lt;/li&gt;
+        &lt;li&gt;variables are case sensitive $rohan and $ROHAN and $RoHan all are different&lt;/li&gt;
+        &lt;/ul&gt;
+</pre>
+    </div>
+</div>
+<!-- prog4 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog4" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        datatypes in php
+    </a>
+</p>
+<div class="collapse" id="prog4">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    //    php data types
+    //    1.string
+    //    2.integer
+    //    3.float
+    //    4.bollean
+    //    5.object 
+    //    6. array
+    //    7. null 
+    
+    
+    //strings
+    $name = "harry";
+    $friend = "rohan";
+    echo "$name ka friend is $friend";
+    
+    echo "&lt;br&gt;";
+    //integer
+    $income =455;
+    echo $income;
+    
+    echo "&lt;br&gt;";
+    //float
+    $income = -44.876;
+    echo $income;
+    
+    echo "&lt;br&gt;";
+    // bollean can be either true or false
+    $x=true;
+    $y=false;
+    
+    echo "$x";
+    echo "&lt;br&gt;";
+    echo "$y"; //returns blank string
+    echo var_dump($x);
+    echo "&lt;br&gt;";
+    echo var_dump($y); //returns datatype with its value
+    echo "&lt;br&gt;";
+    echo var_dump($income); 
+    
+    echo "&lt;br&gt;";
+    //object- instances of classes
+    //employee is a class ----&gt; harry can be one object
+    
+    echo "&lt;br&gt;";
+    //array 
+    $friemds =array("rohan","sagar","hello","larry");
+    echo var_dump($friemds);
+    echo "&lt;br&gt;";
+    echo $friemds[2];
+    
+    echo "&lt;br&gt;";
+    //null
+    $name =NULL; //koi value na de jaana 
+    echo "$name";//no value is given that y not displayed
+    echo var_dump($name);
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog5 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog5" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        string_functions
+    </a>
+</p>
+<div class="collapse" id="prog5">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $name="harry bhai";
+    echo $name;
+    echo "&lt;br&gt;";
+    
+    echo "the length of " . "my string is " . strlen($name);
+    echo "&lt;br&gt;";
+    echo str_word_count($name);//tells no of words in a string
+    echo "&lt;br&gt;";
+    echo strrev($name);
+    echo "&lt;br&gt;";
+    echo strpos($name , "bh");//for searching the position of a string in a particular string
+    echo "&lt;br&gt;";
+    echo str_replace("bhai" , "bro" , $name);
+    //to reapeat a particular string
+    echo "&lt;br&gt;";
+    echo str_repeat($name,11);
+    echo "&lt;br&gt;";
+    // to trim extra side spaces
+    echo "&lt;pre&gt;";
+    echo rtrim("  hary is a gud boy  ");
+    echo "&lt;br&gt;";
+    echo ltrim("  hary is a gud boy  ");
+    echo "&lt;/pre&gt;";
+    echo "&lt;br&gt;";
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog6 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog6" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        operators
+    </a>
+</p>
+<div class="collapse" id="prog6">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    /* Operators in PHP
+    1. Arithmetic Operators
+    2. Assignment Operators
+    3. Comparison Operators 
+    4. Logical Operators
+    */
+    
+    $a = 45;
+    $b = 8;
+    
+    // 1. Arithmetic Operators
+    echo "For a + b, the result is ". ($a + $b) . "&lt;br&gt;";
+    echo "For a - b, the result is ". ($a - $b) . "&lt;br&gt;";
+    echo "For a * b, the result is ". ($a * $b) . "&lt;br&gt;";
+    echo "For a / b, the result is ". ($a / $b) . "&lt;br&gt;";
+    echo "For a % b, the result is ". ($a % $b) . "&lt;br&gt;";
+    echo "For a ** b, the result is ". ($a ** $b) . "&lt;br&gt;";
+     
+    // 2. Assignment Operators
+    // $x = $a;
+    // echo "For x, the value is ". $x . "&lt;br&gt;";
+    
+    // $a += 6;
+    // echo "For a, the value is ". $a . "&lt;br&gt;";
+    
+    // $a -= 6;
+    // echo "For a, the value is ". $a . "&lt;br&gt;";
+    
+    // $a *= 6;
+    // echo "For a, the value is ". $a . "&lt;br&gt;";
+    
+    // $a /= 5;
+    // echo "For a, the value is ". $a . "&lt;br&gt;";
+    
+    // $a %= 5; // $a = $a % 5
+    // echo "For a, the value is ". $a . "&lt;br&gt;";
+    
+    
+    // 3. Comparison Operators 
+    $x = 78;
+    $y = 78;
+    
+    // echo "For x &gt; y, the result is ";
+    // echo var_dump($x &gt; $y);
+    
+    // echo "For x &gt; y, the result is ";
+    // echo var_dump($x &gt;= $y);
+    
+    // echo "For x &lt; y, the result is ";
+    // echo var_dump($x &lt; $y);
+    
+    // echo "For x &lt; y, the result is ";
+    // echo var_dump($x &lt;= $y);
+    
+    echo "For x &lt;&gt; y, the result is "; 
+    echo var_dump($x &lt;&gt; $y);
+    echo "&lt;br&gt;";
+    
+    
+    // 4. Logical Operators
+    
+    $m = true;
+    $n = true;
+    
+    echo "For m and n, the result is "; 
+    echo var_dump($m and $n);
+    echo "&lt;br&gt;";
+    
+    echo "For m && n, the result is "; 
+    echo var_dump($m && $n);
+    echo "&lt;br&gt;";
+    
+    echo "For m or n, the result is "; 
+    echo var_dump($m or $n);
+    echo "&lt;br&gt;";
+    
+    echo "For m || n, the result is "; 
+    echo var_dump($m || $n);
+    echo "&lt;br&gt;";
+    
+    echo "For !m , the result is "; 
+    echo var_dump(!$m);
+    echo "&lt;br&gt;";    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog7 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog7" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        if_else
+    </a>
+</p>
+<div class="collapse" id="prog7">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    // $a = 665;
+    // $b = 9;
+    
+    // if($a &gt; 78){
+    //     echo "a is greater than 78";
+    // }
+    // else{
+    //     echo "a is not greater than 78";
+    // }
+    
+    $age = 24;
+    
+    // If else ladder
+    // if ($age&gt;18){
+    //     echo "You can drink water with chai and alcohol";
+    // }
+    // elseif($age&gt;13){ elseif joint me likha jayega
+    //     echo "You can drink chai only with water. No alcohol for you";
+    // }
+    // else{
+    //     echo "You can drink water only";
+    // }
+    
+    
+    if ($age&gt;18){
+        echo "You can drink water with chai and alcohol&lt;br&gt;";
+    }
+    
+    if($age&gt;13){
+        echo "You can drink chai only with water. No alcohol for you&lt;br&gt;";
+    }
+    else{
+        echo "You can drink water only&lt;br&gt;";
+    }
+    
+    
+    // Quick quiz - 
+    // 1. Create an if else ladder using more than one elseif 
+    // 2. Write a program to allow a driver to drive only when his age is greater than or equal to 25
+    // and less than or equal to 65
+    
+    echo "Done";
+    ?&gt;    
+</pre>
+    </div>
+</div>
+<!-- prog8 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog8" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        switch_case
+    </a>
+</p>
+<div class="collapse" id="prog8">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    $age = 56;
+    
+    switch($age){
+        case 12:
+            echo "You are 12 years old &lt;br&gt;";
+            break;
+    
+        case 45:
+            echo "You are 45 years old &lt;br&gt;";
+            break;
+    
+        case 56:
+            echo "You are 56 years old boy &lt;br&gt;";
+            break;
+        
+        default:
+            echo "Your age is weird &lt;br&gt;";
+            break;
+    
+        }
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog9 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog9" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        while_loop
+    </a>
+</p>
+<div class="collapse" id="prog9">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    echo "while loops in php";echo"&lt;br&gt;";
+    // echo 1;echo"&lt;br&gt;";
+    // echo 2;echo "&lt;br&gt;";
+    // echo 3;echo "&lt;br&gt;";
+    // echo 4;echo "&lt;br&gt;";
+    // echo 5;echo "&lt;br&gt;";
+    
+    /* 
+    while (condition){
+        some lines of code here;
+    }
+    */
+    
+    $i = 0; 
+    while($i&lt;5){
+        echo "The value of i is ";
+        echo $i+1;
+        echo "&lt;br&gt;";
+        $i+=1; 
+    } 
+    ?&gt;    
+</pre>
+    </div>
+</div>
+<!-- prog10 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog10" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        for loop
+    </a>
+</p>
+<div class="collapse" id="prog10">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    echo "This is for loop in action &lt;br&gt;";
+    
+    for ($index=1; $index &lt; 6; $index++) { 
+        // for(initialization;condition; updation)
+        echo "The number is $index &lt;br&gt;";
+    }
+    
+    // Avoid running into infinite loops
+    // for ($i=0; $i &lt; 87; ) { 
+    //     echo $i;
+    // }
+    
+    echo "For loop has ended";
+    ?&gt;    
+</pre>
+    </div>
+</div>
+<!-- prog11 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog11" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        do_while
+    </a>
+</p>
+<div class="collapse" id="prog11">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    echo "Welcome to do while loops &lt;br&gt;";
+    
+    /*
+    do {
+        some lines of code to be executed here;
+        ...
+    } while(condition);
+    */
+    
+    $i = 0;
+    do{
+        echo "$i &lt;br&gt;";
+        $i++;
+    }while($i&lt;5);
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog12 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog12" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        foreach loop
+    </a>
+</p>
+<div class="collapse" id="prog12">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    echo "Welcome to the world of foreach loops &lt;br&gt;";
+    // this is numeric araray / index array
+    $arr = array("Bananas", "Apples", "Harpic", "Bread", "Butter");
+    
+    // for ($i=0; $i &lt; count($arr); $i++) { 
+    //     echo $arr[$i];
+    //     echo "&lt;br&gt;";
+    // }
+    
+    // Better way to do this - foreach loops
+    foreach ($arr as  $value) {
+        echo "$value &lt;br&gt;";
+    }
+    
+    ?&gt;    
+</pre>
+    </div>
+</div>
+<!-- prog13 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog13" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        functions
+    </a>
+</p>
+<div class="collapse" id="prog13">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    echo "Welcome to php tutorial on functions &lt;br&gt;";
+    
+    function processMarks($marksArr){
+        $sum = 0;
+        foreach ($marksArr as $value) {
+            $sum += $value;
+        }
+        return $sum;
+    }
+    
+    function avgMarks($marksArr){
+        $sum = 0;
+        $i = 0;
+        foreach ($marksArr as $value) {
+            $sum += $value;
+            $i++;
+        }
+        return $sum/$i;
+    }
+    
+    $rohanDas = [34, 98, 45, 12, 98, 93];
+    // $sumMarks = processMarks($rohanDas);
+    $sumMarks = avgMarks($rohanDas);
+    
+    $harry = [99, 98, 93, 94, 17, 100];
+    // $sumMarksHarry = processMarks($harry);
+    $sumMarksHarry = avgMarks($harry);
+    echo "Total marks scored by Rohan out of 600 is $sumMarks &lt;br&gt;";
+    echo "Total marks scored by Harry out of 600 is $sumMarksHarry";
+    
+    ?&gt;    
+</pre>
+    </div>
+</div>
+<!-- prog14 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog14" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        dates in php
+    </a>
+</p>
+<div class="collapse" id="prog14">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    echo "welcome to world of dates &lt;br&gt;";
+    $d = date("dS F Y g:i A");//for all representation search php.dates
+    echo "today is $d &lt;br&gt;";
+    
+    //below examples of php dates
+    // Prints something like: Monday 8th of August 2005 03:12:46 PM
+    echo "today is ";
+    echo date('l jS \of F Y h:i:s A');
+    echo "&lt;br&gt;";
+    // Prints: July 1, 2000 is on a Saturday
+    echo "today is ";
+    echo "July 1, 2000 is on a " . date("l", mktime(0, 0, 0, 7, 1, 2000));
+    $l= date("Y");
+    echo " &lt;br&gt; copyright $l | all rights reserved";
+    
+    $date=date("dS F Y g:i A");
+    echo $date;
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog15 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog15" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        associative_array
+    </a>
+</p>
+<div class="collapse" id="prog15">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    // this is associative array 
+    
+    $favcol = array(
+        'shubham'=&gt;'red',
+        'rohan' =&gt;'blue',
+        'harry'=&gt;'white',
+        8=&gt;'pink'
+    );
+    echo $favcol['harry'];
+    echo "&lt;br&gt;";
+    echo $favcol['shubham'];
+    echo "&lt;br&gt;";
+    echo $favcol['rohan'];
+    echo "&lt;br&gt;";
+    echo $favcol[8];
+    echo "&lt;br&gt;";
+    
+    foreach ($favcol as $key =&gt; $value) {
+        echo "favourite colour of $key is $value &lt;br&gt;";
+    }
+    
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog16 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog16" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        multi_dime. array
+    </a>
+</p>
+<div class="collapse" id="prog16">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+
+    echo "this is multi dimensional array tutorial &lt;br&gt;";
+    // it is a 2 dimensional array 
+    $multarr =array(
+        array(9,0,5,3),
+        array(6,7,3,4),
+        array(4,6,2,1)
+                   );
+    
+    echo var_dump($multarr); 
+    echo "&lt;br&gt;";              
+    echo var_dump($multarr[0]);
+    // echo $multarr[0];  cant convert array to string
+    echo "&lt;br&gt;";
+    echo $multarr[0][0];
+    echo "&lt;br&gt;";
+    echo $multarr[1][2];
+    echo "&lt;br&gt;";
+    for ($i=0; $i &lt; count($multarr); $i++) { 
+        for ($j=0; $j &lt;count($multarr[$i]) ; $j++) { 
+            echo $multarr[$i][$j];echo "\t";
+        }
+        echo "&lt;br&gt;";
+    }
+    for ($i=0; $i &lt;count($multarr); $i++) { 
+             echo var_dump($multarr[$i]);
+             echo "&lt;br&gt;";
+    }
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog17 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog17" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        local_global
+    </a>
+</p>
+<div class="collapse" id="prog17">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    echo "Welcome to scope and local/global vars in php&lt;br&gt;";
+    $a = 98; // Global Variable
+    $b = 9;
+    
+    function printValue(){
+        // $a = 97; // Local Variable
+        global $a, $b; // Give me the access to this global variable
+        $a = 100;
+        $b = 1000;
+        echo "&lt;br&gt;The value of your variable a is $a and b is $b";
+    }
+    
+    echo $a; 
+    printValue();
+    echo "&lt;br&gt;The value of your variable a is $a and b is $b";
+    echo "&lt;br&gt;";
+    echo var_dump($GLOBALS); echo "&lt;br&gt;";
+    echo var_dump($GLOBALS["a"]);  echo "&lt;br&gt;";
+    echo var_dump($GLOBALS["b"]);
+    
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog18 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog18" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        get_post request
+    </a>
+</p>
+<div class="collapse" id="prog18">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;!doctype html&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;!-- Required meta tags --&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    
+        &lt;!-- Bootstrap CSS --&gt;
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"&gt;
+    
+        &lt;title&gt;get and post&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+      &lt;a class="navbar-brand" href="#"&gt;get/post&lt;/a&gt;
+      &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    
+      &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+        &lt;ul class="navbar-nav mr-auto"&gt;
+          &lt;li class="nav-item active"&gt;
+            &lt;a class="nav-link" href="/cwhphp/21_getpost.php"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item dropdown"&gt;
+            &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+              Dropdown
+            &lt;/a&gt;
+            &lt;div class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+              &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
+              &lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;
+              &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+              &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form class="form-inline my-2 my-lg-0"&gt;
+          &lt;input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"&gt;
+          &lt;button class="btn btn-outline-success my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+     
+    &lt;?php
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $email = $_POST['email'];
+        $password = $_POST['pass'];
+        echo '&lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+        &lt;strong&gt;success!&lt;/strong&gt; your email '. $email . ' and password '. $password . ' has been submitted .
+        &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+          &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;';
+        };
+    ?&gt;
+    
+    &lt;!-- form  --&gt;
+         &lt;div class="container mt-3"&gt;&lt;!--margin top 3 --&gt;
+         &lt;h3&gt;enter your email and password&lt;/h3&gt;
+         &lt;form action="/cwhphp/21_getpost.php" method="post"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="email"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"&gt;
+        &lt;small id="emailHelp" class="form-text text-muted"&gt;We'll never share your email with anyone else.&lt;/small&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="pass"&gt;Password&lt;/label&gt;
+        &lt;input type="password" name="pass" class="form-control" id="pass"&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group form-check"&gt;
+        &lt;input type="checkbox" class="form-check-input" id="exampleCheck1"&gt;
+        &lt;label class="form-check-label" for="exampleCheck1"&gt;Check me out&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+         &lt;/div&gt;
+    
+        &lt;!-- Optional JavaScript --&gt;
+        &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+        &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+    </div>
+</div>
+<!-- prog19 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog19" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        mysqli
+    </a>
+</p>
+<div class="collapse" id="prog19">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+  
+    echo "ready to connect database and php &lt;br&gt;";
+    // 1. mysqli extension
+    // 2. pdo = php data object
+    
+    //connecting to database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password);
+    
+    // die if not connecteed
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    // echo "connected successfully"; 
+    ?&gt;
+</pre>
+    </div>
+</div>
+<!-- prog20 -->
+<p class="mt-2">
+    <a class="btn btn-primary" data-toggle="collapse" href="#prog20" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        _dbconnect.php
+    </a>
+</p>
+<div class="collapse" id="prog20">
+    <div class="card card-body ">
+<pre class="bg-dark text-light">
+    &lt;?php
+    // 1. mysqli extension
+    // 2. pdo = php data object
+    
+    //connecting to database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "dbharry7";
+    
+    
+    //create a connection object
+    $conn = mysqli_connect($servername,$username,$password,$database);
+    
+    if(!$conn){
+      die("sorry we failed to connect:" . mysqli_connect_error());
+    }
+    else{
+        echo "connected successfully";
+    }
+    ?&gt;
+</pre>
+    </div>
+</div>
+    </div>
+
+    <div class="container text-center mt-3">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="php1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="php2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="php3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="php4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="php5.html">5</a></li>
+            </ul>
+          </nav>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
